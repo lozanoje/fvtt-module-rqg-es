@@ -36,7 +36,7 @@
   ],
   "system": "rqg",
   "systemVersion": "1.11.0",
-  "url": "https://github.com/lozalojo/rqg-babele-es",
-  "manifest": "https://raw.githubusercontent.com/lozalojo/rqg-babele-es/main/module.json",
-  "download": "https://github.com/lozalojo/rqg-babele-es/archive/main.zip"
+  "url": "https://github.com/lozanoje/rqg-babele-es",
+  "manifest": "https://raw.githubusercontent.com/lozanoje/rqg-babele-es/main/module.json",
+  "download": "https://github.com/lozanoje/rqg-babele-es/archive/main.zip"
 }

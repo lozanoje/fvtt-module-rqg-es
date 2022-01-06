@@ -11,4 +11,5 @@ Hooks.once('init', () => {
 		document.getElementById("logo").src="/modules/rqg-babele-es/images/fvtt-rqg-es.webp";
 		
 	}
+	
 });
