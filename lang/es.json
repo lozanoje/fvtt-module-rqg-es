@@ -1,4 +1,8 @@
 {
+  "I18N": {
+    "LANGUAGE": "Español",
+    "MAINTAINERS": "rwanoux, Namergon, @ForjaSalvaje#2419, @Viriato139ac#0342"
+  },
   "ITEM": {
     "TypeSkill": "Habilidad",
     "TypePassion": "Pasión",
@@ -10,194 +14,393 @@
     "TypeSpiritmagic": "Conjuro de magia espiritual",
     "TypeCult": "Culto",
     "TypeRunemagic": "Conjuro rúnico",
-    "TypeMeleeweapon": "~ Arma cuerpo a cuerpo",
-    "TypeMissileweapon": "~ Arma a distancia"
+    "TypeReputation": "Reputación"
   },
   "RQG": {
-    "characteristic": {
-      "strength": "FUE",
-      "constitution": "CON",
-      "size": "TAM",
-      "dexterity": "DES",
-      "intelligence": "INT",
-      "power": "POD",
-      "charisma": "CAR"
+    "Actor": {
+      "AwardExperience": {
+        "GainedExperienceInfo": "{actorName} acaba de ganar una marca de experiencia en {itemName}!",
+        "ItemDoesntHaveExperienceError": "Se ha intentado añadir una marca de experiencia al objeto \"{itemName}\" con id \"{itemId}\" que no tiene la propiedad \"hasExperience\"",
+        "ItemNotFoundError": "Se ha intentado añadir una marca de experiencia al objeto con id \"{itemId}\" que no se ha encontrado en el actor \"{actorName}\" con id de actor \"{actorId}\""
+      },
+      "Background": {
+        "Background": "Trasfondo",
+        "Origin": "Origen",
+        "BaseData": "Información básica",
+        "BirthYear": "Año de nacimiento",
+        "Age": "Edad",
+        "Gender": "Género",
+        "Species": "Especie",
+        "TownHomeArea": "Ciudad/tierra natal",
+        "Tribe": "Tribu",
+        "Clan": "Clan",
+        "Circumstance": "Otros datos",
+        "Reputation": "Reputación",
+        "StandardOfLiving": "Nivel de vida",
+        "BaseIncome": "Ingresos",
+        "Ransom": "Rescate",
+        "RansomDetails": "Detalles",
+        "Homeland": {
+          "Heading": "Tierra natal",
+          "aggar": "Aggar",
+          "balazar": "Balazar",
+          "beastValley": "Valle de las Bestias",
+          "bilini": "Bilini",
+          "blackHorseCounty": "Condado del Caballo Negro",
+          "dagoriInkarth": "Dagori Inkarth",
+          "dragonPass": "Paso del Dragón",
+          "dryadWoods": "Bosques de las Dríadas",
+          "esrolia": "Esrolia",
+          "grazelands": "Los Pastizales",
+          "hendrikiland": "Tierra Hendriki",
+          "heortland": "Tierra Heortlinga",
+          "holay": "Holay",
+          "imither": "Imither",
+          "lunarTarsh": "Tarsh Lunar",
+          "oldTarsh": "Viejo Tarsh",
+          "prax": "Prax",
+          "sartar": "Sartar",
+          "shadowPlateau": "Meseta Sombría",
+          "stinkingForest": "Bosque Maloliente",
+          "trollWoods": "Bosque de los Troles",
+          "vansh": "Vansh",
+          "habitatChaosArea": "Hábitat: Cubil del Caos",
+          "habitatForest": "Hábitat: Bosque",
+          "habitatGlacier": "Hábitat: Glaciar",
+          "habitatMarshSwamp": "Hábitat: Pantano/marisma",
+          "habitatMountainsHills": "Hábitat: Montañas/colinas",
+          "habitatPlains": "Hábitat: Llanuras",
+          "habitatSky": "Hábitat: Cielo",
+          "habitatSpiritPlane": "Hábitat: Plano espiritual",
+          "habitatUnderground": "Hábitat: Bajo tierra",
+          "habitatWaterSea": "Hábitat: Agua/mar"
+        },
+        "Occupation": {
+          "Heading": "Ocupación",
+          "": " ",
+          "assistantShaman": "Aprendiz de chamán",
+          "chariotDriver": "Auriga",
+          "crafter": "Artesano",
+          "bandit": "Bandido",
+          "entertainer": "Artista",
+          "farmer": "Granjero",
+          "fisher": "Pescador",
+          "healer": "Sanador",
+          "herder": "Pastor",
+          "hunter": "Cazador",
+          "merchant": "Mercader",
+          "noble": "Noble",
+          "philosopher": "Filósofo",
+          "priest": "Sacerdote",
+          "scribe": "Escriba",
+          "thief": "Ladrón",
+          "warriorHeavyInfantry": "Guerrero infantería pesada",
+          "warriorLightInfantry": "Guerrero infantería ligera",
+          "warriorHeavyCavalry": "Guerrero caballería pesada",
+          "warriorLightCavalry": "Guerrero caballería ligera"
+        }
+      },
+      "Characteristics": {
+        "strength": "FUE",
+        "constitution": "CON",
+        "size": "TAM",
+        "dexterity": "DES",
+        "intelligence": "INT",
+        "power": "POD",
+        "charisma": "CAR",
+        "strength-full": "Fuerza",
+        "constitution-full": "Constitución",
+        "size-full": "Tamaño",
+        "dexterity-full": "Destreza",
+        "intelligence-full": "Inteligencia",
+        "power-full": "Poder",
+        "charisma-full": "Carisma"
+      },
+      "Combat": {
+        "StrDexMinsNotMetTip": "Character does not meet STR and/or DEX minimums for this weapon.  Use at half skill chance.",
+        "StrMinNotMetTip": "Character does not meet STR minimum for this weapon. Use at half skill chance.",
+        "DexMinNotMetTip": "Character does not meet DEX minimum for this weapon. STR over STR minimum can make up for this at two points of STR for one point of DEX, or use at half skill chance."
+      },
+      "Gear": {
+        "CurrencyConversionTipOver1": "Un {name} equivale a {value} lunares",
+        "CurrencyConversionTipLunar": "Lunares es la moneda de cambio estándar",
+        "CurrencyConversionTipUnder1": "Un lunar equivale a {value} {name}s."
+      },
+      "RuneMagic": {
+        "CultRank": {
+          "layMember": "Miembro laico",
+          "initiate": "Iniciado",
+          "godTalker": "Portavoz divino",
+          "runePriest": "Sacerdote de las runas",
+          "runeLord": "Señor de las runas",
+          "chiefPriest": "Sacerdote principal",
+          "highPriest": "Sumo sacerdote"
+        }
+      },
+      "Skills": {
+        "SkillCategory": {
+          "agility": "Agilidad",
+          "communication": "Comunicación",
+          "knowledge": "Conocimiento",
+          "magic": "Magia",
+          "manipulation": "Manipulación",
+          "perception": "Percepción",
+          "stealth": "Sigilo",
+          "otherSkills": "Otras habilidades",
+          "meleeWeapons": "Armas cuerpo a cuerpo",
+          "missileWeapons": "Armas a distancia",
+          "shields": "Escudos",
+          "naturalWeapons": "Armas naturales"
+        }
+      },
+      "Occupation": {}
     },
-    "ResultEnum": {
-      "0": "Hipercrítico",
-      "1": "Crítico especial",
-      "2": "Crítico",
-      "3": "Especial",
-      "4": "Éxito",
-      "5": "Fallo",
-      "6": "Pifia"
+    "Dialog": {
+      "Common": {
+        "btnCancel": "Cancelar",
+        "btnConfirm": "Confirmar",
+        "OtherModifiers": "Otros modificadores:"
+      },
+      "confirmItemDeleteDialog": {
+        "title": "Borrar {itemType}: {itemName}",
+        "content": "¿Está seguro de que desea borrar el {itemType} {itemName}?",
+        "contentCult": "¿Está seguro de que desea borrar el {itemType} {itemName}? Se borrarán también todos los obejtos {runeMagicSpell} asociados a este {itemType}."
+      },
+      "improveAbilityDialog": {
+        "title": "Mejora de {typeLocName} \"{name}\"",
+        "titleChar": "Mejora de característica \"{name}\"",
+        "header": "Mejorando {name}",
+        "fromExperience": ". . . con la experiencia",
+        "chanceToGain": "{chanceToGain}% porcentaje de ganar:",
+        "experiencGainFixed": "Ganancia 3%",
+        "experiencGainRandom": "Ganancia 1d6%",
+        "noExperienceCheckTitle": "Sin marca de experiencia",
+        "noExperienceCheckExplanation": "Este personaje no tiene ninguna marca de experiencia en {typeLocName} y no podrá mejorarse con la experiencia",
+        "throughTraining": ". . . con el entrenamiento",
+        "afterTraining": "Tras el entrenamiento:",
+        "gain": "Ganancia {gain}%",
+        "gainchar": "Ganancia {gain}",
+        "throughResearch": ". . . con la investigación",
+        "skillOver75Title": "Habilidad por encima de 75%",
+        "skillOver75Explanation": "No puede entrenar habilidades con un valor por encima de 75%",
+        "speciesMaxTitle": "Actualmente al máximo por especie {name}",
+        "speciesMaxExplanation": "Se encuentra por por encima del máximo por especie {name} y no podrá ganar más",
+        "btnDoImprovement": "Aplicar la mejora",
+        "btnCancel": "Cancelar",
+        "experienceRoll": {
+          "flavor": "{actorName} hace una tirada de experiencia por {typeLocName} \"{name}\"",
+          "contentSkill": "Tire un 1d100 y añada el modificador por categoría ({mod}), tendrá éxito si la tirada modificada es MAYOR que el valor {skillChance}% de {typeLocName} \"{name}\" o un 100",
+          "contentOther": "Tire un 1d100, tendrá éxito si la tirada es MAYOR que el valor {chance}% de {typeLocName} \"{name}\"",
+          "contentChar": "Tire un 1d100, tendrá éxito si la tirada es MENOR o IGUAL que {chanceToGain}%. El valor {chance} multiplicado por cinco está basado en el máximo de característica por especie {speciesMax} menos la característica \"{name}\""
+        },
+        "experienceResultCard": {
+          "flavor": "La mejora por experiencia para {typeLocName} \"{name}\" ha tenido éxito",
+          "contentChoseFixed": "Elija una ganancia fija de {gain}.",
+          "contentChoseRandom": "Elija una ganancia de {gain}."
+        },
+        "experienceGainFailed": {
+          "flavor": "La mejora por experiencia para {typeLocName} \"{name}\" ha fallado",
+          "content": "{actorName} ha fallado en su aprendizaje por experiencia y la marca se ha quitado de {typeLocName} \"{name}\"."
+        },
+        "trainingResultCard": {
+          "flavor": "Mejora por entrenamiento para {typeLocName} \"{name}\"",
+          "contentChoseFixed": "Elija una ganancia fija de {gain}.",
+          "contentChoseRandom": "Elija una ganancia de {gain}."
+        },
+        "researchRoll": {
+          "flavor": "{actorName} hace una tiradade mejora por investigación para {typeLocName} \"{name}\"",
+          "contentChar": "Tire 1d100, tendrá éxito si la tirada es MENOR O IGUAL a {chanceToGain}%. El valor {chance} multiplicado por cinco está basado en el máximo de característica por especie {speciesMax} menos la característica \"{name}\""
+        },
+        "researchResultCard": {
+          "flavor": "Mejora por investigación para {typeLocName} \"{name}\"",
+          "contentChoseRandom": "Elija una ganancia de {gain}."
+        },
+        "researchGainFailed": {
+          "flavor": "La mejora por investigación para {typeLocName} \"{name}\" ha fallado",
+          "content": "{actorName} ha fallado en su aprendizaje mediante investigación para {typeLocName} \"{name}\"."
+        },
+        "notifications": {
+          "noExperience": "{actorName} no tiene una marca de experiencia en {typeLocName} \"{name}\" y no puede ganar experiencia"
+        }
+      },
+      "RuneMagicCard": {
+        "MissingJournalLinkTitle": "Edite el hechizo y añada una descripción para tener un enlace a un diario aquí",
+        "CastUsingRune": "Lanzando usando la runa:",
+        "RuneHasExperienceTitle": "Tiene marca de experiencia",
+        "RunePointCost": "Coste en Puntos de Runa:",
+        "OneUseWarning": "¡De un solo uso!",
+        "OneUseWarningTip": "¡Lanzar este hechizo reducirá tanto sus puntos de runa actuales como el máximo del culto!",
+        "MagicPointBoost": "Potenciación de puntos de magia:",
+        "MeditationOrRitual": "Meditación o prácticas rituales:",
+        "MeditationOrRitualValue0": "Ninguna",
+        "MeditationOrRitualValue5": "Meditación: 1 asalto de combate, +5% bono",
+        "MeditationOrRitualValue10": "Meditación: 2 asaltos de combate, +10% bono",
+        "MeditationOrRitualValue15": "Meditación: 5 asaltos de combate (1 minuto), +15% bono",
+        "MeditationOrRitualValue20": "Meditación: 25 asaltos de combate (5 minutos), +20% bono",
+        "MeditationOrRitualValue25": "Meditación: 50 asaltos de combate (10 minutos), +25% bono",
+        "MeditationOrRitualValue30": "Prácticas rituales: media hora, +30% bono",
+        "MeditationOrRitualValue35": "Prácticas rituales: 1 hora, +35% bono",
+        "MeditationOrRitualValue40": "Prácticas rituales: 5 horas, +40% bono",
+        "MeditationOrRitualValue45": "Prácticas rituales: 10 horas, +45% bono",
+        "MeditationOrRitualValue50": "Prácticas rituales: 1 día, +50% bono",
+        "MeditationOrRitualValue55": "Prácticas rituales: 2 días, +55% bono",
+        "MeditationOrRitualValue60": "Prácticas rituales: 1 semana, +60% bono",
+        "MeditationOrRitualValue65": "Prácticas rituales: 2 semanas, +65% bono",
+        "MeditationOrRitualValue70": "Prácticas rituales: 4 semanas, +70% bono",
+        "MeditationOrRitualValue75": "Prácticas rituales: 1 temporada, +75% bono",
+        "MeditationOrRitualValue80": "Prácticas rituales: 1 año, +80% bono",
+        "MeditationOrRitualValue85": "Prácticas rituales: 2 años, +85% bono",
+        "MeditationOrRitualValue90": "Prácticas rituales: 5 años, +90% bono",
+        "MeditationOrRitualValue95": "Prácticas rituales: 10 años, +95% bono",
+        "MeditationOrRitualValue100": "Prácticas rituales: 20 años, +100% bono",
+        "SkillAugmentation": "Refuerzo de habilidades:",
+        "SkillAugmentationValue0": "Ninguno",
+        "SkillAugmentationValue50": "Crítico, +50%",
+        "SkillAugmentationValue30": "Especial, +30%",
+        "SkillAugmentationValue20": "Éxito, +20%",
+        "SkillAugmentationValue-20": "Fallo, -20%",
+        "SkillAugmentationValue-50": "Pifia, -50%",
+        "getActorFromIdsWarning": "No se puede obtener el actor del id de actor o el id de icono",
+        "noSelectedRuneWarning": "Intentando tirar un conjuro de magia rúnica sin ninguna runa seleccionada en la tarjeta",
+        "resultMessageCritical": "El conjuto tiene efecto, no cuesta ningún punto de runa y {magicPointBoost} puntos de magia de la potenciación",
+        "resultMessageSpecial": "El conjuto tiene efecto, cuesta {runePointCost} puntos de runa y {magicPointBoost} puntos de magia de la potenciación",
+        "resultMessageSuccess": "El conjuto tiene efecto, cuesta {runePointCost} puntos de runa y {magicPointBoost} puntos de magia de la potenciación",
+        "resultMessageFailure": "El conjuto falla y no se pierde ningún punto de runa. Si fue potenciado, solo se perderá 1 punto de magia",
+        "resultMessageFumble": "El conjuto falla y se pierden {runePointCost} puntos de runa. Si fue potenciado, solo se perderá 1 punto de magia",
+        "SpentOneUseRunePoints": "¡{actorName} ha gastado {runePoints} puntos de runa de un solo uso del culto {cultName}!",
+        "validationNotEnoughRunePoints": "¡No le quedan suficientes puntos de runa!",
+        "validationNotEnoughMagicPoints": "¡No le quedan suficientes puntos de magia para la potenciación elegida!",
+        "runeMagicResultFlavor": "Magia rúnica: {name}"
+      },
+      "weaponCard": {
+        "Damage": "Daño",
+        "damageRollType": {
+          "normal": "Normal",
+          "special": "Especial",
+          "maxSpecial": "Máx. especial"
+        },
+        "fumbleRoll": "Tirar pifia",
+        "hitLocationRoll": "Tirar localización",
+        "Modifier": "modificador"
+      }
     },
-    "ArmorType": {
-      "Hood":  "Capucha",
-      "BroadBrimmedHat": "Sombrero de ala ancha",
-      "Cap": "Gorro",
-      "CompositeHelm": "Yelmo compuesto",
-      "OpenHelm": "Yelmo abierto",
-      "ClosedHelm": "Yelmo cerrado",
-      "FullHelm": "Yelmo completo",
-      "Sleeves": "Mangas",
-      "Vambraces": "Brazales",
-      "Cuirass": "Coraza",
-      "Linothorax": "Linotórax",
-      "Hauberk": "Loriga",
-      "Segmented": "Segmentada",
-      "Skirt": "Falda",
-      "PantsTrews": "Pantalones/calzas",
-      "Greaves": "Grebas"
+    "Items": {
+      "Armor": {
+        "ArmorType": {
+          "Hood": "Capucha",
+          "BroadBrimmedHat": "Sombrero de ala ancha",
+          "Cap": "Gorro",
+          "CompositeHelm": "Yelmo compuesto",
+          "OpenHelm": "Yelmo abierto",
+          "ClosedHelm": "Yelmo cerrado",
+          "FullHelm": "Yelmo completo",
+          "Sleeves": "Mangas",
+          "Vambraces": "Brazales",
+          "Cuirass": "Coraza",
+          "Linothorax": "Linotórax",
+          "Hauberk": "Loriga",
+          "Segmented": "Segmentada",
+          "Skirt": "Falda",
+          "PantsTrews": "Pantalones/calzas",
+          "Greaves": "Grebas"
+        },
+        "ArmorMaterial": {
+          "Leather": "Cuero",
+          "HeavyLeather": "Cuero duro",
+          "StuddedLeather": "Cuero tachonado",
+          "BronzePlate": "Placas de bronce",
+          "BronzeSegmentedPlate": "Placas de bronce segmentada",
+          "BronzeDiscPlate": "Bezanteada",
+          "LightScale": "Escamas ligera",
+          "HeavyScale": "Escamas pesada",
+          "Cuirboilli": "Cuero hervido",
+          "RingMail": "Anillas",
+          "TurtleShell": "Caparazón",
+          "Quilted": "Acolchada",
+          "Linen": "Lino"
+        }
+      },
+      "Cult": {},
+      "EquippedStatus": {
+        "notCarried": "No cargado",
+        "carried": "Cargado",
+        "equipped": "Equipado"
+      },
+      "HitLocationType": {
+        "limb": "Extremidad",
+        "head": "Cabeza",
+        "chest": "Pecho",
+        "abdomen": "Abdomen"
+      },
+      "Skill": {
+        "SkillCategory": {}
+      },
+      "Weapon": {
+        "combatManeuver": {
+          "Throw": "Arrojar",
+          "Shoot": "Disparar",
+          "Thrust": "Punta",
+          "Cut": "Filo",
+          "Bash": "Golpe escudo",
+          "Parry": "Parada",
+          "Grapple": "Presa",
+          "Knockback": "Empujón"
+        }
+      }
     },
-    "ArmorMaterial" : {
-      "Leather": "Cuero",
-      "HeavyLeather": "Cuero duro",
-      "StuddedLeather": "Cuero tachonado",
-      "BronzePlate": "Placas de bronce",
-      "BronzeSegmentedPlate": "Placas de bronce segmentada",
-      "BronzeDiscPlate": "Bezanteada",
-      "LightScale": "Escamas ligera",
-      "HeavyScale": "Escamas pesada",
-      "Cuirboilli": "Cuero hervido",
-      "RingMail": "Anillas",
-      "TurtleShell": "Caparazón",
-      "Quilted": "Acolchada",
-      "Linen": "Lino"
+    "Game": {
+      "ComabatManeuver": {},
+      "DamageRollType": {},
+      "ResultEnum": {
+        "0": "Hipercrítico",
+        "1": "Crítico especial",
+        "2": "Crítico",
+        "3": "Especial",
+        "4": "Éxito",
+        "5": "Fallo",
+        "6": "Pifia"
+      },
+      "WeaponUsage": {
+        "oneHand": "1M",
+        "offHand": "Mtorpe",
+        "twoHand": "2M",
+        "missile": "Distancia"
+      }
     },
-    "CultRank": {
-      "layMember": "Miembro laico",
-      "initiate": "Iniciado",
-      "godTalker": "Portavoz divino",
-      "runePriest": "Sacerdote de las runas",
-      "runeLord": "Señor de las runas",
-      "chiefPriest": "Sacerdote principal",
-      "highPriest": "Sumo sacerdote"
-    },
-    "EquippedStatus":{
-      "notCarried":  "No cargado",
-      "carried":  "Cargado",
-      "equipped": "Equipado"
-    },
-    "SkillCategory": {
-      "agility": "Agilidad",
-      "communication": "Comunicación",
-      "knowledge": "Conocimiento",
-      "magic": "Magia",
-      "manipulation": "Manipulación",
-      "perception": "Percepción",
-      "stealth": "Sigilo",
-      "otherSkills": "Otras habilidades",
-      "meleeWeapons": "Armas cuerpo a cuerpo",
-      "missileWeapons": "Armas a distancia",
-      "shields": "Escudos",
-      "naturalWeapons": "Armas naturales"
-    },
-    "HitLocationType": {
-      "limb": "Extremidad",
-      "head": "Cabeza",
-      "chest": "Pecho",
-      "abdomen": "Abdomen"
-    },
-    "Homeland": {
-      "Heading": "Tierra natal",
-      "aggar": "Aggar",
-      "balazar": "Balazar",
-      "beastValley": "Valle de las Bestias",
-      "bilini": "Bilini",
-      "blackHorseCounty": "Condado del Caballo Negro",
-      "dagoriInkarth": "Dagori Inkarth",
-      "dragonPass": "Paso del Dragón",
-      "dryadWoods": "Bosques de las Dríadas",
-      "esrolia": "Esrolia",
-      "grazelands": "Los Pastizales",
-      "hendrikiland": "Tierra Hendriki",
-      "heortland": "Tierra Heortlinga",
-      "holay": "Holay",
-      "imither": "Imither",
-      "lunarTarsh": "Tarsh Lunar",
-      "oldTarsh": "Viejo Tarsh",
-      "prax": "Prax",
-      "sartar": "Sartar",
-      "shadowPlateau": "Meseta Sombría",
-      "stinkingForest": "Bosque Maloliente",
-      "trollWoods": "Bosque de los Troles",
-      "vansh": "Vansh",
-      "habitatChaosArea": "Hábitat: Cubil del Caos",
-      "habitatForest": "Hábitat: Bosque",
-      "habitatGlacier": "Hábitat: Glaciar",
-      "habitatMarshSwamp": "Hábitat: Pantano/marisma",
-      "habitatMountainsHills": "Hábitat: Montañas/colinas",
-      "habitatPlains": "Hábitat: Llanuras",
-      "habitatSky": "Hábitat: Cielo",
-      "habitatSpiritPlane": "Hábitat: Plano espiritual",
-      "habitatUnderground": "Hábitat: Bajo tierra",
-      "habitatWaterSea": "Hábitat: Agua/mar"
-    },
-    "Occupation": {
-      "Heading": "Ocupación",
-      "": " ",
-      "assistantShaman": "Aprendiz de chamán",
-      "chariotDriver": "Auriga",
-      "crafter": "Artesano",
-      "bandit": "Bandido",
-      "entertainer": "Artista",
-      "farmer": "Granjero",
-      "fisher": "Pescador",
-      "healer": "Sanador",
-      "herder": "Pastor",
-      "hunter": "Cazador",
-      "merchant": "Mercader",
-      "noble": "Noble",
-      "philosopher": "Filósofo",
-      "priest": "Sacerdote",
-      "scribe": "Escriba",
-      "thief": "Ladrón",
-      "warriorHeavyInfantry": "Guerrero infantería pesada",
-      "warriorLightInfantry": "Guerrero infantería ligera",
-      "warriorHeavyCavalry": "Guerrero caballería pesada",
-      "warriorLightCavalry": "Guerrero caballería ligera"
-    },
-    "combatManeuver": {
-      "Throw": "Arrojar",
-      "Shoot": "Disparar",
-      "Thrust": "Punta",
-      "Cut": "Filo",
-      "Bash": "Golpe escudo",
-      "Parry": "Parada",
-      "Grapple": "Presa",
-      "Knockback": "Empujón"
-    },
-    "usage": {
-      "oneHand": "1M",
-      "offHand": "Mtorpe",
-      "twoHand": "2M",
-      "missile": "Distancia"
-    },
-    "damageRollType": {
-      "normal": "Normal",
-      "special": "Especial",
-      "maxSpecial": "Máx. especial"
-    },
-    "modifier": "modificador",
-    "Damage": "Daño",
-    "fumbleRoll": "Tirar pifia",
-    "hitLocationRoll": "Tirar localización",
-    "Background": "Trasfondo",
-    "BaseData": "Información básica",
-    "BirthYear": "Año de nacimiento",
-    "Age": "Edad",
-    "Gender": "Género",
-    "Species": "Especie",
-    "Origin": "Origen",
-    "TownHomeArea": "Ciudad/tierra natal",
-    "Tribe": "Tribu",
-    "Clan": "Clan",
-    "Circumstance": "Otros datos",
-    "Reputation": "Reputación",
-    "StandardOfLiving": "Nivel de vida",
-    "BaseIncome": "Ingresos",
-    "Ransom": "Rescate",
-    "RansomDetails": "Detalles"
+    "Settings": {
+      "HitLocations": {
+        "dialogTitle": "Ajustes de nombres de localizaciones",
+        "settingName": "Nombres de localizaciones",
+        "settingLabel": "Configure los nombres de localizaciones disponibles",
+        "settingHint": "Los nombres de las localizaciones se usan en los menús desplegables en la cobertura de armaduras y cuando se pone nombre a una nueva localización",
+        "addLocationPlaceholder": "Añadir nueva localización"
+      },
+      "DefaultItemIcons": {
+        "dialogTitle": "Ajuste de iconos por defecto de objetos",
+        "settingName": "Iconos por defecto de objetos",
+        "settingLabel": "Configure los iconos por defecto para objetos nuevos",
+        "settingHint": "Ajuste los iconos por defecto cuando se creen nuevos objetos"
+      },
+      "RunesCompendium": {
+        "settingName": "Compendio de runas",
+        "settingHint": "El sistema usará las runas del compendio especificado. Incluya todas las runas en el compendio"
+      },
+      "FumbleRollTable": {
+        "settingName": "Tabla de pifias",
+        "settingHint": "Nombre de la tabla de pifias - se usará en combate"
+      },
+      "SpecialCrit": {
+        "settingName": "Resultados especiales e hipercríticos",
+        "settingHint": "*** Versión alfa - aún no implementado totalmente *** Añade los resultados de crítico especial (skill/100) e hipercrítico (skill/500)"
+      },
+      "MagicRuneName": {
+        "settingName": "Nombre de la runa Magia (condition)",
+        "settingHint": "Si un conjuro rúnica tiene esta runa, se considera \"Común\", y un aventurero podrá lanzarlo usando cualquiera de las runas asociadas con los puntos de runa que gasten"
+      },
+      "SystemMigrationVersion": {
+        "settingName": "Versión de migración de sistema",
+        "settingHint": "¡No toque esta opción a menos de que sepa exactamente lo que está haciendo!"
+      }
+    }
   }
 }
