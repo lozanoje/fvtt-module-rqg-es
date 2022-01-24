@@ -401,6 +401,71 @@
         "settingName": "Versión de migración de sistema",
         "settingHint": "¡No toque esta opción a menos de que sepa exactamente lo que está haciendo!"
       }
+    },
+    "scripts": {
+      "general": {
+        "roll": "Tirar",
+        "cancel": "Cancelar",
+        "select": "Seleccionar",
+        "type": "Tipo",
+        "ability": "Aptitud",
+        "modifier": "Modificador",
+        "characteristic": "Característica",
+        "charac": "Carac.",
+        "value": "Valor",
+        "actor": "Actor",
+        "errorselect": "Por favor, seleccione un icono",
+        "errortarget": "Por favor, marque un objetivo",
+        "erroractor": "No se han creado actores en este mundo",
+        "mod": "Mod.",
+        "rollp": "Tirada (%)",
+        "result": "Resultado"
+      },
+      "augmentingAbilities": {
+        "title": "Reforzar Aptitudes",
+        "augmenting": "Refuerzo",
+        "augmented": "Aumentada",
+        "augFlavour": "Usando <span style=\"font-weight: bold;color: brown\">{augName} ({augBase}%)</span> para reforzar. La tirada ha sido {augRoll}% sobre una aptitud modificada de {augValue}%, un {augLabel}",
+        "skillFlavour": "Tirando <span style=\"font-weight: bold;color: brown\">{skillName} ({skillBase}%)</span> reforzada con {augName}. La tirada ha sido {skillRoll}% sobre una aptitud modificada de {skillValue}%, un {skillLabel}",
+        "base": "Base",
+        "aug": "Ref."
+      },
+      "characteristicRolls": {
+        "title": "Tiradas de Característica (RQG)",
+
+        "difficulty": "Dificultad",
+        "difficultyEnum": {
+          "1": "Acción sencilla",
+          "2": "Fácil",
+          "3": "Moderada",
+          "4": "Difícil",
+          "5": "Muy difícil",
+          "6": "Casi imposible"
+        },
+        "flavourString": "Tirando <span style=\"font-weight: bold;color: brown\">{charNam} ({charVal} x {charMul})</span>. La tirada ha sido {charRoll}% sobre una probabilidad modificada de {charValue}%, un {charLabel}"
+      },
+      "hitlocationRolls": {
+        "title": "Tiradas de localizaciones de golpe (RQG)",
+        "baseString": "Localizaciones de golpe de",
+        "hitlocation": "Localización de golpe",
+        "contentFlavour": "Tirando {formRoll} para localización de golpe",
+        "contentString": "<hr>La tirada ha sido <span style=\"font-weight: bold;color: green\">{skillRoll}</span>, golpe en <span style=\"font-weight: bold;color: brown\">{locTable}</span>"
+      },
+      "opposedRolls": {
+        "title": "Tiradas Enfrentadas (RQG)",
+				"active": "Activo",
+				"pasive": "Pasivo",
+				"activeFlavour": "Tirada enfrentada, aptitud activa: <span style=\"font-weight: bold;color: brown\">{activeName} ({activeBase}%)</span> contra la aptitud pasiva: <span style=\"font-weight: bold;color: brown\">{pasiveName} ({pasiveBase}%)</span>",
+				"pasiveFlavour": "Resultado: <span style=\"font-weight: bold;color: brown\">{activeName} ({activeBase}%)</span> contra <span style=\"font-weight: bold;color: brown\">{pasiveName} ({pasiveBase}%)</span>",
+				"winner": "GANADOR",
+				"loser": "PERDEDOR",
+				"tie": "EMPATE"
+			},
+      "resistanceTable": {
+				"title": "Tabla de Resistencia (RQG)",
+				"target": "Objetivo",
+				"flavourString": "Tirando <span style=\"font-weight: bold;color: brown\">{charNam} ({charVal})</span> contra un objetivo de <span style=\"font-weight: bold;color: brown\">{charTar}</span>. La tirada ha sido {charRoll}% sobre una probabilidad modificada de {charValue}%, un {charLabel}"
+			}
     }
   }
 }

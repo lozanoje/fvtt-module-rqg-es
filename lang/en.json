@@ -397,6 +397,70 @@
         "settingName": "System Migration Version",
         "settingHint": "Do not touch this unless you really know what you are doing!"
       }
+    },
+    "scripts": {
+      "general": {
+        "roll": "Roll",
+        "cancel": "Cancel",
+        "select": "Select",
+        "type": "Type",
+        "ability": "Ability",
+        "modifier": "Modifier",
+        "characteristic": "Characteristic",
+        "charac": "Charac",
+        "value": "Value",
+        "actor": "Actor",
+        "errorselect": "Please SELECT a token first",
+        "errortarget": "Please TARGET a token first",
+        "erroractor": "No actors defined in the world",
+        "mod": "Mod",
+        "rollp": "Roll (%)",
+        "result": "Result"
+      },
+      "augmentingAbilities": {
+        "title": "Augmenting Abilities (RQG)",
+        "augmenting": "Augmenting",
+        "augmented": "Augmented",
+        "augFlavour": "Using <span style=\"font-weight: bold;color: brown\">{augName} ({augBase}%)</span> for augmentation. Rolled {augRoll}% on a modified skill of {augValue}%, a {augLabel}",
+        "skillFlavour": "Rolling <span style=\"font-weight: bold;color: brown\">{skillName} ({skillBase}%)</span> augmented with {augName}. Rolled {skillRoll}% on a modified skill of {skillValue}%, a {skillLabel}",
+        "base": "Base",
+        "aug": "Aug"
+      },
+      "characteristicRolls": {
+        "title": "Characteristic Rolls (RQG)",
+        "difficulty": "Difficulty",
+        "difficultyEnum": {
+          "1": "Simple action",
+          "2": "Easy",
+          "3": "Moderate",
+          "4": "Hard",
+          "5": "Very hard",
+          "6": "Nearly impossible"
+        },
+        "flavourString": "Rolling <span style=\"font-weight: bold;color: brown\">{charNam} ({charVal} x {charMul})</span>. Rolled {charRoll}% on a modified probability of {charValue}%, a {charLabel}"
+      },
+      "hitlocationRolls": {
+        "title": "Hit Location Rolls (RQG)",
+        "baseString": "Hit locations for",
+        "hitlocation": "Hit location",
+        "contentFlavour": "Rolling {formRoll} for localization.",
+        "contentString": "<hr>Rolled a <span style=\"font-weight: bold;color: green\">{skillRoll}</span>, a hit at the <span style=\"font-weight: bold;color: brown\">{locTable}</span>"
+      },
+      "opposedRolls": {
+        "title": "Opposed Rolls (RQG)",
+				"active": "Active",
+				"pasive": "Pasive",
+				"activeFlavour": "Opposed test, active ability: <span style=\"font-weight: bold;color: brown\">{activeName} ({activeBase}%)</span> versus pasive ability <span style=\"font-weight: bold;color: brown\">{pasiveName} ({pasiveBase}%)</span>",
+				"pasiveFlavour": "Results: <span style=\"font-weight: bold;color: brown\">{activeName} ({activeBase}%)</span> versus <span style=\"font-weight: bold;color: brown\">{pasiveName} ({pasiveBase}%)</span>",
+				"winner": "WINNER",
+				"loser": "LOSER",
+				"tie": "TIE"
+			},
+      "resistanceTable": {
+        "title": "Resistance Table (RQG)",
+				"target": "Target number",
+				"flavourString": "Rolling <span style=\"font-weight: bold;color: brown\">{charNam} ({charVal})</span> against a target number of <span style=\"font-weight: bold;color: brown\">{charTar}</span>. Rolled {charRoll}% on a modified probability of {charValue}%, a {charLabel}"
+			}
     }
   }
 }
