@@ -2,9 +2,9 @@
   "name": "rqg-babele-es",
   "title": "RQG Babele Spanish",
   "description": "Traducción de la implementación de RuneQuest Aventuras en Glorantha de xxxxx al español mediante babele",
-  "version": "1.120.2",
-  "minimumCoreVersion" : "0.8.6",
-  "compatibleCoreVersion":"0.8.9",
+  "version": "1.120.3",
+  "minimumCoreVersion" : "9",
+  "compatibleCoreVersion":"9",
   "author": "José E. Lozano (Viriato139ac)",
   "esmodules": ["babele-register.js"],
   "scripts": [],
@@ -18,7 +18,7 @@
     {
       "name": "rqg",
       "type": "system",
-      "version": "1.11.0"
+      "version": "1.12.0"
     }
   ],
     "packs": [
