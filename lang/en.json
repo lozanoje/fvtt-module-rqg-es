@@ -401,6 +401,7 @@
     "scripts": {
       "general": {
         "roll": "Roll",
+        "rolled": "Roll",
         "cancel": "Cancel",
         "select": "Select",
         "type": "Type",
@@ -415,7 +416,8 @@
         "erroractor": "No actors defined in the world",
         "mod": "Mod",
         "rollp": "Roll (%)",
-        "result": "Result"
+        "result": "Result",
+        "base": "Base"
       },
       "augmentingAbilities": {
         "title": "Augmenting Abilities (RQG)",
@@ -423,7 +425,6 @@
         "augmented": "Augmented",
         "augFlavour": "Using <span style=\"font-weight: bold;color: brown\">{augName} ({augBase}%)</span> for augmentation. Rolled {augRoll}% on a modified skill of {augValue}%, a {augLabel}",
         "skillFlavour": "Rolling <span style=\"font-weight: bold;color: brown\">{skillName} ({skillBase}%)</span> augmented with {augName}. Rolled {skillRoll}% on a modified skill of {skillValue}%, a {skillLabel}",
-        "base": "Base",
         "aug": "Aug"
       },
       "characteristicRolls": {
@@ -446,7 +447,8 @@
         "from": "from",
         "to": "to",
         "contentFlavour": "Rolling {formRoll} for localization.",
-        "contentString": "<hr>Rolled a <span style=\"font-weight: bold;color: green\">{skillRoll}</span>, a hit at the <span style=\"font-weight: bold;color: brown\">{locTable}</span>"
+        "contentString": "<hr>Rolled a <span style=\"font-weight: bold;color: green\">{skillRoll}</span>, a hit at the <span style=\"font-weight: bold;color: brown\">{locTable}</span>",
+        "ontheground": "Fall On the ground"
       },
       "opposedRolls": {
         "title": "Opposed Rolls (RQG)",

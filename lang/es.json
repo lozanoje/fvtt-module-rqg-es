@@ -405,6 +405,7 @@
     "scripts": {
       "general": {
         "roll": "Tirar",
+        "rolled": "Tirada",
         "cancel": "Cancelar",
         "select": "Seleccionar",
         "type": "Tipo",
@@ -419,7 +420,8 @@
         "erroractor": "No se han creado actores en este mundo",
         "mod": "Mod.",
         "rollp": "Tirada (%)",
-        "result": "Resultado"
+        "result": "Resultado",
+        "base": "Base"
       },
       "augmentingAbilities": {
         "title": "Reforzar Aptitudes",
@@ -427,7 +429,6 @@
         "augmented": "Aumentada",
         "augFlavour": "Usando <span style=\"font-weight: bold;color: brown\">{augName} ({augBase}%)</span> para reforzar. La tirada ha sido {augRoll}% sobre una aptitud modificada de {augValue}%, un {augLabel}",
         "skillFlavour": "Tirando <span style=\"font-weight: bold;color: brown\">{skillName} ({skillBase}%)</span> reforzada con {augName}. La tirada ha sido {skillRoll}% sobre una aptitud modificada de {skillValue}%, un {skillLabel}",
-        "base": "Base",
         "aug": "Ref."
       },
       "characteristicRolls": {
@@ -451,7 +452,8 @@
         "from": "de",
         "to": "a",
         "contentFlavour": "Tirando {formRoll} para localización de golpe",
-        "contentString": "<hr>La tirada ha sido <span style=\"font-weight: bold;color: green\">{skillRoll}</span>, golpe en <span style=\"font-weight: bold;color: brown\">{locTable}</span>"
+        "contentString": "<hr>La tirada ha sido <span style=\"font-weight: bold;color: green\">{skillRoll}</span>, golpe en <span style=\"font-weight: bold;color: brown\">{locTable}</span>",
+        "ontheground": "Caído en el suelo"
       },
       "opposedRolls": {
         "title": "Tiradas Enfrentadas (RQG)",
