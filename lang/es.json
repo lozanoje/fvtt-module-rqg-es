@@ -1,7 +1,7 @@
 {
   "I18N": {
     "LANGUAGE": "Español",
-    "MAINTAINERS": "rwanoux, Namergon, @ForjaSalvaje#2419, @Viriato139ac#0342"
+    "MAINTAINERS": "@Viriato139ac#0342"
   },
   "ITEM": {
     "TypeSkill": "Habilidad",
@@ -18,6 +18,30 @@
   },
   "RQG": {
     "Actor": {
+      "Attributes": {
+        "AlliesAndNotes": "Aliados y notas",
+        "StrikeRank": "Momento de reacción",
+        "SizeAbbr": "TAM",
+        "DexterityAbbr": "DES",
+        "MagicPoints": "Puntos de magia",
+        "CreatureQ": "¿Criatura?",
+        "MovementAbbr": "MOV",
+        "EncumbranceAbbr": "CRG",
+        "EncumbranceFactor": "Factor de CRG",
+        "HeroPoints": "Puntos de héroe",
+        "Health": {
+          "healthy": "Sano",
+          "wounded": "Herido",
+          "shock": "Conmocionado",
+          "unconscious": "Inconsciente",
+          "dead": "Muerto"
+        },
+        "MoveMode": {
+          "walk": "Andar",
+          "swim": "Nadar",
+          "fly": "Volar"
+        }
+      },
       "AwardExperience": {
         "GainedExperienceInfo": "{actorName} acaba de ganar una marca de experiencia en {itemName}!",
         "ItemDoesntHaveExperienceError": "Se ha intentado añadir una marca de experiencia al objeto \"{itemName}\" con id \"{itemId}\" que no tiene la propiedad \"hasExperience\"",
@@ -101,6 +125,8 @@
         }
       },
       "Characteristics": {
+        "Characteristic": "Característica",
+        "format": "{name} ({abbr})",
         "strength": "FUE",
         "constitution": "CON",
         "size": "TAM",
@@ -117,16 +143,97 @@
         "charisma-full": "Carisma"
       },
       "Combat": {
-        "StrDexMinsNotMetTip": "Character does not meet STR and/or DEX minimums for this weapon.  Use at half skill chance.",
-        "StrMinNotMetTip": "Character does not meet STR minimum for this weapon. Use at half skill chance.",
-        "DexMinNotMetTip": "Character does not meet DEX minimum for this weapon. STR over STR minimum can make up for this at two points of STR for one point of DEX, or use at half skill chance."
+        "DamageBonus": "Modificador al daño",
+        "StrDexMinsNotMetTip": "El personaje no cumple los requisitos de FUE y/o DES mínimas para usar esta arma. Se usará la habilidad a la mitad",
+        "StrMinNotMetTip": "El personaje no cumple el requisito de FUE mínima para usar esta arma. Se usará la habilidad a la mitad",
+        "DexMinNotMetTip": "El personaje no cumple el requisito de DES mínima para usar esta arma. Se puede compensar con la FUE extra por encima de la FUE mínima a razón de dos puntos de FUE por cada punto de DES requerido, en caso contrario se usará la habilidad a mitad",
+        "Weapon": "Arma",
+        "HP": "PG",
+        "Chance": "Probabilidad",
+        "Damage": "Daño",
+        "SR": "MR",
+        "Dodge": "Esquivar",
+        "SpiritCombat": "Combate espiritual",
+        "SpiritCombatDamage": "Daño en combate espiritual"
       },
       "Gear": {
+        "ViewByItemType": "Vista por tipo de objeto",
+        "ViewByLocation": "Vista por ubicación",
+        "Gear": "Equipo",
+        "Armor": "Armadura",
+        "Consumables": "Consumibles",
+        "Currency": "Dinero",
+        "WeaponsAndShields": "Armas y escudos",
         "CurrencyConversionTipOver1": "Un {name} equivale a {value} lunares",
         "CurrencyConversionTipLunar": "Lunares es la moneda de cambio estándar",
-        "CurrencyConversionTipUnder1": "Un lunar equivale a {value} {name}s."
+        "CurrencyConversionTipUnder1": "Un lunar equivale a {value} {name}s",
+        "Name": "Nombre",
+        "EncumbranceAbbr": "CRG",
+        "Location": "Ubicación",
+        "Price": "Coste",
+        "Total": "Total",
+        "QuantityAbbr": "Ud",
+        "ExtendedAbbr": "Ext",
+        "Skill": "Habilidad",
+        "Damage": "Daño",
+        "MinimumStrength": "FUE",
+        "MinimumDexterity": "DES",
+        "HitPointsAbbr": "PG",
+        "Absorbs": "Absorbe",
+        "HitLocations": "Localizaciones de golpe",
+        "MoveQuietlyPenalty": "- Moverse en silencio"
+      },
+      "Health": {
+        "Health": "Salud",
+        "TotalHitPoints": "PGs totales",
+        "HealingRatePerWeek": "Ritmo de curación {healingRate}/semana",
+        "HitLocation": "Localización de golpe",
+        "HitPointsAbbr": "PG",
+        "ArmorPointsAbbr": "PA",
+        "Wounds": "Heridas",
+        "HealWound": "Curar herida",
+        "AddWound": "Añadir herida"
+      },
+      "Nav": {
+        "Combat": "Combate",
+        "Runes": "Runas",
+        "SpiritMagic": "Magia espiritual",
+        "RuneMagic": "Magia rúnica",
+        "Sorcery": "Hechicería",
+        "Skills": "Habilidades",
+        "Gear": "Equipo",
+        "Passions": "Pasiones",
+        "Background": "Trasfondo",
+        "ActiveEffects": "EA 🧪"
+      },
+      "Passion": {
+        "Passions": "Pasiones",
+        "BackStory": "Historia"
+      },
+      "Rune": {
+        "Condition": "Condición",
+        "Elemental": "Elemental",
+        "Form": "Forma",
+        "Power": "Poder"
       },
       "RuneMagic": {
+        "EditRuneMagicSpellTitle": "Editar conjuro rúnico",
+        "DeleteRuneMagicSpellTitle": "Borrar conjuro rúnico",
+        "ChooseCultForRuneSpell": "Elegir culto del conjuro rúnico {name}",
+        "CultRankLabel": "Rango en el culto:",
+        "RunePoints": "Puntos de runa:",
+        "Gifts": "Dones:",
+        "Geases": "Geas:",
+        "SubCults": "Subcultos:",
+        "RuneSpell": "Conjuro rúnico",
+        "Points": "Puntos",
+        "Range": "Alcance",
+        "Duration": "Duración",
+        "Ritual": "Ritual",
+        "Enchantment": "Encantamiento",
+        "Stackable": "Apilable",
+        "OneUse": "Un solo uso",
+        "Chance": "Probabilidad",
         "CultRank": {
           "layMember": "Miembro laico",
           "initiate": "Iniciado",
@@ -138,6 +245,7 @@
         }
       },
       "Skills": {
+        "SkillDescriptionTitle": "Descripción de la habilidad",
         "SkillCategory": {
           "agility": "Agilidad",
           "communication": "Comunicación",
@@ -153,13 +261,98 @@
           "naturalWeapons": "Armas naturales"
         }
       },
-      "Occupation": {}
+      "Sorcery": {
+        "FreeINT": "INT libre",
+        "Techniques": "Técnicas",
+        "MasteredRunes": "Runas dominadas"
+      },
+      "SpiritMagic": {
+        "SpiritMagic": "Magia espiritual",
+        "CHALimitFormula": "{points} puntos de magia espiritual con límite de CAR {CHALimit}",
+        "Name": "Nombre",
+        "Points": "Puntos",
+        "Variable": "Variable",
+        "Range": "Alcance",
+        "Duration": "Duración",
+        "Concentration": "Concentración",
+        "Ritual": "Ritual",
+        "Enchantment": "Encantamiento"
+      }
+    },
+    "ContextMenu": {
+      "ImproveItem": "Mejorar {itemType}",
+      "EditItem": "Editar {itemType}",
+      "DeleteItem": "Borrar {itemType}",
+      "ToggleExperience": "Conmutar experiencia",
+      "InitializeCharacteristic": "Inicializar característica",
+      "InitializeAllCharacteristics": "Inicializar todas las característica",
+      "InitializeResultCard": "Inicializar {char}",
+      "OverwriteCharacteristicDialogTitle": "Sobrescribir {characteristicName} de {actorName}?",
+      "OverwriteCharacteristicDialog": "¿Desea sobrescribir el valor actual de {characteristicName}? Esto hará que se recalculen los valores derivados, como los PG, PM, MR y las categorías de habilidades que dependan de {characteristicName}.",
+      "OverwriteAllCharacteristicsDialogTitle": "¿Sobrescribir todas las características de {actorName}?",
+      "OverwriteAllCharacteristicsDialog": "¿Desea sobrescribir el valor actual de todas las características? Esto hará que se recalculen los valores derivados, como los PG, PM, MR y las categorías de habilidades",
+      "ViewDescription": "Ver descripción",
+      "SetAsNotCarried": "Establecer a no cargado",
+      "SetAsCarried": "Establecer a cargado",
+      "SetAsEquipped": "Establecer a equipado",
+      "SplitIntoNewLocation": "Dividir en una nueva ubicación",
+      "EditPassionBackstory": "Editar trasfondo de pasión",
+      "Notification": {
+        "DatasetNotFound": "No se ha encontrado el dataset de la característica",
+        "CharacteristicNotFound": "No se ha encontrado el nombre de característica \"{characteristicName}\" en el actor {actorName} para realizar la acción desde el menú contextual de características",
+        "CantShowWeaponChatCardError": "No se ha encontrado el skillId [{skillItemId}] o weaponId [{weaponItemId}] en el actor ${actorName} con el para mostar la tarjeta del chat desde el menú contextual de combate",
+        "CantToggleExperienceError": "No se ha encontrado el itemId [{itemId}] en el actor {actorName} para conmutar la marca de experiencia desde el menú contextual de combate",
+        "CantShowItemSheetError": "No se ha encontrado el itemId [{skillItemId}] en el actor {actorName} con el que mostrar la hoja de habilidad desde el menú contextual de combate",
+        "CantShowWeaponSheetError": "No se ha encontrado el itemId [{weaponItemId}] en el actor {actorName} con el que mostrar la hoja de objeto desde el menú contextual de combate",
+        "CantDeleteSkillError": "No se ha encontrado el itemId [{skillItemId}] en el actor {actorName} para borrar el objeto desde el menú contextual de combate",
+        "CantDeleteWeaponError": "No se ha encontrado el itemId [{weaponItemId}] en el actor {actorName} para borrar el arma desde menú contextual de combate",
+        "CantShowJournalDescriptionError": "No se ha encontrado el journal Id [{journalId}] en el actor {actorName} con el que mostrarlo desde el menú contextual de culto",
+        "CantEditCultError": "`No se ha encontrado el itemId [{itemId}] en el actor {actorName} con el que editar el culto desde el menú contextual de culto",
+        "CantEditGearError": "No se ha encontrado el gear with itemId [{itemId}] en el actor {actorName} con el que editar el objeto desde el menú contextual de equipo",
+        "CantEditHitLocationError": "No se ha encontrado el itemId [{itemId}] en el actor {actorName} con el que editar localización desde el menú contextual de salud",
+        "CantDirectRollPassionError": "No se ha encontrado el itemId [{itemId}] o probabilidad del objeto (item.data.data.chance) en el actor {actorName} para realizar una tirada directa de pasión desde el menú contextual de pasión`",
+        "CantToggleExperiencePassionError": "No se ha encontrado el itemId [{itemId}] en el actor {actorName} con el que conmutar marca de experiencia en la pasión desde el menú contextual de pasión.",
+        "CantImprovePassionError": "No se ha encontrado el itemId [{itemId}] en el actor {actorName} para mejorar pasión desde el menú contextual de pasión",
+        "CantEditPassionError": "No se ha encontrado el itemId [{itemId}] en el actor {actorName} para editar una pasión desde el menú contextual de pasión",
+        "CantEditRuneError": "No se ha encontrado el itemsheet [{itemId}] en el actor {actorName} para editar una runa desde el menú contextual de runa",
+        "CantRollQuickSkillError": "El objeto [{itemId}] del actor {actorName} no puede realizar una tirada directa de la habilidad desde el menú contextual de habilidad",
+        "CantEditSpiritMagicError": "No se ha encontrado el itemSheet de [{itemId}] en el actor {actorName} para editar el conjuro espiritual desde el menú contextual de magia espiritual"
+      }
     },
     "Dialog": {
       "Common": {
+        "yes": "sí",
+        "no": "no",
         "btnCancel": "Cancelar",
         "btnConfirm": "Confirmar",
-        "OtherModifiers": "Otros modificadores:"
+        "OtherModifiers": "Otros modificadores:",
+        "RollFormat": "Tirada ({chance}%)",
+        "CantFindChatMessageError": "CantFindChatMessageError",
+        "CantFindActorToDoRollFromChatCardWarn": "¡No se ha encontrado el actor con el que hacer la tirada de esta tarjeta del chat!"
+      },
+      "characteristicCard": {
+        "CardWithoutActorIdError": "Se ha pedido la tarjeta de característica de un actor sin id",
+        "CardFlavor": "Característica: {name} ({value})",
+        "RollFlavor": "Tirada {name} {difficulty}",
+        "RollFlavorModifier": "<br/>Con otros modificadores {modifier}"
+      },
+      "itemCard": {
+        "RollFlavor": "Tirada {name}",
+        "RollFlavorModifier": "<br/>Con otros modificadores {modifier}"
+      },
+      "reputationCard": {
+        "CheckReputationFlavor": "Tirada de reputación",
+        "Reputation": "Reputación"
+      },
+      "spiritMagicCard": {
+        "CardWithoutActorIdError": "Se ha pedido la tarjeta de conjuro espiritual de un actor sin id",
+        "CantCastSpellAboveLearnedLevel": "No se puede lanzar un conjuro por encima del nivel aprendido",
+        "NotEnoughMagicPoints": "Sin puntos de magia suficientes para lanzar el conjuro",
+        "SuccessfullyCastInfo": "Lanzamiento con éxito del conjuro espiritual, se han usado {amount} puntos de magia",
+        "CardFlavor": "Magia espiritual: {name}",
+        "Cast": "Lanzamiento {spellName}",
+        "Level": "Nivel",
+        "Boost": "Potenciación"
       },
       "confirmItemDeleteDialog": {
         "title": "Borrar {itemType}: {itemName}",
@@ -270,7 +463,8 @@
         "SpentOneUseRunePoints": "¡{actorName} ha gastado {runePoints} puntos de runa de un solo uso del culto {cultName}!",
         "validationNotEnoughRunePoints": "¡No le quedan suficientes puntos de runa!",
         "validationNotEnoughMagicPoints": "¡No le quedan suficientes puntos de magia para la potenciación elegida!",
-        "runeMagicResultFlavor": "Magia rúnica: {name}"
+        "runeMagicResultFlavor": "Magia rúnica: {name}",
+        "Cast": "Lanzamiento {spellName}"
       },
       "weaponCard": {
         "Damage": "Daño",
@@ -281,11 +475,39 @@
         },
         "fumbleRoll": "Tirar pifia",
         "hitLocationRoll": "Tirar localización",
-        "Modifier": "modificador"
+        "Modifier": "Modificador",
+        "CantFindSkillError": "No se ha encontrado habilidad con itemId [{skillId}] en el actor {actorName} con el que mostrar la tarjeta del chat de arma",
+        "CantFindActorWarn": "No se ha encontrado el actor en este mundo con el que realizar la acción",
+        "UsedLastOfAmmoWarn": "Acaba de usar el último de tus {projectileName}!",
+        "OutOfAmmoWarn": "No dispone de más {projectileName} para {combatManeuverName}!",
+        "CantFindChatMessageError": "No se ha podido encontrar el mensaje en el chat",
+        "HitLocationRollFlavor": "Tirada de localización",
+        "UnknownButtonInCardError": "Botón desconocido \"{actionButton}\" en la tarjeta del chat de arma",
+        "WeaponCardFlavor": "Arma: {weaponName}",
+        "NoCombatManeuverInDamageRollError": "Sin maniobra de combate en la tirada de daño",
+        "CantFindActorToDoDamageRollWarn": "No se ha podido encontrar el actor en el mundo con el que tirar el daño",
+        "WeaponDoesNotHaveCombatManeuverError": "El arma no tiene esa maniobra de combate",
+        "WeaponDoesNotHaveAttachManeuverError": "El arma llamada \"{weaponName}\" no tiene una maniobra de combate ofensiva",
+        "WeaponDamageTag": "arma",
+        "DamageBonusDamageTag": "modificador al daño",
+        "CrushSpecialDamageTag": "especial aplastamiento",
+        "ImpaleSpecialDamageTag": "especial empalamiento",
+        "FumbleTableMissingWarn": "No se ha encontrado la tabla de pifias \"{fumbleTableName}\"",
+        "PluralResults": "{numberOfResults} resultados",
+        "SingularResult": "un resultado",
+        "FumbleResultFlavor": "Extrayendo {numberOfResults} de la tabla {fumbleTableName}"
       }
     },
     "Items": {
       "Armor": {
+        "NamePrefix": "Prefijo del nombre",
+        "ArmorTypeLabel": "Tipo de armadura",
+        "Material": "Material",
+        "HitLocations": "Localizaciones",
+        "AddNewCoveredHitLocationPlaceholder": "Añadir nueva localización cubierta",
+        "Absorbs": "Absorbe",
+        "MoveQuietlyPenalty": "Penalización a moverse en silencio",
+        "FitsSIZ": "Sirve para TAM",
         "ArmorType": {
           "Hood": "Capucha",
           "BroadBrimmedHat": "Sombrero de ala ancha",
@@ -320,11 +542,77 @@
           "Linen": "Lino"
         }
       },
-      "Cult": {},
+      "Cult": {
+        "CultNamePlaceholder": "Nombre del culto",
+        "CultTaglinePlaceholder": "Lema del culto",
+        "AddNewRunePlaceholder": "Añadir nueva runa",
+        "HolyDays": "Días sagrados Days",
+        "RunePoints": "Puntos de runa",
+        "ActorsGifts": "Dones del actor",
+        "ActorsGeases": "Geas del actor",
+        "ActorsSubCults": "Subcultos del actor"
+      },
       "EquippedStatus": {
         "notCarried": "No cargado",
         "carried": "Cargado",
         "equipped": "Equipado"
+      },
+      "Gear": {
+        "Name": "Nombre",
+        "EncumbranceAbbr": "CRG",
+        "PriceReal": "Precio (real)",
+        "PriceEstimated": "Precio (estimado)",
+        "Location": "Ubicación",
+        "AttunedTo": "En sintonía con",
+        "Quantity": "Cantidad",
+        "Description": "Descripción",
+        "GMNotes": "Notas GM",
+        "IsContainerQ": "¿Es contenedor?",
+        "LunarsAbbr": "L",
+        "HitPointsAbbr": "PG",
+        "CurrentHitPoints": "PG actuales",
+        "HitPointLocation": "Localización de PG",
+        "PhysicalItemType": {
+          "unique": "Único",
+          "currency": "Moneda",
+          "consumable": "Consumible"
+        }
+      },
+      "HitLocation": {
+        "Name": "Nombre",
+        "HealthStatus": "Estado de salud",
+        "ActAs": "Actúa como",
+        "ForDamageCalculations": "para el cálculo de daño",
+        "ConnectedTo": "Conectado con",
+        "HitLocationOn": "Localización en",
+        "NaturalArmorPoints": "PA natural",
+        "BaseHPDelta": "Delta PG base (+/- de los PG de localización base)",
+        "AddWound": {
+          "Title": "Aplicar herida a {hitLocationName}",
+          "ApplyToTotalHitPointsQ": "¿Aplicar a los PG totales?",
+          "SubtractArmorPointsQ": "¿Restar PA?",
+          "btnAddWound": "Añadir herida"
+        },
+        "AddWoundChatContent": "{actorName} recibe una herida en {hitLocationName}. {notification}",
+        "HealWound": {
+          "Title": "Curar herida en {hitLocationName}",
+          "SelectWoundToHeal": "Seleccione la herida que quiere curar en {hitLocationName}",
+          "HitPointsToHeal": "PG curados: ",
+          "btnHealWound": "Curar herida"
+        },
+        "HealthStatusEnum": {
+          "healthy": "Sano",
+          "wounded": "Herido",
+          "useless": "Incapacitada",
+          "severed": "Amputada"
+        },
+        "Notification": {
+          "CantFindHitLocation": "No se ha podido encontrar localización con itemId [{hitLocationItemId}] en el actor ${actorName} con el que mostrar la tarjeta de chat de heridas",
+          "HitLocationDoesNotHaveCalculatedArmor": "La localización {hitLocationName} no tiene un campo calculado de PA totales",
+          "NoValueOnHitLocation": "No existe el valor en la localización ${hitLocationName}",
+          "NoMaxOnHitLocation": "Sin máximo en la localización ${hitLocationName}",
+          "NoActorOnTokenWarn": "Sin actor en el icono"
+        }
       },
       "HitLocationType": {
         "limb": "Extremidad",
@@ -332,10 +620,162 @@
         "chest": "Pecho",
         "abdomen": "Abdomen"
       },
+      "Notification": {
+        "CircularGearLocationWarning": "Referencia circular en ubicación de equipo (A en B en A) - compruebe la ubicación: {itemLocation}",
+        "ItemIsNotContainerWarning": "{itemName} no es un contenedor",
+        "CantFindRootLocationNode": "No se ha podido encontrar el nodo raíz de la localización",
+        "LocationDidntFindItem": "no se ha encontrado el objeto en la ubicación",
+        "ExpectedCultItemError": "Se esperaba un culto",
+        "CantFindRunesCompendiumError": "No se ha podido encontrar el compendio de runas {runesCompendiumName}",
+        "CantFindCultRuneError": "No se ha podido encontrar la runa de culto {newRune} entre allRunesIndex",
+        "CantFindRuneInAllRunesCompendiumError": "No se ha podido encontrar la runa en el compendio",
+        "ItemWasNotHitLocationError": "Se ha llamado a hitLocation#onActorPrepareEmbeddedEntities sobre un objeto sin hitLocation",
+        "HitLocationDoesNotHaveActorError": "La localización no tiene un actor asociado",
+        "ActorDoesNotHaveMaxHpError": "El actor no tiene PG máximos",
+        "OpposingRuneDoesNotExistWarning": "La runa opuesta no existe",
+        "WrongItemTypeRuneMagicError": "RQG | itemtype incorrecto o sin objeto incrustrado en el actor PrepareEmbeddedEntities",
+        "ActorDoesNotHaveCultOnRuneMagicWarning": "RQG | El culto al que se hace referencia en la habilidad mágica ${item.name} no existe en el actor ${actor.name}",
+        "PrepareDerivedDataNotSkillError": "Se ha llamado a Skill#onActorPrepareDerivedData con algo que no es una habilidad",
+        "ActorNotCharacterError": "El actor no es del tipo personaje",
+        "CantFindWeaponSkillWarning": "No se ha podido encontrar la habilidad de armas",
+        "NoWeaponSkillFromSkillOriginWarning": "No se ha podido encontrar la habilidad de armas del skillOrigin \"{skillOrigin}\".",
+        "CantFindSkillAssociatedWithWeaponWarning": "No se ha podido encontrar la habilidad asociada con este arma",
+        "CantCreateActiveEffect": "No se puede crear el efecto activo",
+        "NoIdOnTokenError": "Sin ID en el icono",
+        "NoIdOnActorError": "Sin ID en el actor",
+        "ItemWithIdDoesNotHaveChanceError": "No se ha podido encontrar el objeto con ID {itemId} en el actor {actorName} con el que mostrar la tarjeta del chat",
+        "CouldNotFindActorByIdsWarn": "No se ha podido encontrar el actor con actor ID {actorId} ni el tokenID {tokenId} para realizar la tirada de atributo"
+      },
+      "Passion": {
+        "Name": "Nombre",
+        "Passion": "Pasión",
+        "Subject": "Objeto",
+        "Chance": "Probabilidades",
+        "Experience": "Experiencia",
+        "BackStory": "Trasfondo",
+        "PassionEnum": {
+          "Ambition": "Ambición",
+          "Cowardly": "Cobardía",
+          "Devotion": "Devoción",
+          "Fear": "Miedo",
+          "Hate": "Odio",
+          "Honor": "Honor",
+          "Loyalty": "Lealtad",
+          "Love": "Amor",
+          "Gluttony": "Gula",
+          "Vanity": "Vanidad"
+        }
+      },
+      "Rune": {
+        "Name": "Nombre",
+        "Rune": "Runa",
+        "Type": "Tipo",
+        "HasExperienceQ": "¿Tiene experiencia?",
+        "OpposingRune": "Runa opuesta",
+        "MinorRunes": "Runa menor",
+        "MasteredSorceryQ": "¿Dominada (hechicería)?",
+        "RuneType": {
+          "element": "Elemental",
+          "power": "Poder",
+          "form": "Forma",
+          "condition": "Condición",
+          "technique": "Técnica"
+        }
+      },
+      "RuneMagic": {
+        "Range": "Alcance",
+        "Duration": "Duración",
+        "StackableQ": "¿Apilable?",
+        "OneUseQ": "¿Único uso?",
+        "Cult": "Culto",
+        "Runes": "Runas:",
+        "AddNewRunePlaceholder": "Añadir nueva runa",
+        "runeMagicCultDialog": {
+          "title": "¿A qué culto pertenece este conjuro rúnico?",
+          "btnAddRuneMagic": "Añadir conjuro rúnico",
+          "Actor": "Actor:",
+          "RuneMagic": "Conjuro rúnico:"
+        }
+      },
       "Skill": {
+        "Name": "Nombre",
+        "SkillName": "Nombre de la habilidad",
+        "Specialization": "Especialización",
+        "Category": "Categoría",
+        "CategoryModifier": "Modificacor de categoría",
+        "BaseChance": "Probabilidad base",
+        "LearnedChance": "Propabilidad aprendizaje",
+        "Chance": "Probabilidad",
+        "CanGainExperienceQ": "¿Puede ganar experiencia?",
+        "HasExperienceQ": "¿Tiene experiencia?",
+        "SorceryRunes": "Runas de hechicería:",
+        "Notification": {
+          "CantFindSkillJournalEntryError": "No se ha podido encontrar el diaro con el que quiere enlazar la hoja {skillName}",
+          "CanOnlyDropJournalEntryWarning": "Solo puede soltar una entrada de diario en la hoja de habilidad"
+        },
         "SkillCategory": {}
       },
+      "Spell": {
+        "RitualQ": "¿Ritual?",
+        "EnchantmentQ": "¿Encantamiento?",
+        "DurationEnum": {
+          "": "Ninguno",
+          "instant": "Instantáneo",
+          "temporal": "Temporal",
+          "focused": "Foco",
+          "permanent": "Permanente",
+          "special": "Especial"
+        },
+        "RangeEnum": {
+          "": "Ninguno",
+          "self": "Personal",
+          "touch": "Toque",
+          "ranged": "Alcance",
+          "special": "Especial"
+        },
+        "ConcentrationEnum": {
+          "": "",
+          "active": "Activo",
+          "passive": "Pasivo"
+        }
+      },
+      "SpiritMagic": {
+        "VariableQ": "¿Variable?",
+        "Range": "Alcance",
+        "Duration": "Duración",
+        "Concentration": "Concentración",
+        "SpellFocus": "Foco del hechizo:",
+        "MatrixIndicator": "(En una matriz)",
+        "MatrixQ": "¿En una matriz?",
+        "LinkedToCompendium": "Enlazado con la entrada [{journalName}] del compendio [{compendium}]"
+      },
       "Weapon": {
+        "UsesOfWeaponHeader": "Usos del arma",
+        "DropSkillToChange": "(Arrastre una habilidad sobre el arma para cambiar)",
+        "DropSkillToAdd": "¡Suelte una habilidad sobre este arma!",
+        "Damage": "Daño",
+        "MinimumStrengthAbbr": "FUE mín",
+        "MinimumDexterityAbbr": "DES mín",
+        "StrikeRankAbbr": "MR",
+        "CombatManeuversHeader": "Maniobras de combate",
+        "ActionLabel": "Etiqueta de acción",
+        "DamageType": "Tipo de daño",
+        "DamageTypeEnum": {
+          "impale": "Empalamiento",
+          "slash": "Tajo",
+          "crush": "Aplastamiento",
+          "parry": "Parada",
+          "special": "Especial"
+        },
+        "NaturalWeaponQ": "¿Arma natural?",
+        "ThrownWeaponQ": "¿Arma arrojadiza? (mod. daño a la mitad)",
+        "ProjectileWeaponQ": "¿Arma de proyectiles? (sin mod. daño, usa los proyectiles asociados)",
+        "RangedWeaponQ": "¿Arma a distancia? (sin mod. daño, sin proyectiles)",
+        "ProjectileQ": "¿Proyectiles? (munición)",
+        "Projectile": "Proyectiles",
+        "Range": "Alcance",
+        "Rate": "Tasa",
+        "SameDataAsOneHand": "Los mismos datos que a una mano",
         "combatManeuver": {
           "Throw": "Arrojar",
           "Shoot": "Disparar",
@@ -348,9 +788,31 @@
         }
       }
     },
+    "Foundry": {
+      "ActiveEffect": {
+        "Header": "🐛Efectos activos🧪",
+        "AddEffectTitle": "Añadir efecto",
+        "Label": "Etiqueta",
+        "Disabled": "Deshabilitado",
+        "StartTime": "Tiempo inicio",
+        "KeyValueMode": "Clave - Valor - Modo",
+        "NewActiveEffectName": "Nuevo efecto activo"
+      },
+      "CombatTracker": {
+        "DuplicateCombatant": "Duplicar contendiente",
+        "UpdateCombatant": "Actualizar contendiente",
+        "RemoveCombatant": "Quitar contendiente",
+        "RemoveAllDuplicates": "Quitar todos los duplicados"
+      },
+      "ContentLink": {
+        "CompendiumNameTitle": "Compendio [{compendiumName}]",
+        "WorldJournalEntry": "Entrada del diario en el mundo",
+        "DropToConnectJournal": "Arraste un diario a este objeto para conectarlo con una descripción",
+        "DropToReplaceJournal": "Arrastre un diario a este objeto para reemplazar la descripción"
+      }
+    },
     "Game": {
-      "ComabatManeuver": {},
-      "DamageRollType": {},
+      "MeleeRoundAbbr": "AC",
       "ResultEnum": {
         "0": "Hipercrítico",
         "1": "Crítico especial",
@@ -360,12 +822,27 @@
         "5": "Fallo",
         "6": "Pifia"
       },
+      "RollCard": "Tirar con tarjeta (click)",
+      "RollQuick": "Tirada directa (dbl click)",
+      "RollCharacteristicQuick": "Tirada directa *5 (dbl click)",
+      "RollTitle": "Tirar con tarjeta (clic), tirada directa (doble clic)",
       "WeaponUsage": {
         "oneHand": "1M",
         "offHand": "Mtorpe",
         "twoHand": "2M",
         "missile": "Distancia"
+      },
+      "RollDifficulty": {
+        "0": "Casi imposible (*0.5)",
+        "1": "Muy difícil (*1)",
+        "2": "Difícil (*2)",
+        "3": "Moderada (*3)",
+        "4": "Fácil (*4)",
+        "5": "Acción sencilla (*5)"
       }
+    },
+    "Notification": {
+      "Error": {}
     },
     "Settings": {
       "HitLocations": {
