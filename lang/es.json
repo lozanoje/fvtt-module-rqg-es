@@ -802,7 +802,8 @@
         "DuplicateCombatant": "Duplicar contendiente",
         "UpdateCombatant": "Actualizar contendiente",
         "RemoveCombatant": "Quitar contendiente",
-        "RemoveAllDuplicates": "Quitar todos los duplicados"
+        "RemoveAllDuplicates": "Quitar todos los duplicados",
+        "CombatantWithoutActor": "El contendiente \"{combatantName}\" hace referencia a un actor que ya no existe en el mundo"
       },
       "ContentLink": {
         "CompendiumNameTitle": "Compendio [{compendiumName}]",
