@@ -4,16 +4,18 @@
     "MAINTAINERS": "@Viriato139ac#0342"
   },
   "ITEM": {
-    "TypeSkill": "Habilidad",
+    "TypeArmor": "Armadura",
+    "TypeCult": "Culto",
+    "TypeGear": "Equipo",
+    "TypeHitlocation": "Localización",
     "TypePassion": "Pasión",
     "TypeRune": "Runa",
-    "TypeHitlocation": "Localización",
-    "TypeGear": "Equipo",
-    "TypeArmor": "Armadura",
-    "TypeWeapon": "Arma",
-    "TypeSpiritmagic": "Conjuro de magia espiritual",
-    "TypeCult": "Culto",
     "TypeRunemagic": "Conjuro rúnico",
+    "TypeShamanicability": "Aptitud chamánica",
+    "TypeSkill": "Habilidad",
+    "TypeSorcerymagic": "Conjuro de hechicería",
+    "TypeSpiritmagic": "Conjuro de magia espiritual",
+    "TypeWeapon": "Arma",
     "TypeReputation": "Reputación"
   },
   "RQG": {
@@ -244,7 +246,7 @@
           "highPriest": "Sumo sacerdote"
         }
       },
-      "Skills": {
+      "Skill": {
         "SkillDescriptionTitle": "Descripción de la habilidad",
         "SkillCategory": {
           "agility": "Agilidad",
@@ -365,14 +367,14 @@
         "header": "Mejorando {name}",
         "fromExperience": ". . . con la experiencia",
         "chanceToGain": "{chanceToGain}% porcentaje de ganar:",
-        "experiencGainFixed": "Ganancia 3%",
-        "experiencGainRandom": "Ganancia 1d6%",
+        "experienceGainFixed": "Ganancia 3%",
+        "experienceGainRandom": "Ganancia 1d6%",
         "noExperienceCheckTitle": "Sin marca de experiencia",
         "noExperienceCheckExplanation": "Este personaje no tiene ninguna marca de experiencia en {typeLocName} y no podrá mejorarse con la experiencia",
         "throughTraining": ". . . con el entrenamiento",
         "afterTraining": "Tras el entrenamiento:",
         "gain": "Ganancia {gain}%",
-        "gainchar": "Ganancia {gain}",
+        "gainChar": "Ganancia {gain}",
         "throughResearch": ". . . con la investigación",
         "skillOver75Title": "Habilidad por encima de 75%",
         "skillOver75Explanation": "No puede entrenar habilidades con un valor por encima de 75%",
@@ -416,7 +418,7 @@
           "noExperience": "{actorName} no tiene una marca de experiencia en {typeLocName} \"{name}\" y no puede ganar experiencia"
         }
       },
-      "RuneMagicCard": {
+      "runeMagicCard": {
         "MissingJournalLinkTitle": "Edite el hechizo y añada una descripción para tener un enlace a un diario aquí",
         "CastUsingRune": "Lanzando usando la runa:",
         "RuneHasExperienceTitle": "Tiene marca de experiencia",
@@ -498,7 +500,7 @@
         "FumbleResultFlavor": "Extrayendo {numberOfResults} de la tabla {fumbleTableName}"
       }
     },
-    "Items": {
+    "Item": {
       "Armor": {
         "NamePrefix": "Prefijo del nombre",
         "ArmorTypeLabel": "Tipo de armadura",
@@ -644,7 +646,9 @@
         "NoIdOnTokenError": "Sin ID en el icono",
         "NoIdOnActorError": "Sin ID en el actor",
         "ItemWithIdDoesNotHaveChanceError": "No se ha podido encontrar el objeto con ID {itemId} en el actor {actorName} con el que mostrar la tarjeta del chat",
-        "CouldNotFindActorByIdsWarn": "No se ha podido encontrar el actor con actor ID {actorId} ni el tokenID {tokenId} para realizar la tirada de atributo"
+        "CouldNotFindActorByIdsWarn": "No se ha podido encontrar el actor con actor ID {actorId} ni el tokenID {tokenId} para realizar la tirada de atributo",
+        "CanOnlyDropJournalEntryWarning": "Solo puede arrastrar una entrada de diario en una hoja del tipo {itemType}",
+        "ErrorParsingItemData": "Error procesando datos del objeto"
       },
       "Passion": {
         "Name": "Nombre",
