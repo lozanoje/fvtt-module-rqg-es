@@ -714,8 +714,7 @@
         "HasExperienceQ": "¿Tiene experiencia?",
         "SorceryRunes": "Runas de hechicería:",
         "Notification": {
-          "CantFindSkillJournalEntryError": "No se ha podido encontrar el diaro con el que quiere enlazar la hoja {skillName}",
-          "CanOnlyDropJournalEntryWarning": "Solo puede soltar una entrada de diario en la hoja de habilidad"
+          "CantFindSkillJournalEntryError": "No se ha podido encontrar el diaro con el que quiere enlazar la hoja {skillName}"
         },
         "SkillCategory": {}
       },

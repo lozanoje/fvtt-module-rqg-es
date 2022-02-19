@@ -878,6 +878,120 @@
         "settingName": "System Migration Version",
         "settingHint": "Do not touch this unless you really know what you are doing!"
       }
+    },
+    "scripts": {
+      "general": {
+        "roll": "Roll",
+        "rolled": "Roll",
+        "cancel": "Cancel",
+        "select": "Select",
+        "type": "Type",
+        "ability": "Ability",
+        "modifier": "Modifier",
+        "characteristic": "Characteristic",
+        "charac": "Charac",
+        "value": "Value",
+        "actor": "Actor",
+        "errorselect": "Please SELECT a token first",
+        "errortarget": "Please TARGET a token first",
+        "erroractor": "No actors defined in the world",
+        "mod": "Mod",
+        "rollp": "Roll (%)",
+        "result": "Result",
+        "base": "Base"
+      },
+      "augmentingAbilities": {
+        "title": "Augmenting Abilities (RQG)",
+        "augmenting": "Augmenting",
+        "augmented": "Augmented",
+        "augFlavour": "Using <span style=\"font-weight: bold;color: brown\">{augName} ({augBase}%)</span> for augmentation. Rolled {augRoll}% on a modified skill of {augValue}%, a {augLabel}",
+        "skillFlavour": "Rolling <span style=\"font-weight: bold;color: brown\">{skillName} ({skillBase}%)</span> augmented with {augName}. Rolled {skillRoll}% on a modified skill of {skillValue}%, a {skillLabel}",
+        "aug": "Aug"
+      },
+      "characteristicRolls": {
+        "title": "Characteristic Rolls (RQG)",
+        "difficulty": "Difficulty",
+        "difficultyEnum": {
+          "1": "Simple action",
+          "2": "Easy",
+          "3": "Moderate",
+          "4": "Hard",
+          "5": "Very hard",
+          "6": "Nearly impossible"
+        },
+        "flavourString": "Rolling <span style=\"font-weight: bold;color: brown\">{charNam} ({charVal} x {charMul})</span>. Rolled {charRoll}% on a modified probability of {charValue}%, a {charLabel}"
+      },
+      "hitlocationRolls": {
+        "title": "Hit Location Rolls (RQG)",
+        "baseString": "Hit locations for",
+        "hitlocation": "Hit location",
+        "from": "from",
+        "to": "to",
+        "contentFlavour": "Rolling {formRoll} for localization.",
+        "contentString": "<hr>Rolled a <span style=\"font-weight: bold;color: green\">{skillRoll}</span>, a hit at the <span style=\"font-weight: bold;color: brown\">{locTable}</span>",
+        "ontheground": "Fall On the ground"
+      },
+      "opposedRolls": {
+        "title": "Opposed Rolls (RQG)",
+				"active": "Active",
+				"pasive": "Pasive",
+				"activeFlavour": "Opposed test, active ability: <span style=\"font-weight: bold;color: brown\">{activeName} ({activeBase}%)</span> versus pasive ability <span style=\"font-weight: bold;color: brown\">{pasiveName} ({pasiveBase}%)</span>",
+				"pasiveFlavour": "Results: <span style=\"font-weight: bold;color: brown\">{activeName} ({activeBase}%)</span> versus <span style=\"font-weight: bold;color: brown\">{pasiveName} ({pasiveBase}%)</span>",
+				"winner": "WINNER",
+				"loser": "LOSER",
+				"tie": "TIE"
+			},
+      "resistanceTable": {
+        "title": "Resistance Table (RQG)",
+				"target": "Target number",
+				"flavourString": "Rolling <span style=\"font-weight: bold;color: brown\">{charNam} ({charVal})</span> against a target number of <span style=\"font-weight: bold;color: brown\">{charTar}</span>. Rolled {charRoll}% on a modified probability of {charValue}%, a {charLabel}"
+			},
+      "strikeranksHelper": {
+        "title": "Strike Ranks Helper (RQG)",
+				"token": "Selected token",
+				"actor": "Actor's name",
+				"dexsr": "DEX SR",
+				"sizsr": "SIZ SR",
+				"actorHint": "Name of the actor linked to the selected token",
+				"dexsrHint": "DEX strike rank of the actor",
+				"sizsrHint": "SIZ strike rank of the actor",
+				"generalTitle": "General options",
+				"generalIndependent": "Independent action",
+				"generalReadiness": "Requires readiness",
+				"generalIndependentHint": "this action is independent, do not add to the last entry at the CT, adds it as if it were new",
+				"generalReadinessHint": "adds readiness to the action (+5 SR)",
+				"combatTitle": "Combat",
+				"combatAttack": "Attack",
+				"combatAttackHint": "Shows only equipped and natural weapons",
+				"magicTitle": "Magic",
+				"magicSpells": "Spells",
+				"magicRune": "Rune",
+				"magicMPs": "MPs",
+				"magicSpirit": "Spirit",
+				"magicSorcery": "Sorcery",
+				"magicSpellsHint": "rune spells goes at SR 1, rest goes on DEX SR, you have to ready a new spell after the first one",
+				"magicMPsHint": "number of extra MPs used to augmenting the spell, adds +1SR for each MP above the first one",
+				"otherTitle": "Other",
+				"otherReady": "Ready (+5 SR)",
+				"otherMovement": "Movement",
+				"otherAimed": "Aimed/Disengange (SR: 12)",
+				"otherOther": "Other",
+				"otherSR": "SR",
+				"otherReadyHint": "before being able to perform an action, or draw a weapon, or ready a spell after casting another one",
+				"otherMovementHint": "one SR for every 3m of movement",
+				"otherAimedHint": "all those actions goes at the end, at SR 12",
+				"otherOtherHint": "other action, you have to specify the SR",
+				"removeTitle": "Remove from CT",
+				"removeTokensCT": "Tokens at CT",
+				"removeUpdate": "Update",
+				"removeAll": "All SRs",
+				"removeOnly": "Only blank",
+				"removeTokens": "Tokens",
+				"removeTokensHint": "list of entries/tokens at the CT, use the button to update the dropdown after adding/deleting combatants",
+				"removeDesc": "Remove ST",
+				"removeDescHint": "removes all SR, only blank ones (without SR), or specific SR entries, from a token or for all of them",
+				"removeAllTokens": "All tokens"
+			}
     }
   }
 }
