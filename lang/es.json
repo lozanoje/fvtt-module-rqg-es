@@ -208,6 +208,15 @@
         "Background": "Trasfondo",
         "ActiveEffects": "EA 🧪"
       },
+      "Notification": {
+        "NotActorOwnerWarn": "No es propietario de {actorName}, y no podrá soltar objetos a esta ficha de personaje",
+        "DraggedItemNotFoundError": "¡No se han encontrado en origen los objetos que se han arrastrado!",
+        "CantMakeItemDataSourceError": "No se ha podido realizar ItemDataSource del objeto arrastrado del item id [{itemId}]",
+        "NoIncomingItemDataSourceError": "¡Sin fuente de datos de objeto de origen!",
+        "IncomingItemDataSourceNotPhysicalItemError": "¡La fuente de datos de objeto de origen no representa un objeto físico cuantificable!",
+        "CantTransferLessThanOneItemError": "¡No se puede transferir menos de un objeto!",
+        "CantTransferMoreThanSourceOwnsError": "No se puede transferir más {itemName} que el actor ${sourceActorName} tenga en el inventario"
+      },
       "Passion": {
         "Passions": "Pasiones",
         "BackStory": "Historia"
@@ -325,6 +334,8 @@
       "Common": {
         "yes": "sí",
         "no": "no",
+        "btnYes": "Sí",
+        "btnNo": "No",
         "btnCancel": "Cancelar",
         "btnConfirm": "Confirmar",
         "OtherModifiers": "Otros modificadores:",
@@ -337,6 +348,20 @@
         "CardFlavor": "Característica: {name} ({value})",
         "RollFlavor": "Tirada {name} {difficulty}",
         "RollFlavorModifier": "<br/>Con otros modificadores {modifier}"
+      },
+      "confirmCopyIntangibleItem": {
+        "title": "¿Quiere traspasar {itemName} a {targetActor}?",
+        "header": "¿Quiere traspasar {itemName} a {targetActor}?",
+        "btnCopy": "Copiar",
+        "ReallyCopyIntangibleItem": "¿Quiere copiar {itemName} de {sourceActor} a {targetActor}?"
+      },
+      "confirmTransferPhysicalItem": {
+        "title": "¿Quiere traspasar {itemName} a {targetActor}?",
+        "header": "¿Quiere traspasar {itemName} a {targetActor}?",
+        "btnGive": "Traspasar",
+        "ReallyGiveItemSingle": "¿Quiere traspasar {itemName} a {targetActor}?  Se borrará del inventario de {sourceActor}",
+        "ReallyGiveItemQuantity": "¿Quiere traspasar {itemName} a {targetActor}?  Se borrará del inventario de {sourceActor}, o se reducirá la cantidad del inventario de {sourceActor}",
+        "GiveHowMany": "¿Cuántos {itemName} traspasar a {targetActor}? El inventario de {sourceActor} de este objeto se deducirá la cantidad escogida, o el objeto será borrado si la cantidad excede el máximo de {maxQty}"
       },
       "itemCard": {
         "RollFlavor": "Tirada {name}",
@@ -648,7 +673,8 @@
         "ItemWithIdDoesNotHaveChanceError": "No se ha podido encontrar el objeto con ID {itemId} en el actor {actorName} con el que mostrar la tarjeta del chat",
         "CouldNotFindActorByIdsWarn": "No se ha podido encontrar el actor con actor ID {actorId} ni el tokenID {tokenId} para realizar la tirada de atributo",
         "CanOnlyDropJournalEntryWarning": "Solo puede arrastrar una entrada de diario en una hoja del tipo {itemType}",
-        "ErrorParsingItemData": "Error procesando datos del objeto"
+        "ErrorParsingItemData": "Error procesando datos del objeto",
+        "SimpleCalendarNotInstalled": "Este comando requiere el módulo Simple Calendar"
       },
       "Passion": {
         "Name": "Nombre",
