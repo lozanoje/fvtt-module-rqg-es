@@ -1,1028 +1,1068 @@
 {
-  "I18N": {
-    "LANGUAGE": "Español",
-    "MAINTAINERS": "@Viriato139ac#0342"
-  },
-  "ITEM": {
-    "TypeArmor": "Armadura",
-    "TypeCult": "Culto",
-    "TypeGear": "Equipo",
-    "TypeHitlocation": "Localización",
-    "TypePassion": "Pasión",
-    "TypeRune": "Runa",
-    "TypeRunemagic": "Conjuro rúnico",
-    "TypeShamanicability": "Aptitud chamánica",
-    "TypeSkill": "Habilidad",
-    "TypeSorcerymagic": "Conjuro de hechicería",
-    "TypeSpiritmagic": "Conjuro de magia espiritual",
-    "TypeWeapon": "Arma",
-    "TypeReputation": "Reputación"
-  },
-  "RQG": {
-    "Actor": {
-      "Attributes": {
-        "AlliesAndNotes": "Aliados y notas",
-        "StrikeRank": "Momento de reacción",
-        "SizeAbbr": "TAM",
-        "DexterityAbbr": "DES",
-        "MagicPoints": "Puntos de magia",
-        "CreatureQ": "¿Criatura?",
-        "MovementAbbr": "MOV",
-        "EncumbranceAbbr": "CRG",
-        "EncumbranceFactor": "Factor de CRG",
-        "HeroPoints": "Puntos de héroe",
-        "Health": {
-          "healthy": "Sano",
-          "wounded": "Herido",
-          "shock": "Conmocionado",
-          "unconscious": "Inconsciente",
-          "dead": "Muerto"
-        },
-        "MoveMode": {
-          "walk": "Andar",
-          "swim": "Nadar",
-          "fly": "Volar"
-        }
-      },
-      "AwardExperience": {
-        "GainedExperienceInfo": "{actorName} acaba de ganar una marca de experiencia en {itemName}!",
-        "ItemDoesntHaveExperienceError": "Se ha intentado añadir una marca de experiencia al objeto \"{itemName}\" con id \"{itemId}\" que no tiene la propiedad \"hasExperience\"",
-        "ItemNotFoundError": "Se ha intentado añadir una marca de experiencia al objeto con id \"{itemId}\" que no se ha encontrado en el actor \"{actorName}\" con id de actor \"{actorId}\""
-      },
-      "Background": {
-        "Background": "Trasfondo",
-        "Origin": "Origen",
-        "BaseData": "Información básica",
-        "BirthYear": "Año de nacimiento",
-        "Age": "Edad",
-        "Gender": "Género",
-        "Species": "Especie",
-        "TownHomeArea": "Ciudad/tierra natal",
-        "Tribe": "Tribu",
-        "Clan": "Clan",
-        "Circumstance": "Otros datos",
-        "Reputation": "Reputación",
-        "StandardOfLiving": "Nivel de vida",
-        "BaseIncome": "Ingresos",
-        "Ransom": "Rescate",
-        "RansomDetails": "Detalles",
-        "Homeland": {
-          "Heading": "Tierra natal",
-          "aggar": "Aggar",
-          "balazar": "Balazar",
-          "beastValley": "Valle de las Bestias",
-          "bilini": "Bilini",
-          "blackHorseCounty": "Condado del Caballo Negro",
-          "dagoriInkarth": "Dagori Inkarth",
-          "dragonPass": "Paso del Dragón",
-          "dryadWoods": "Bosques de las Dríadas",
-          "esrolia": "Esrolia",
-          "grazelands": "Los Pastizales",
-          "hendrikiland": "Tierra Hendriki",
-          "heortland": "Tierra Heortlinga",
-          "holay": "Holay",
-          "imither": "Imither",
-          "lunarTarsh": "Tarsh Lunar",
-          "oldTarsh": "Viejo Tarsh",
-          "prax": "Prax",
-          "sartar": "Sartar",
-          "shadowPlateau": "Meseta Sombría",
-          "stinkingForest": "Bosque Maloliente",
-          "trollWoods": "Bosque de los Troles",
-          "vansh": "Vansh",
-          "habitatChaosArea": "Hábitat: Cubil del Caos",
-          "habitatForest": "Hábitat: Bosque",
-          "habitatGlacier": "Hábitat: Glaciar",
-          "habitatMarshSwamp": "Hábitat: Pantano/marisma",
-          "habitatMountainsHills": "Hábitat: Montañas/colinas",
-          "habitatPlains": "Hábitat: Llanuras",
-          "habitatSky": "Hábitat: Cielo",
-          "habitatSpiritPlane": "Hábitat: Plano espiritual",
-          "habitatUnderground": "Hábitat: Bajo tierra",
-          "habitatWaterSea": "Hábitat: Agua/mar"
-        },
-        "Occupation": {
-          "Heading": "Ocupación",
-          "": " ",
-          "assistantShaman": "Aprendiz de chamán",
-          "chariotDriver": "Auriga",
-          "crafter": "Artesano",
-          "bandit": "Bandido",
-          "entertainer": "Artista",
-          "farmer": "Granjero",
-          "fisher": "Pescador",
-          "healer": "Sanador",
-          "herder": "Pastor",
-          "hunter": "Cazador",
-          "merchant": "Mercader",
-          "noble": "Noble",
-          "philosopher": "Filósofo",
-          "priest": "Sacerdote",
-          "scribe": "Escriba",
-          "thief": "Ladrón",
-          "warriorHeavyInfantry": "Guerrero infantería pesada",
-          "warriorLightInfantry": "Guerrero infantería ligera",
-          "warriorHeavyCavalry": "Guerrero caballería pesada",
-          "warriorLightCavalry": "Guerrero caballería ligera"
-        }
-      },
-      "Characteristics": {
-        "Characteristic": "Característica",
-        "format": "{name} ({abbr})",
-        "strength": "FUE",
-        "constitution": "CON",
-        "size": "TAM",
-        "dexterity": "DES",
-        "intelligence": "INT",
-        "power": "POD",
-        "charisma": "CAR",
-        "strength-full": "Fuerza",
-        "constitution-full": "Constitución",
-        "size-full": "Tamaño",
-        "dexterity-full": "Destreza",
-        "intelligence-full": "Inteligencia",
-        "power-full": "Poder",
-        "charisma-full": "Carisma"
-      },
-      "Combat": {
-        "DamageBonus": "Modificador al daño",
-        "StrDexMinsNotMetTip": "El personaje no cumple los requisitos de FUE y/o DES mínimas para usar esta arma. Se usará la habilidad a la mitad",
-        "StrMinNotMetTip": "El personaje no cumple el requisito de FUE mínima para usar esta arma. Se usará la habilidad a la mitad",
-        "DexMinNotMetTip": "El personaje no cumple el requisito de DES mínima para usar esta arma. Se puede compensar con la FUE extra por encima de la FUE mínima a razón de dos puntos de FUE por cada punto de DES requerido, en caso contrario se usará la habilidad a mitad",
-        "Weapon": "Arma",
-        "HP": "PG",
-        "Chance": "Probabilidad",
-        "Damage": "Daño",
-        "SR": "MR",
-        "Dodge": "Esquivar",
-        "SpiritCombat": "Combate espiritual",
-        "SpiritCombatDamage": "Daño en combate espiritual"
-      },
-      "Gear": {
-        "ViewByItemType": "Vista por tipo de objeto",
-        "ViewByLocation": "Vista por ubicación",
-        "Gear": "Equipo",
-        "Armor": "Armadura",
-        "Consumables": "Consumibles",
-        "Currency": "Dinero",
-        "WeaponsAndShields": "Armas y escudos",
-        "CurrencyConversionTipOver1": "Un {name} equivale a {value} lunares",
-        "CurrencyConversionTipLunar": "Lunares es la moneda de cambio estándar",
-        "CurrencyConversionTipUnder1": "Un lunar equivale a {value} {name}s",
-        "Name": "Nombre",
-        "EncumbranceAbbr": "CRG",
-        "Location": "Ubicación",
-        "Price": "Coste",
-        "Total": "Total",
-        "QuantityAbbr": "Ud",
-        "ExtendedAbbr": "Ext",
-        "Skill": "Habilidad",
-        "Damage": "Daño",
-        "MinimumStrength": "FUE",
-        "MinimumDexterity": "DES",
-        "HitPointsAbbr": "PG",
-        "Absorbs": "Absorbe",
-        "HitLocations": "Localizaciones de golpe",
-        "MoveQuietlyPenalty": "- Moverse en silencio"
-      },
-      "Health": {
-        "Health": "Salud",
-        "TotalHitPoints": "PGs totales",
-        "HealingRatePerWeek": "Ritmo de curación {healingRate}/semana",
-        "HitLocation": "Localización de golpe",
-        "HitPointsAbbr": "PG",
-        "ArmorPointsAbbr": "PA",
-        "Wounds": "Heridas",
-        "HealWound": "Curar herida",
-        "AddWound": "Añadir herida"
-      },
-      "Nav": {
-        "Combat": "Combate",
-        "Runes": "Runas",
-        "SpiritMagic": "Magia espiritual",
-        "RuneMagic": "Magia rúnica",
-        "Sorcery": "Hechicería",
-        "Skills": "Habilidades",
-        "Gear": "Equipo",
-        "Passions": "Pasiones",
-        "Background": "Trasfondo",
-        "ActiveEffects": "EA 🧪"
-      },
-      "Notification": {
-        "NotActorOwnerWarn": "No es propietario de {actorName}, y no podrá soltar objetos a esta ficha de personaje",
-        "DraggedItemNotFoundError": "¡No se han encontrado en origen los objetos que se han arrastrado!",
-        "CantMakeItemDataSourceError": "No se ha podido realizar ItemDataSource del objeto arrastrado del item id [{itemId}]",
-        "NoIncomingItemDataSourceError": "¡Sin fuente de datos de objeto de origen!",
-        "IncomingItemDataSourceNotPhysicalItemError": "¡La fuente de datos de objeto de origen no representa un objeto físico cuantificable!",
-        "CantTransferLessThanOneItemError": "¡No se puede transferir menos de un objeto!",
-        "CantTransferMoreThanSourceOwnsError": "No se puede transferir más {itemName} que el actor ${sourceActorName} tenga en el inventario"
-      },
-      "Passion": {
-        "Passions": "Pasiones",
-        "BackStory": "Historia"
-      },
-      "Rune": {
-        "Condition": "Condición",
-        "Elemental": "Elemental",
-        "Form": "Forma",
-        "Power": "Poder"
-      },
-      "RuneMagic": {
-        "EditRuneMagicSpellTitle": "Editar conjuro rúnico",
-        "DeleteRuneMagicSpellTitle": "Borrar conjuro rúnico",
-        "ChooseCultForRuneSpell": "Elegir culto del conjuro rúnico {name}",
-        "CultRankLabel": "Rango en el culto:",
-        "RunePoints": "Puntos de runa:",
-        "Gifts": "Dones:",
-        "Geases": "Geas:",
-        "SubCults": "Subcultos:",
-        "RuneSpell": "Conjuro rúnico",
-        "Points": "Puntos",
-        "Range": "Alcance",
-        "Duration": "Duración",
-        "Ritual": "Ritual",
-        "Enchantment": "Encantamiento",
-        "Stackable": "Apilable",
-        "OneUse": "Un solo uso",
-        "Chance": "Probabilidad",
-        "CultRank": {
-          "layMember": "Miembro laico",
-          "initiate": "Iniciado",
-          "godTalker": "Portavoz divino",
-          "runePriest": "Sacerdote de las runas",
-          "runeLord": "Señor de las runas",
-          "chiefPriest": "Sacerdote principal",
-          "highPriest": "Sumo sacerdote"
-        }
-      },
-      "Skill": {
-        "SkillDescriptionTitle": "Descripción de la habilidad",
-        "SkillCategory": {
-          "agility": "Agilidad",
-          "communication": "Comunicación",
-          "knowledge": "Conocimiento",
-          "magic": "Magia",
-          "manipulation": "Manipulación",
-          "perception": "Percepción",
-          "stealth": "Sigilo",
-          "otherSkills": "Otras habilidades",
-          "meleeWeapons": "Armas cuerpo a cuerpo",
-          "missileWeapons": "Armas a distancia",
-          "shields": "Escudos",
-          "naturalWeapons": "Armas naturales"
-        }
-      },
-      "Sorcery": {
-        "FreeINT": "INT libre",
-        "Techniques": "Técnicas",
-        "MasteredRunes": "Runas dominadas"
-      },
-      "SpiritMagic": {
-        "SpiritMagic": "Magia espiritual",
-        "CHALimitFormula": "{points} puntos de magia espiritual con límite de CAR {CHALimit}",
-        "Name": "Nombre",
-        "Points": "Puntos",
-        "Variable": "Variable",
-        "Range": "Alcance",
-        "Duration": "Duración",
-        "Concentration": "Concentración",
-        "Ritual": "Ritual",
-        "Enchantment": "Encantamiento"
-      }
+    "I18N": {
+        "LANGUAGE": "Español",
+        "MAINTAINERS": "@Viriato139ac#0342"
     },
-    "ContextMenu": {
-      "ImproveItem": "Mejorar {itemType}",
-      "EditItem": "Editar {itemType}",
-      "DeleteItem": "Borrar {itemType}",
-      "ToggleExperience": "Conmutar experiencia",
-      "InitializeCharacteristic": "Inicializar característica",
-      "InitializeAllCharacteristics": "Inicializar todas las característica",
-      "InitializeResultCard": "Inicializar {char}",
-      "OverwriteCharacteristicDialogTitle": "Sobrescribir {characteristicName} de {actorName}?",
-      "OverwriteCharacteristicDialog": "¿Desea sobrescribir el valor actual de {characteristicName}? Esto hará que se recalculen los valores derivados, como los PG, PM, MR y las categorías de habilidades que dependan de {characteristicName}.",
-      "OverwriteAllCharacteristicsDialogTitle": "¿Sobrescribir todas las características de {actorName}?",
-      "OverwriteAllCharacteristicsDialog": "¿Desea sobrescribir el valor actual de todas las características? Esto hará que se recalculen los valores derivados, como los PG, PM, MR y las categorías de habilidades",
-      "ViewDescription": "Ver descripción",
-      "SetAsNotCarried": "Establecer a no cargado",
-      "SetAsCarried": "Establecer a cargado",
-      "SetAsEquipped": "Establecer a equipado",
-      "SplitIntoNewLocation": "Dividir en una nueva ubicación",
-      "EditPassionBackstory": "Editar trasfondo de pasión",
-      "Notification": {
-        "DatasetNotFound": "No se ha encontrado el dataset de la característica",
-        "CharacteristicNotFound": "No se ha encontrado el nombre de característica \"{characteristicName}\" en el actor {actorName} para realizar la acción desde el menú contextual de características",
-        "CantShowWeaponChatCardError": "No se ha encontrado el skillId [{skillItemId}] o weaponId [{weaponItemId}] en el actor ${actorName} con el para mostar la tarjeta del chat desde el menú contextual de combate",
-        "CantToggleExperienceError": "No se ha encontrado el itemId [{itemId}] en el actor {actorName} para conmutar la marca de experiencia desde el menú contextual de combate",
-        "CantShowItemSheetError": "No se ha encontrado el itemId [{skillItemId}] en el actor {actorName} con el que mostrar la hoja de habilidad desde el menú contextual de combate",
-        "CantShowWeaponSheetError": "No se ha encontrado el itemId [{weaponItemId}] en el actor {actorName} con el que mostrar la hoja de objeto desde el menú contextual de combate",
-        "CantDeleteSkillError": "No se ha encontrado el itemId [{skillItemId}] en el actor {actorName} para borrar el objeto desde el menú contextual de combate",
-        "CantDeleteWeaponError": "No se ha encontrado el itemId [{weaponItemId}] en el actor {actorName} para borrar el arma desde menú contextual de combate",
-        "CantShowJournalDescriptionError": "No se ha encontrado el journal Id [{journalId}] en el actor {actorName} con el que mostrarlo desde el menú contextual de culto",
-        "CantEditCultError": "`No se ha encontrado el itemId [{itemId}] en el actor {actorName} con el que editar el culto desde el menú contextual de culto",
-        "CantEditGearError": "No se ha encontrado el gear with itemId [{itemId}] en el actor {actorName} con el que editar el objeto desde el menú contextual de equipo",
-        "CantEditHitLocationError": "No se ha encontrado el itemId [{itemId}] en el actor {actorName} con el que editar localización desde el menú contextual de salud",
-        "CantDirectRollPassionError": "No se ha encontrado el itemId [{itemId}] o probabilidad del objeto (item.data.data.chance) en el actor {actorName} para realizar una tirada directa de pasión desde el menú contextual de pasión`",
-        "CantToggleExperiencePassionError": "No se ha encontrado el itemId [{itemId}] en el actor {actorName} con el que conmutar marca de experiencia en la pasión desde el menú contextual de pasión.",
-        "CantImprovePassionError": "No se ha encontrado el itemId [{itemId}] en el actor {actorName} para mejorar pasión desde el menú contextual de pasión",
-        "CantEditPassionError": "No se ha encontrado el itemId [{itemId}] en el actor {actorName} para editar una pasión desde el menú contextual de pasión",
-        "CantEditRuneError": "No se ha encontrado el itemsheet [{itemId}] en el actor {actorName} para editar una runa desde el menú contextual de runa",
-        "CantRollQuickSkillError": "El objeto [{itemId}] del actor {actorName} no puede realizar una tirada directa de la habilidad desde el menú contextual de habilidad",
-        "CantEditSpiritMagicError": "No se ha encontrado el itemSheet de [{itemId}] en el actor {actorName} para editar el conjuro espiritual desde el menú contextual de magia espiritual"
-      }
+    "ITEM": {
+        "TypeArmor": "Armadura",
+        "TypeCult": "Culto",
+        "TypeGear": "Equipo",
+        "TypeHitlocation": "Localización",
+        "TypePassion": "Pasión",
+        "TypeRune": "Runa",
+        "TypeRunemagic": "Conjuro rúnico",
+        "TypeShamanicability": "Aptitud chamánica",
+        "TypeSkill": "Habilidad",
+        "TypeSorcerymagic": "Conjuro de hechicería",
+        "TypeSpiritmagic": "Conjuro de magia espiritual",
+        "TypeWeapon": "Arma",
+        "TypeReputation": "Reputación"
     },
-    "Dialog": {
-      "Common": {
-        "yes": "sí",
-        "no": "no",
-        "btnYes": "Sí",
-        "btnNo": "No",
-        "btnCancel": "Cancelar",
-        "btnConfirm": "Confirmar",
-        "OtherModifiers": "Otros modificadores:",
-        "RollFormat": "Tirada ({chance}%)",
-        "CantFindChatMessageError": "CantFindChatMessageError",
-        "CantFindActorToDoRollFromChatCardWarn": "¡No se ha encontrado el actor con el que hacer la tirada de esta tarjeta del chat!"
-      },
-      "characteristicCard": {
-        "CardWithoutActorIdError": "Se ha pedido la tarjeta de característica de un actor sin id",
-        "CardFlavor": "Característica: {name} ({value})",
-        "RollFlavor": "Tirada {name} {difficulty}",
-        "RollFlavorModifier": "<br/>Con otros modificadores {modifier}"
-      },
-      "confirmCopyIntangibleItem": {
-        "title": "¿Quiere traspasar {itemName} a {targetActor}?",
-        "header": "¿Quiere traspasar {itemName} a {targetActor}?",
-        "btnCopy": "Copiar",
-        "ReallyCopyIntangibleItem": "¿Quiere copiar {itemName} de {sourceActor} a {targetActor}?"
-      },
-      "confirmTransferPhysicalItem": {
-        "title": "¿Quiere traspasar {itemName} a {targetActor}?",
-        "header": "¿Quiere traspasar {itemName} a {targetActor}?",
-        "btnGive": "Traspasar",
-        "ReallyGiveItemSingle": "¿Quiere traspasar {itemName} a {targetActor}?  Se borrará del inventario de {sourceActor}",
-        "ReallyGiveItemQuantity": "¿Quiere traspasar {itemName} a {targetActor}?  Se borrará del inventario de {sourceActor}, o se reducirá la cantidad del inventario de {sourceActor}",
-        "GiveHowMany": "¿Cuántos {itemName} traspasar a {targetActor}? El inventario de {sourceActor} de este objeto se deducirá la cantidad escogida, o el objeto será borrado si la cantidad excede el máximo de {maxQty}"
-      },
-      "itemCard": {
-        "RollFlavor": "Tirada {name}",
-        "RollFlavorModifier": "<br/>Con otros modificadores {modifier}"
-      },
-      "reputationCard": {
-        "CheckReputationFlavor": "Tirada de reputación",
-        "Reputation": "Reputación"
-      },
-      "spiritMagicCard": {
-        "CardWithoutActorIdError": "Se ha pedido la tarjeta de conjuro espiritual de un actor sin id",
-        "CantCastSpellAboveLearnedLevel": "No se puede lanzar un conjuro por encima del nivel aprendido",
-        "NotEnoughMagicPoints": "Sin puntos de magia suficientes para lanzar el conjuro",
-        "SuccessfullyCastInfo": "Lanzamiento con éxito del conjuro espiritual, se han usado {amount} puntos de magia",
-        "CardFlavor": "Magia espiritual: {name}",
-        "Cast": "Lanzamiento {spellName}",
-        "Level": "Nivel",
-        "Boost": "Potenciación"
-      },
-      "confirmItemDeleteDialog": {
-        "title": "Borrar {itemType}: {itemName}",
-        "content": "¿Está seguro de que desea borrar el {itemType} {itemName}?",
-        "contentCult": "¿Está seguro de que desea borrar el {itemType} {itemName}? Se borrarán también todos los obejtos {runeMagicSpell} asociados a este {itemType}."
-      },
-      "improveAbilityDialog": {
-        "title": "Mejora de {typeLocName} \"{name}\"",
-        "titleChar": "Mejora de característica \"{name}\"",
-        "header": "Mejorando {name}",
-        "fromExperience": ". . . con la experiencia",
-        "chanceToGain": "{chanceToGain}% porcentaje de ganar:",
-        "experienceGainFixed": "Ganancia 3%",
-        "experienceGainRandom": "Ganancia 1d6%",
-        "noExperienceCheckTitle": "Sin marca de experiencia",
-        "noExperienceCheckExplanation": "Este personaje no tiene ninguna marca de experiencia en {typeLocName} y no podrá mejorarse con la experiencia",
-        "throughTraining": ". . . con el entrenamiento",
-        "afterTraining": "Tras el entrenamiento:",
-        "gain": "Ganancia {gain}%",
-        "gainChar": "Ganancia {gain}",
-        "throughResearch": ". . . con la investigación",
-        "skillOver75Title": "Habilidad por encima de 75%",
-        "skillOver75Explanation": "No puede entrenar habilidades con un valor por encima de 75%",
-        "speciesMaxTitle": "Actualmente al máximo por especie {name}",
-        "speciesMaxExplanation": "Se encuentra por por encima del máximo por especie {name} y no podrá ganar más",
-        "btnDoImprovement": "Aplicar la mejora",
-        "btnCancel": "Cancelar",
-        "experienceRoll": {
-          "flavor": "{actorName} hace una tirada de experiencia por {typeLocName} \"{name}\"",
-          "contentSkill": "Tire un 1d100 y añada el modificador por categoría ({mod}), tendrá éxito si la tirada modificada es MAYOR que el valor {skillChance}% de {typeLocName} \"{name}\" o un 100",
-          "contentOther": "Tire un 1d100, tendrá éxito si la tirada es MAYOR que el valor {chance}% de {typeLocName} \"{name}\"",
-          "contentChar": "Tire un 1d100, tendrá éxito si la tirada es MENOR o IGUAL que {chanceToGain}%. El valor {chance} multiplicado por cinco está basado en el máximo de característica por especie {speciesMax} menos la característica \"{name}\""
+    "RQG": {
+        "Actor": {
+            "Attributes": {
+                "AlliesAndNotes": "Aliados y notas",
+                "StrikeRank": "Momento de reacción",
+                "SizeAbbr": "TAM",
+                "DexterityAbbr": "DES",
+                "MagicPoints": "Puntos de magia",
+                "CreatureQ": "¿Criatura?",
+                "MovementAbbr": "MOV",
+                "EncumbranceAbbr": "CRG",
+                "EncumbranceFactor": "Factor de CRG",
+                "HeroPoints": "Puntos de héroe",
+                "Health": {
+                    "healthy": "Sano",
+                    "wounded": "Herido",
+                    "shock": "Conmocionado",
+                    "unconscious": "Inconsciente",
+                    "dead": "Muerto"
+                },
+                "MoveMode": {
+                    "walk": "Andar",
+                    "swim": "Nadar",
+                    "fly": "Volar"
+                }
+            },
+            "AwardExperience": {
+                "GainedExperienceInfo": "{actorName} acaba de ganar una marca de experiencia en {itemName}!",
+                "ItemDoesntHaveExperienceError": "Se ha intentado añadir una marca de experiencia al objeto \"{itemName}\" con id \"{itemId}\" que no tiene la propiedad \"hasExperience\"",
+                "ItemNotFoundError": "Se ha intentado añadir una marca de experiencia al objeto con id \"{itemId}\" que no se ha encontrado en el actor \"{actorName}\" con id de actor \"{actorId}\""
+            },
+            "Background": {
+                "Background": "Trasfondo",
+                "Origin": "Origen",
+                "BaseData": "Información básica",
+                "BirthYear": "Año de nacimiento",
+                "Age": "Edad",
+                "Gender": "Género",
+                "Species": "Especie",
+                "TownHomeArea": "Ciudad/tierra natal",
+                "Tribe": "Tribu",
+                "Clan": "Clan",
+                "Circumstance": "Otros datos",
+                "Reputation": "Reputación",
+                "StandardOfLiving": "Nivel de vida",
+                "BaseIncome": "Ingresos",
+                "Ransom": "Rescate",
+                "RansomDetails": "Detalles",
+                "Homeland": {
+                    "Heading": "Tierra natal",
+                    "aggar": "Aggar",
+                    "balazar": "Balazar",
+                    "beastValley": "Valle de las Bestias",
+                    "bilini": "Bilini",
+                    "blackHorseCounty": "Condado del Caballo Negro",
+                    "dagoriInkarth": "Dagori Inkarth",
+                    "dragonPass": "Paso del Dragón",
+                    "dryadWoods": "Bosques de las Dríadas",
+                    "esrolia": "Esrolia",
+                    "grazelands": "Los Pastizales",
+                    "hendrikiland": "Tierra Hendriki",
+                    "heortland": "Tierra Heortlinga",
+                    "holay": "Holay",
+                    "imither": "Imither",
+                    "lunarTarsh": "Tarsh Lunar",
+                    "oldTarsh": "Viejo Tarsh",
+                    "prax": "Prax",
+                    "sartar": "Sartar",
+                    "shadowPlateau": "Meseta Sombría",
+                    "stinkingForest": "Bosque Maloliente",
+                    "trollWoods": "Bosque de los Troles",
+                    "vansh": "Vansh",
+                    "habitatChaosArea": "Hábitat: Cubil del Caos",
+                    "habitatForest": "Hábitat: Bosque",
+                    "habitatGlacier": "Hábitat: Glaciar",
+                    "habitatMarshSwamp": "Hábitat: Pantano/marisma",
+                    "habitatMountainsHills": "Hábitat: Montañas/colinas",
+                    "habitatPlains": "Hábitat: Llanuras",
+                    "habitatSky": "Hábitat: Cielo",
+                    "habitatSpiritPlane": "Hábitat: Plano espiritual",
+                    "habitatUnderground": "Hábitat: Bajo tierra",
+                    "habitatWaterSea": "Hábitat: Agua/mar"
+                },
+                "Occupation": {
+                    "Heading": "Ocupación",
+                    "": " ",
+                    "assistantShaman": "Aprendiz de chamán",
+                    "chariotDriver": "Auriga",
+                    "crafter": "Artesano",
+                    "bandit": "Bandido",
+                    "entertainer": "Artista",
+                    "farmer": "Granjero",
+                    "fisher": "Pescador",
+                    "healer": "Sanador",
+                    "herder": "Pastor",
+                    "hunter": "Cazador",
+                    "merchant": "Mercader",
+                    "noble": "Noble",
+                    "philosopher": "Filósofo",
+                    "priest": "Sacerdote",
+                    "scribe": "Escriba",
+                    "thief": "Ladrón",
+                    "warriorHeavyInfantry": "Guerrero infantería pesada",
+                    "warriorLightInfantry": "Guerrero infantería ligera",
+                    "warriorHeavyCavalry": "Guerrero caballería pesada",
+                    "warriorLightCavalry": "Guerrero caballería ligera"
+                }
+            },
+            "Characteristics": {
+                "Characteristic": "Característica",
+                "format": "{name} ({abbr})",
+                "strength": "FUE",
+                "constitution": "CON",
+                "size": "TAM",
+                "dexterity": "DES",
+                "intelligence": "INT",
+                "power": "POD",
+                "charisma": "CAR",
+                "strength-full": "Fuerza",
+                "constitution-full": "Constitución",
+                "size-full": "Tamaño",
+                "dexterity-full": "Destreza",
+                "intelligence-full": "Inteligencia",
+                "power-full": "Poder",
+                "charisma-full": "Carisma"
+            },
+            "Combat": {
+                "DamageBonus": "Modificador al daño",
+                "StrDexMinsNotMetTip": "El personaje no cumple los requisitos de FUE y/o DES mínimas para usar esta arma. Se usará la habilidad a la mitad",
+                "StrMinNotMetTip": "El personaje no cumple el requisito de FUE mínima para usar esta arma. Se usará la habilidad a la mitad",
+                "DexMinNotMetTip": "El personaje no cumple el requisito de DES mínima para usar esta arma. Se puede compensar con la FUE extra por encima de la FUE mínima a razón de dos puntos de FUE por cada punto de DES requerido, en caso contrario se usará la habilidad a mitad",
+                "Weapon": "Arma",
+                "HP": "PG",
+                "Chance": "Probabilidad",
+                "Damage": "Daño",
+                "SR": "MR",
+                "Dodge": "Esquivar",
+                "SpiritCombat": "Combate espiritual",
+                "SpiritCombatDamage": "Daño en combate espiritual"
+            },
+            "Gear": {
+                "ViewByItemType": "Vista por tipo de objeto",
+                "ViewByLocation": "Vista por ubicación",
+                "Gear": "Equipo",
+                "Armor": "Armadura",
+                "Consumables": "Consumibles",
+                "Currency": "Dinero",
+                "WeaponsAndShields": "Armas y escudos",
+                "CurrencyConversionTipOver1": "Un {name} equivale a {value} lunares",
+                "CurrencyConversionTipLunar": "Lunares es la moneda de cambio estándar",
+                "CurrencyConversionTipUnder1": "Un lunar equivale a {value} {name}s",
+                "Name": "Nombre",
+                "EncumbranceAbbr": "CRG",
+                "Location": "Ubicación",
+                "Price": "Coste",
+                "Total": "Total",
+                "QuantityAbbr": "Ud",
+                "ExtendedAbbr": "Ext",
+                "Skill": "Habilidad",
+                "Damage": "Daño",
+                "MinimumStrength": "FUE",
+                "MinimumDexterity": "DES",
+                "HitPointsAbbr": "PG",
+                "Absorbs": "Absorbe",
+                "HitLocations": "Localizaciones de golpe",
+                "MoveQuietlyPenalty": "- Moverse en silencio"
+            },
+            "Health": {
+                "Health": "Salud",
+                "TotalHitPoints": "PGs totales",
+                "HealingRatePerWeek": "Ritmo de curación {healingRate}/semana",
+                "HitLocation": "Localización de golpe",
+                "HitPointsAbbr": "PG",
+                "ArmorPointsAbbr": "PA",
+                "Wounds": "Heridas",
+                "HealWound": "Curar herida",
+                "AddWound": "Añadir herida"
+            },
+            "Nav": {
+                "Combat": "Combate",
+                "Runes": "Runas",
+                "SpiritMagic": "Magia espiritual",
+                "RuneMagic": "Magia rúnica",
+                "Sorcery": "Hechicería",
+                "Skills": "Habilidades",
+                "Gear": "Equipo",
+                "Passions": "Pasiones",
+                "Background": "Trasfondo",
+                "ActiveEffects": "EA 🧪"
+            },
+            "Notification": {
+                "NotActorOwnerWarn": "No es propietario de {actorName}, y no podrá soltar objetos a esta ficha de personaje",
+                "DraggedItemNotFoundError": "¡No se han encontrado en origen los objetos que se han arrastrado!",
+                "CantMakeItemDataSourceError": "No se ha podido realizar ItemDataSource del objeto arrastrado del item id [{itemId}]",
+                "NoIncomingItemDataSourceError": "¡Sin fuente de datos de objeto de origen!",
+                "IncomingItemDataSourceNotPhysicalItemError": "¡La fuente de datos de objeto de origen no representa un objeto físico cuantificable!",
+                "CantTransferLessThanOneItemError": "¡No se puede transferir menos de un objeto!",
+                "CantTransferMoreThanSourceOwnsError": "No se puede transferir más {itemName} que el actor ${sourceActorName} tenga en el inventario"
+            },
+            "Passion": {
+                "Passions": "Pasiones",
+                "BackStory": "Historia"
+            },
+            "Rune": {
+                "Condition": "Condición",
+                "Elemental": "Elemental",
+                "Form": "Forma",
+                "Power": "Poder"
+            },
+            "RuneMagic": {
+                "EditRuneMagicSpellTitle": "Editar conjuro rúnico",
+                "DeleteRuneMagicSpellTitle": "Borrar conjuro rúnico",
+                "ChooseCultForRuneSpell": "Elegir culto del conjuro rúnico {name}",
+                "CultRankLabel": "Rango en el culto:",
+                "RunePoints": "Puntos de runa:",
+                "Gifts": "Dones:",
+                "Geases": "Geas:",
+                "SubCults": "Subcultos:",
+                "RuneSpell": "Conjuro rúnico",
+                "Points": "Puntos",
+                "Range": "Alcance",
+                "Duration": "Duración",
+                "Ritual": "Ritual",
+                "Enchantment": "Encantamiento",
+                "Stackable": "Apilable",
+                "OneUse": "Un solo uso",
+                "Chance": "Probabilidad",
+                "CultRank": {
+                    "layMember": "Miembro laico",
+                    "initiate": "Iniciado",
+                    "godTalker": "Portavoz divino",
+                    "runePriest": "Sacerdote de las runas",
+                    "runeLord": "Señor de las runas",
+                    "chiefPriest": "Sacerdote principal",
+                    "highPriest": "Sumo sacerdote"
+                }
+            },
+            "Skill": {
+                "SkillDescriptionTitle": "Descripción de la habilidad",
+                "SkillCategory": {
+                    "agility": "Agilidad",
+                    "communication": "Comunicación",
+                    "knowledge": "Conocimiento",
+                    "magic": "Magia",
+                    "manipulation": "Manipulación",
+                    "perception": "Percepción",
+                    "stealth": "Sigilo",
+                    "otherSkills": "Otras habilidades",
+                    "meleeWeapons": "Armas cuerpo a cuerpo",
+                    "missileWeapons": "Armas a distancia",
+                    "shields": "Escudos",
+                    "naturalWeapons": "Armas naturales"
+                }
+            },
+            "Sorcery": {
+                "FreeINT": "INT libre",
+                "Techniques": "Técnicas",
+                "MasteredRunes": "Runas dominadas"
+            },
+            "SpiritMagic": {
+                "SpiritMagic": "Magia espiritual",
+                "CHALimitFormula": "{points} puntos de magia espiritual con límite de CAR {CHALimit}",
+                "Name": "Nombre",
+                "Points": "Puntos",
+                "Variable": "Variable",
+                "Range": "Alcance",
+                "Duration": "Duración",
+                "Concentration": "Concentración",
+                "Ritual": "Ritual",
+                "Enchantment": "Encantamiento"
+            }
         },
-        "experienceResultCard": {
-          "flavor": "La mejora por experiencia para {typeLocName} \"{name}\" ha tenido éxito",
-          "contentChoseFixed": "Elija una ganancia fija de {gain}.",
-          "contentChoseRandom": "Elija una ganancia de {gain}."
+        "ContextMenu": {
+            "ImproveItem": "Mejorar {itemType}",
+            "EditItem": "Editar {itemType}",
+            "DeleteItem": "Borrar {itemType}",
+            "ToggleExperience": "Conmutar experiencia",
+            "InitializeCharacteristic": "Inicializar característica",
+            "InitializeAllCharacteristics": "Inicializar todas las característica",
+            "InitializeResultCard": "Inicializar {char}",
+            "OverwriteCharacteristicDialogTitle": "Sobrescribir {characteristicName} de {actorName}?",
+            "OverwriteCharacteristicDialog": "¿Desea sobrescribir el valor actual de {characteristicName}? Esto hará que se recalculen los valores derivados, como los PG, PM, MR y las categorías de habilidades que dependan de {characteristicName}.",
+            "OverwriteAllCharacteristicsDialogTitle": "¿Sobrescribir todas las características de {actorName}?",
+            "OverwriteAllCharacteristicsDialog": "¿Desea sobrescribir el valor actual de todas las características? Esto hará que se recalculen los valores derivados, como los PG, PM, MR y las categorías de habilidades",
+            "ViewDescription": "Ver descripción",
+            "SetAsNotCarried": "Establecer a no cargado",
+            "SetAsCarried": "Establecer a cargado",
+            "SetAsEquipped": "Establecer a equipado",
+            "SplitIntoNewLocation": "Dividir en una nueva ubicación",
+            "EditPassionBackstory": "Editar trasfondo de pasión",
+            "Notification": {
+                "DatasetNotFound": "No se ha encontrado el dataset de la característica",
+                "CharacteristicNotFound": "No se ha encontrado el nombre de característica \"{characteristicName}\" en el actor {actorName} para realizar la acción desde el menú contextual de características",
+                "CantShowWeaponChatCardError": "No se ha encontrado el skillId [{skillItemId}] o weaponId [{weaponItemId}] en el actor ${actorName} con el para mostar la tarjeta del chat desde el menú contextual de combate",
+                "CantToggleExperienceError": "No se ha encontrado el itemId [{itemId}] en el actor {actorName} para conmutar la marca de experiencia desde el menú contextual de combate",
+                "CantShowItemSheetError": "No se ha encontrado el itemId [{skillItemId}] en el actor {actorName} con el que mostrar la hoja de habilidad desde el menú contextual de combate",
+                "CantShowWeaponSheetError": "No se ha encontrado el itemId [{weaponItemId}] en el actor {actorName} con el que mostrar la hoja de objeto desde el menú contextual de combate",
+                "CantDeleteSkillError": "No se ha encontrado el itemId [{skillItemId}] en el actor {actorName} para borrar el objeto desde el menú contextual de combate",
+                "CantDeleteWeaponError": "No se ha encontrado el itemId [{weaponItemId}] en el actor {actorName} para borrar el arma desde menú contextual de combate",
+                "CantShowJournalDescriptionError": "No se ha encontrado el journal Id [{journalId}] en el actor {actorName} con el que mostrarlo desde el menú contextual de culto",
+                "CantEditCultError": "`No se ha encontrado el itemId [{itemId}] en el actor {actorName} con el que editar el culto desde el menú contextual de culto",
+                "CantEditGearError": "No se ha encontrado el gear with itemId [{itemId}] en el actor {actorName} con el que editar el objeto desde el menú contextual de equipo",
+                "CantEditHitLocationError": "No se ha encontrado el itemId [{itemId}] en el actor {actorName} con el que editar localización desde el menú contextual de salud",
+                "CantDirectRollPassionError": "No se ha encontrado el itemId [{itemId}] o probabilidad del objeto (item.data.data.chance) en el actor {actorName} para realizar una tirada directa de pasión desde el menú contextual de pasión`",
+                "CantToggleExperiencePassionError": "No se ha encontrado el itemId [{itemId}] en el actor {actorName} con el que conmutar marca de experiencia en la pasión desde el menú contextual de pasión.",
+                "CantImprovePassionError": "No se ha encontrado el itemId [{itemId}] en el actor {actorName} para mejorar pasión desde el menú contextual de pasión",
+                "CantEditPassionError": "No se ha encontrado el itemId [{itemId}] en el actor {actorName} para editar una pasión desde el menú contextual de pasión",
+                "CantEditRuneError": "No se ha encontrado el itemsheet [{itemId}] en el actor {actorName} para editar una runa desde el menú contextual de runa",
+                "CantRollQuickSkillError": "El objeto [{itemId}] del actor {actorName} no puede realizar una tirada directa de la habilidad desde el menú contextual de habilidad",
+                "CantEditSpiritMagicError": "No se ha encontrado el itemSheet de [{itemId}] en el actor {actorName} para editar el conjuro espiritual desde el menú contextual de magia espiritual"
+            }
         },
-        "experienceGainFailed": {
-          "flavor": "La mejora por experiencia para {typeLocName} \"{name}\" ha fallado",
-          "content": "{actorName} ha fallado en su aprendizaje por experiencia y la marca se ha quitado de {typeLocName} \"{name}\"."
+        "Dialog": {
+            "Common": {
+                "yes": "sí",
+                "no": "no",
+                "btnYes": "Sí",
+                "btnNo": "No",
+                "btnCancel": "Cancelar",
+                "btnConfirm": "Confirmar",
+                "OtherModifiers": "Otros modificadores:",
+                "RollFormat": "Tirada ({chance}%)",
+                "CantFindChatMessageError": "CantFindChatMessageError",
+                "CantFindActorToDoRollFromChatCardWarn": "¡No se ha encontrado el actor con el que hacer la tirada de esta tarjeta del chat!"
+            },
+            "characteristicCard": {
+                "CardWithoutActorIdError": "Se ha pedido la tarjeta de característica de un actor sin id",
+                "CardFlavor": "Característica: {name} ({value})",
+                "RollFlavor": "Tirada {name} {difficulty}",
+                "RollFlavorModifier": "<br/>Con otros modificadores {modifier}"
+            },
+            "confirmCopyIntangibleItem": {
+                "title": "¿Quiere traspasar {itemName} a {targetActor}?",
+                "header": "¿Quiere traspasar {itemName} a {targetActor}?",
+                "btnCopy": "Copiar",
+                "ReallyCopyIntangibleItem": "¿Quiere copiar {itemName} de {sourceActor} a {targetActor}?"
+            },
+            "confirmTransferPhysicalItem": {
+                "title": "¿Quiere traspasar {itemName} a {targetActor}?",
+                "header": "¿Quiere traspasar {itemName} a {targetActor}?",
+                "btnGive": "Traspasar",
+                "ReallyGiveItemSingle": "¿Quiere traspasar {itemName} a {targetActor}?  Se borrará del inventario de {sourceActor}",
+                "ReallyGiveItemQuantity": "¿Quiere traspasar {itemName} a {targetActor}?  Se borrará del inventario de {sourceActor}, o se reducirá la cantidad del inventario de {sourceActor}",
+                "GiveHowMany": "¿Cuántos {itemName} traspasar a {targetActor}? El inventario de {sourceActor} de este objeto se deducirá la cantidad escogida, o el objeto será borrado si la cantidad excede el máximo de {maxQty}"
+            },
+            "itemCard": {
+                "RollFlavor": "Tirada {name}",
+                "RollFlavorModifier": "<br/>Con otros modificadores {modifier}"
+            },
+            "reputationCard": {
+                "CheckReputationFlavor": "Tirada de reputación",
+                "Reputation": "Reputación"
+            },
+            "spiritMagicCard": {
+                "CardWithoutActorIdError": "Se ha pedido la tarjeta de conjuro espiritual de un actor sin id",
+                "CantCastSpellAboveLearnedLevel": "No se puede lanzar un conjuro por encima del nivel aprendido",
+                "NotEnoughMagicPoints": "Sin puntos de magia suficientes para lanzar el conjuro",
+                "SuccessfullyCastInfo": "Lanzamiento con éxito del conjuro espiritual, se han usado {amount} puntos de magia",
+                "CardFlavor": "Magia espiritual: {name}",
+                "Cast": "Lanzamiento {spellName}",
+                "Level": "Nivel",
+                "Boost": "Potenciación"
+            },
+            "confirmItemDeleteDialog": {
+                "title": "Borrar {itemType}: {itemName}",
+                "content": "¿Está seguro de que desea borrar el {itemType} {itemName}?",
+                "contentCult": "¿Está seguro de que desea borrar el {itemType} {itemName}? Se borrarán también todos los obejtos {runeMagicSpell} asociados a este {itemType}."
+            },
+            "improveAbilityDialog": {
+                "title": "Mejora de {typeLocName} \"{name}\"",
+                "titleChar": "Mejora de característica \"{name}\"",
+                "header": "Mejorando {name}",
+                "fromExperience": ". . . con la experiencia",
+                "chanceToGain": "{chanceToGain}% porcentaje de ganar:",
+                "experienceGainFixed": "Ganancia 3%",
+                "experienceGainRandom": "Ganancia 1d6%",
+                "noExperienceCheckTitle": "Sin marca de experiencia",
+                "noExperienceCheckExplanation": "Este personaje no tiene ninguna marca de experiencia en {typeLocName} y no podrá mejorarse con la experiencia",
+                "throughTraining": ". . . con el entrenamiento",
+                "afterTraining": "Tras el entrenamiento:",
+                "gain": "Ganancia {gain}%",
+                "gainChar": "Ganancia {gain}",
+                "throughResearch": ". . . con la investigación",
+                "skillOver75Title": "Habilidad por encima de 75%",
+                "skillOver75Explanation": "No puede entrenar habilidades con un valor por encima de 75%",
+                "speciesMaxTitle": "Actualmente al máximo por especie {name}",
+                "speciesMaxExplanation": "Se encuentra por por encima del máximo por especie {name} y no podrá ganar más",
+                "btnDoImprovement": "Aplicar la mejora",
+                "btnCancel": "Cancelar",
+                "experienceRoll": {
+                    "flavor": "{actorName} hace una tirada de experiencia por {typeLocName} \"{name}\"",
+                    "contentSkill": "Tire un 1d100 y añada el modificador por categoría ({mod}), tendrá éxito si la tirada modificada es MAYOR que el valor {skillChance}% de {typeLocName} \"{name}\" o un 100",
+                    "contentOther": "Tire un 1d100, tendrá éxito si la tirada es MAYOR que el valor {chance}% de {typeLocName} \"{name}\"",
+                    "contentChar": "Tire un 1d100, tendrá éxito si la tirada es MENOR o IGUAL que {chanceToGain}%. El valor {chance} multiplicado por cinco está basado en el máximo de característica por especie {speciesMax} menos la característica \"{name}\""
+                },
+                "experienceResultCard": {
+                    "flavor": "La mejora por experiencia para {typeLocName} \"{name}\" ha tenido éxito",
+                    "contentChoseFixed": "Elija una ganancia fija de {gain}.",
+                    "contentChoseRandom": "Elija una ganancia de {gain}."
+                },
+                "experienceGainFailed": {
+                    "flavor": "La mejora por experiencia para {typeLocName} \"{name}\" ha fallado",
+                    "content": "{actorName} ha fallado en su aprendizaje por experiencia y la marca se ha quitado de {typeLocName} \"{name}\"."
+                },
+                "trainingResultCard": {
+                    "flavor": "Mejora por entrenamiento para {typeLocName} \"{name}\"",
+                    "contentChoseFixed": "Elija una ganancia fija de {gain}.",
+                    "contentChoseRandom": "Elija una ganancia de {gain}."
+                },
+                "researchRoll": {
+                    "flavor": "{actorName} hace una tiradade mejora por investigación para {typeLocName} \"{name}\"",
+                    "contentChar": "Tire 1d100, tendrá éxito si la tirada es MENOR O IGUAL a {chanceToGain}%. El valor {chance} multiplicado por cinco está basado en el máximo de característica por especie {speciesMax} menos la característica \"{name}\""
+                },
+                "researchResultCard": {
+                    "flavor": "Mejora por investigación para {typeLocName} \"{name}\"",
+                    "contentChoseRandom": "Elija una ganancia de {gain}."
+                },
+                "researchGainFailed": {
+                    "flavor": "La mejora por investigación para {typeLocName} \"{name}\" ha fallado",
+                    "content": "{actorName} ha fallado en su aprendizaje mediante investigación para {typeLocName} \"{name}\"."
+                },
+                "notifications": {
+                    "noExperience": "{actorName} no tiene una marca de experiencia en {typeLocName} \"{name}\" y no puede ganar experiencia"
+                }
+            },
+            "runeMagicCard": {
+                "MissingJournalLinkTitle": "Edite el hechizo y añada una descripción para tener un enlace a un diario aquí",
+                "CastUsingRune": "Lanzando usando la runa:",
+                "RuneHasExperienceTitle": "Tiene marca de experiencia",
+                "RunePointCost": "Coste en Puntos de Runa:",
+                "OneUseWarning": "¡De un solo uso!",
+                "OneUseWarningTip": "¡Lanzar este hechizo reducirá tanto sus puntos de runa actuales como el máximo del culto!",
+                "MagicPointBoost": "Potenciación de puntos de magia:",
+                "MeditationOrRitual": "Meditación o prácticas rituales:",
+                "MeditationOrRitualValue0": "Ninguna",
+                "MeditationOrRitualValue5": "Meditación: 1 asalto de combate, +5% bono",
+                "MeditationOrRitualValue10": "Meditación: 2 asaltos de combate, +10% bono",
+                "MeditationOrRitualValue15": "Meditación: 5 asaltos de combate (1 minuto), +15% bono",
+                "MeditationOrRitualValue20": "Meditación: 25 asaltos de combate (5 minutos), +20% bono",
+                "MeditationOrRitualValue25": "Meditación: 50 asaltos de combate (10 minutos), +25% bono",
+                "MeditationOrRitualValue30": "Prácticas rituales: media hora, +30% bono",
+                "MeditationOrRitualValue35": "Prácticas rituales: 1 hora, +35% bono",
+                "MeditationOrRitualValue40": "Prácticas rituales: 5 horas, +40% bono",
+                "MeditationOrRitualValue45": "Prácticas rituales: 10 horas, +45% bono",
+                "MeditationOrRitualValue50": "Prácticas rituales: 1 día, +50% bono",
+                "MeditationOrRitualValue55": "Prácticas rituales: 2 días, +55% bono",
+                "MeditationOrRitualValue60": "Prácticas rituales: 1 semana, +60% bono",
+                "MeditationOrRitualValue65": "Prácticas rituales: 2 semanas, +65% bono",
+                "MeditationOrRitualValue70": "Prácticas rituales: 4 semanas, +70% bono",
+                "MeditationOrRitualValue75": "Prácticas rituales: 1 temporada, +75% bono",
+                "MeditationOrRitualValue80": "Prácticas rituales: 1 año, +80% bono",
+                "MeditationOrRitualValue85": "Prácticas rituales: 2 años, +85% bono",
+                "MeditationOrRitualValue90": "Prácticas rituales: 5 años, +90% bono",
+                "MeditationOrRitualValue95": "Prácticas rituales: 10 años, +95% bono",
+                "MeditationOrRitualValue100": "Prácticas rituales: 20 años, +100% bono",
+                "SkillAugmentation": "Refuerzo de habilidades:",
+                "SkillAugmentationValue0": "Ninguno",
+                "SkillAugmentationValue50": "Crítico, +50%",
+                "SkillAugmentationValue30": "Especial, +30%",
+                "SkillAugmentationValue20": "Éxito, +20%",
+                "SkillAugmentationValue-20": "Fallo, -20%",
+                "SkillAugmentationValue-50": "Pifia, -50%",
+                "getActorFromIdsWarning": "No se puede obtener el actor del id de actor o el id de icono",
+                "noSelectedRuneWarning": "Intentando tirar un conjuro de magia rúnica sin ninguna runa seleccionada en la tarjeta",
+                "resultMessageCritical": "El conjuto tiene efecto, no cuesta ningún punto de runa y {magicPointBoost} puntos de magia de la potenciación",
+                "resultMessageSpecial": "El conjuto tiene efecto, cuesta {runePointCost} puntos de runa y {magicPointBoost} puntos de magia de la potenciación",
+                "resultMessageSuccess": "El conjuto tiene efecto, cuesta {runePointCost} puntos de runa y {magicPointBoost} puntos de magia de la potenciación",
+                "resultMessageFailure": "El conjuto falla y no se pierde ningún punto de runa. Si fue potenciado, solo se perderá 1 punto de magia",
+                "resultMessageFumble": "El conjuto falla y se pierden {runePointCost} puntos de runa. Si fue potenciado, solo se perderá 1 punto de magia",
+                "SpentOneUseRunePoints": "¡{actorName} ha gastado {runePoints} puntos de runa de un solo uso del culto {cultName}!",
+                "validationNotEnoughRunePoints": "¡No le quedan suficientes puntos de runa!",
+                "validationNotEnoughMagicPoints": "¡No le quedan suficientes puntos de magia para la potenciación elegida!",
+                "runeMagicResultFlavor": "Magia rúnica: {name}",
+                "Cast": "Lanzamiento {spellName}"
+            },
+            "weaponCard": {
+                "Damage": "Daño",
+                "damageRollType": {
+                    "normal": "Normal",
+                    "special": "Especial",
+                    "maxSpecial": "Máx. especial"
+                },
+                "fumbleRoll": "Tirar pifia",
+                "hitLocationRoll": "Tirar localización",
+                "Modifier": "Modificador",
+                "CantFindSkillError": "No se ha encontrado habilidad con itemId [{skillId}] en el actor {actorName} con el que mostrar la tarjeta del chat de arma",
+                "CantFindActorWarn": "No se ha encontrado el actor en este mundo con el que realizar la acción",
+                "UsedLastOfAmmoWarn": "Acaba de usar el último de tus {projectileName}!",
+                "OutOfAmmoWarn": "No dispone de más {projectileName} para {combatManeuverName}!",
+                "CantFindChatMessageError": "No se ha podido encontrar el mensaje en el chat",
+                "HitLocationRollFlavor": "Tirada de localización",
+                "UnknownButtonInCardError": "Botón desconocido \"{actionButton}\" en la tarjeta del chat de arma",
+                "WeaponCardFlavor": "Arma: {weaponName}",
+                "NoCombatManeuverInDamageRollError": "Sin maniobra de combate en la tirada de daño",
+                "CantFindActorToDoDamageRollWarn": "No se ha podido encontrar el actor en el mundo con el que tirar el daño",
+                "WeaponDoesNotHaveCombatManeuverError": "El arma no tiene esa maniobra de combate",
+                "WeaponDoesNotHaveAttachManeuverError": "El arma llamada \"{weaponName}\" no tiene una maniobra de combate ofensiva",
+                "WeaponDamageTag": "arma",
+                "DamageBonusDamageTag": "modificador al daño",
+                "CrushSpecialDamageTag": "especial aplastamiento",
+                "ImpaleSpecialDamageTag": "especial empalamiento",
+                "FumbleTableMissingWarn": "No se ha encontrado la tabla de pifias \"{fumbleTableName}\"",
+                "PluralResults": "{numberOfResults} resultados",
+                "SingularResult": "un resultado",
+                "FumbleResultFlavor": "Extrayendo {numberOfResults} de la tabla {fumbleTableName}"
+            }
         },
-        "trainingResultCard": {
-          "flavor": "Mejora por entrenamiento para {typeLocName} \"{name}\"",
-          "contentChoseFixed": "Elija una ganancia fija de {gain}.",
-          "contentChoseRandom": "Elija una ganancia de {gain}."
+        "Item": {
+            "Armor": {
+                "NamePrefix": "Prefijo del nombre",
+                "ArmorTypeLabel": "Tipo de armadura",
+                "Material": "Material",
+                "HitLocations": "Localizaciones",
+                "AddNewCoveredHitLocationPlaceholder": "Añadir nueva localización cubierta",
+                "Absorbs": "Absorbe",
+                "MoveQuietlyPenalty": "Penalización a moverse en silencio",
+                "FitsSIZ": "Sirve para TAM",
+                "ArmorType": {
+                    "Hood": "Capucha",
+                    "BroadBrimmedHat": "Sombrero de ala ancha",
+                    "Cap": "Gorro",
+                    "CompositeHelm": "Yelmo compuesto",
+                    "OpenHelm": "Yelmo abierto",
+                    "ClosedHelm": "Yelmo cerrado",
+                    "FullHelm": "Yelmo completo",
+                    "Sleeves": "Mangas",
+                    "Vambraces": "Brazales",
+                    "Cuirass": "Coraza",
+                    "Linothorax": "Linotórax",
+                    "Hauberk": "Loriga",
+                    "Segmented": "Segmentada",
+                    "Skirt": "Falda",
+                    "PantsTrews": "Pantalones/calzas",
+                    "Greaves": "Grebas"
+                },
+                "ArmorMaterial": {
+                    "Leather": "Cuero",
+                    "HeavyLeather": "Cuero duro",
+                    "StuddedLeather": "Cuero tachonado",
+                    "BronzePlate": "Placas de bronce",
+                    "BronzeSegmentedPlate": "Placas de bronce segmentada",
+                    "BronzeDiscPlate": "Bezanteada",
+                    "LightScale": "Escamas ligera",
+                    "HeavyScale": "Escamas pesada",
+                    "Cuirboilli": "Cuero hervido",
+                    "RingMail": "Anillas",
+                    "TurtleShell": "Caparazón",
+                    "Quilted": "Acolchada",
+                    "Linen": "Lino"
+                }
+            },
+            "Cult": {
+                "CultNamePlaceholder": "Nombre del culto",
+                "CultTaglinePlaceholder": "Lema del culto",
+                "AddNewRunePlaceholder": "Añadir nueva runa",
+                "HolyDays": "Días sagrados Days",
+                "RunePoints": "Puntos de runa",
+                "ActorsGifts": "Dones del actor",
+                "ActorsGeases": "Geas del actor",
+                "ActorsSubCults": "Subcultos del actor"
+            },
+            "EquippedStatus": {
+                "notCarried": "No cargado",
+                "carried": "Cargado",
+                "equipped": "Equipado"
+            },
+            "Gear": {
+                "Name": "Nombre",
+                "EncumbranceAbbr": "CRG",
+                "PriceReal": "Precio (real)",
+                "PriceEstimated": "Precio (estimado)",
+                "Location": "Ubicación",
+                "AttunedTo": "En sintonía con",
+                "Quantity": "Cantidad",
+                "Description": "Descripción",
+                "GMNotes": "Notas GM",
+                "IsContainerQ": "¿Es contenedor?",
+                "LunarsAbbr": "L",
+                "HitPointsAbbr": "PG",
+                "CurrentHitPoints": "PG actuales",
+                "HitPointLocation": "Localización de PG",
+                "PhysicalItemType": {
+                    "unique": "Único",
+                    "currency": "Moneda",
+                    "consumable": "Consumible"
+                }
+            },
+            "HitLocation": {
+                "Name": "Nombre",
+                "HealthStatus": "Estado de salud",
+                "ActAs": "Actúa como",
+                "ForDamageCalculations": "para el cálculo de daño",
+                "ConnectedTo": "Conectado con",
+                "HitLocationOn": "Localización en",
+                "NaturalArmorPoints": "PA natural",
+                "BaseHPDelta": "Delta PG base (+/- de los PG de localización base)",
+                "AddWound": {
+                    "Title": "Aplicar herida a {hitLocationName}",
+                    "ApplyToTotalHitPointsQ": "¿Aplicar a los PG totales?",
+                    "SubtractArmorPointsQ": "¿Restar PA?",
+                    "btnAddWound": "Añadir herida"
+                },
+                "AddWoundChatContent": "{actorName} recibe una herida en {hitLocationName}. {notification}",
+                "HealWound": {
+                    "Title": "Curar herida en {hitLocationName}",
+                    "SelectWoundToHeal": "Seleccione la herida que quiere curar en {hitLocationName}",
+                    "HitPointsToHeal": "PG curados: ",
+                    "btnHealWound": "Curar herida"
+                },
+                "HealthStatusEnum": {
+                    "healthy": "Sano",
+                    "wounded": "Herido",
+                    "useless": "Incapacitada",
+                    "severed": "Amputada"
+                },
+                "Notification": {
+                    "CantFindHitLocation": "No se ha podido encontrar localización con itemId [{hitLocationItemId}] en el actor ${actorName} con el que mostrar la tarjeta de chat de heridas",
+                    "HitLocationDoesNotHaveCalculatedArmor": "La localización {hitLocationName} no tiene un campo calculado de PA totales",
+                    "NoValueOnHitLocation": "No existe el valor en la localización ${hitLocationName}",
+                    "NoMaxOnHitLocation": "Sin máximo en la localización ${hitLocationName}",
+                    "NoActorOnTokenWarn": "Sin actor en el icono"
+                }
+            },
+            "HitLocationType": {
+                "limb": "Extremidad",
+                "head": "Cabeza",
+                "chest": "Pecho",
+                "abdomen": "Abdomen"
+            },
+            "Notification": {
+                "CircularGearLocationWarning": "Referencia circular en ubicación de equipo (A en B en A) - compruebe la ubicación: {itemLocation}",
+                "ItemIsNotContainerWarning": "{itemName} no es un contenedor",
+                "CantFindRootLocationNode": "No se ha podido encontrar el nodo raíz de la localización",
+                "LocationDidntFindItem": "no se ha encontrado el objeto en la ubicación",
+                "ExpectedCultItemError": "Se esperaba un culto",
+                "CantFindRunesCompendiumError": "No se ha podido encontrar el compendio de runas {runesCompendiumName}",
+                "CantFindCultRuneError": "No se ha podido encontrar la runa de culto {newRune} entre allRunesIndex",
+                "CantFindRuneInAllRunesCompendiumError": "No se ha podido encontrar la runa en el compendio",
+                "ItemWasNotHitLocationError": "Se ha llamado a hitLocation#onActorPrepareEmbeddedEntities sobre un objeto sin hitLocation",
+                "HitLocationDoesNotHaveActorError": "La localización no tiene un actor asociado",
+                "ActorDoesNotHaveMaxHpError": "El actor no tiene PG máximos",
+                "OpposingRuneDoesNotExistWarning": "La runa opuesta no existe",
+                "WrongItemTypeRuneMagicError": "RQG | itemtype incorrecto o sin objeto incrustrado en el actor PrepareEmbeddedEntities",
+                "ActorDoesNotHaveCultOnRuneMagicWarning": "RQG | El culto al que se hace referencia en la habilidad mágica ${item.name} no existe en el actor ${actor.name}",
+                "PrepareDerivedDataNotSkillError": "Se ha llamado a Skill#onActorPrepareDerivedData con algo que no es una habilidad",
+                "ActorNotCharacterError": "El actor no es del tipo personaje",
+                "CantFindWeaponSkillWarning": "No se ha podido encontrar la habilidad de armas",
+                "NoWeaponSkillFromSkillOriginWarning": "No se ha podido encontrar la habilidad de armas del skillOrigin \"{skillOrigin}\".",
+                "CantFindSkillAssociatedWithWeaponWarning": "No se ha podido encontrar la habilidad asociada con este arma",
+                "CantCreateActiveEffect": "No se puede crear el efecto activo",
+                "NoIdOnTokenError": "Sin ID en el icono",
+                "NoIdOnActorError": "Sin ID en el actor",
+                "ItemWithIdDoesNotHaveChanceError": "No se ha podido encontrar el objeto con ID {itemId} en el actor {actorName} con el que mostrar la tarjeta del chat",
+                "CouldNotFindActorByIdsWarn": "No se ha podido encontrar el actor con actor ID {actorId} ni el tokenID {tokenId} para realizar la tirada de atributo",
+                "CanOnlyDropJournalEntryWarning": "Solo puede arrastrar una entrada de diario en una hoja del tipo {itemType}",
+                "ErrorParsingItemData": "Error procesando datos del objeto",
+                "SimpleCalendarNotInstalled": "Este comando requiere el módulo Simple Calendar"
+            },
+            "Passion": {
+                "Name": "Nombre",
+                "Passion": "Pasión",
+                "Subject": "Objeto",
+                "Chance": "Probabilidades",
+                "Experience": "Experiencia",
+                "BackStory": "Trasfondo",
+                "PassionEnum": {
+                    "Ambition": "Ambición",
+                    "Cowardly": "Cobardía",
+                    "Devotion": "Devoción",
+                    "Fear": "Miedo",
+                    "Hate": "Odio",
+                    "Honor": "Honor",
+                    "Loyalty": "Lealtad",
+                    "Love": "Amor",
+                    "Gluttony": "Gula",
+                    "Vanity": "Vanidad"
+                }
+            },
+            "Rune": {
+                "Name": "Nombre",
+                "Rune": "Runa",
+                "Type": "Tipo",
+                "HasExperienceQ": "¿Tiene experiencia?",
+                "OpposingRune": "Runa opuesta",
+                "MinorRunes": "Runa menor",
+                "MasteredSorceryQ": "¿Dominada (hechicería)?",
+                "RuneType": {
+                    "element": "Elemental",
+                    "power": "Poder",
+                    "form": "Forma",
+                    "condition": "Condición",
+                    "technique": "Técnica"
+                }
+            },
+            "RuneMagic": {
+                "Range": "Alcance",
+                "Duration": "Duración",
+                "StackableQ": "¿Apilable?",
+                "OneUseQ": "¿Único uso?",
+                "Cult": "Culto",
+                "Runes": "Runas:",
+                "AddNewRunePlaceholder": "Añadir nueva runa",
+                "runeMagicCultDialog": {
+                    "title": "¿A qué culto pertenece este conjuro rúnico?",
+                    "btnAddRuneMagic": "Añadir conjuro rúnico",
+                    "Actor": "Actor:",
+                    "RuneMagic": "Conjuro rúnico:"
+                }
+            },
+            "Skill": {
+                "Name": "Nombre",
+                "SkillName": "Nombre de la habilidad",
+                "Specialization": "Especialización",
+                "Category": "Categoría",
+                "CategoryModifier": "Modificacor de categoría",
+                "BaseChance": "Probabilidad base",
+                "LearnedChance": "Propabilidad aprendizaje",
+                "Chance": "Probabilidad",
+                "CanGainExperienceQ": "¿Puede ganar experiencia?",
+                "HasExperienceQ": "¿Tiene experiencia?",
+                "SorceryRunes": "Runas de hechicería:",
+                "Notification": {
+                    "CantFindSkillJournalEntryError": "No se ha podido encontrar el diaro con el que quiere enlazar la hoja {skillName}"
+                },
+                "SkillCategory": {}
+            },
+            "Spell": {
+                "RitualQ": "¿Ritual?",
+                "EnchantmentQ": "¿Encantamiento?",
+                "DurationEnum": {
+                    "": "Ninguno",
+                    "instant": "Instantáneo",
+                    "temporal": "Temporal",
+                    "focused": "Foco",
+                    "permanent": "Permanente",
+                    "special": "Especial"
+                },
+                "RangeEnum": {
+                    "": "Ninguno",
+                    "self": "Personal",
+                    "touch": "Toque",
+                    "ranged": "Alcance",
+                    "special": "Especial"
+                },
+                "ConcentrationEnum": {
+                    "": "",
+                    "active": "Activo",
+                    "passive": "Pasivo"
+                }
+            },
+            "SpiritMagic": {
+                "VariableQ": "¿Variable?",
+                "Range": "Alcance",
+                "Duration": "Duración",
+                "Concentration": "Concentración",
+                "SpellFocus": "Foco del hechizo:",
+                "MatrixIndicator": "(En una matriz)",
+                "MatrixQ": "¿En una matriz?",
+                "LinkedToCompendium": "Enlazado con la entrada [{journalName}] del compendio [{compendium}]"
+            },
+            "Weapon": {
+                "UsesOfWeaponHeader": "Usos del arma",
+                "DropSkillToChange": "(Arrastre una habilidad sobre el arma para cambiar)",
+                "DropSkillToAdd": "¡Suelte una habilidad sobre este arma!",
+                "Damage": "Daño",
+                "MinimumStrengthAbbr": "FUE mín",
+                "MinimumDexterityAbbr": "DES mín",
+                "StrikeRankAbbr": "MR",
+                "CombatManeuversHeader": "Maniobras de combate",
+                "ActionLabel": "Etiqueta de acción",
+                "DamageType": "Tipo de daño",
+                "DamageTypeEnum": {
+                    "impale": "Empalamiento",
+                    "slash": "Tajo",
+                    "crush": "Aplastamiento",
+                    "parry": "Parada",
+                    "special": "Especial"
+                },
+                "NaturalWeaponQ": "¿Arma natural?",
+                "ThrownWeaponQ": "¿Arma arrojadiza? (mod. daño a la mitad)",
+                "ProjectileWeaponQ": "¿Arma de proyectiles? (sin mod. daño, usa los proyectiles asociados)",
+                "RangedWeaponQ": "¿Arma a distancia? (sin mod. daño, sin proyectiles)",
+                "ProjectileQ": "¿Proyectiles? (munición)",
+                "Projectile": "Proyectiles",
+                "Range": "Alcance",
+                "Rate": "Tasa",
+                "SameDataAsOneHand": "Los mismos datos que a una mano",
+                "combatManeuver": {
+                    "Throw": "Arrojar",
+                    "Shoot": "Disparar",
+                    "Thrust": "Punta",
+                    "Cut": "Filo",
+                    "Bash": "Golpe escudo",
+                    "Parry": "Parada",
+                    "Grapple": "Presa",
+                    "Knockback": "Empujón"
+                }
+            }
         },
-        "researchRoll": {
-          "flavor": "{actorName} hace una tiradade mejora por investigación para {typeLocName} \"{name}\"",
-          "contentChar": "Tire 1d100, tendrá éxito si la tirada es MENOR O IGUAL a {chanceToGain}%. El valor {chance} multiplicado por cinco está basado en el máximo de característica por especie {speciesMax} menos la característica \"{name}\""
+        "Foundry": {
+            "ActiveEffect": {
+                "Header": "🐛Efectos activos🧪",
+                "AddEffectTitle": "Añadir efecto",
+                "Label": "Etiqueta",
+                "Disabled": "Deshabilitado",
+                "StartTime": "Tiempo inicio",
+                "KeyValueMode": "Clave - Valor - Modo",
+                "NewActiveEffectName": "Nuevo efecto activo"
+            },
+            "CombatTracker": {
+                "DuplicateCombatant": "Duplicar contendiente",
+                "UpdateCombatant": "Actualizar contendiente",
+                "RemoveCombatant": "Quitar contendiente",
+                "RemoveAllDuplicates": "Quitar todos los duplicados",
+                "CombatantWithoutActor": "El contendiente \"{combatantName}\" hace referencia a un actor que ya no existe en el mundo"
+            },
+            "ContentLink": {
+                "CompendiumNameTitle": "Compendio [{compendiumName}]",
+                "WorldJournalEntry": "Entrada del diario en el mundo",
+                "DropToConnectJournal": "Arraste un diario a este objeto para conectarlo con una descripción",
+                "DropToReplaceJournal": "Arrastre un diario a este objeto para reemplazar la descripción"
+            }
         },
-        "researchResultCard": {
-          "flavor": "Mejora por investigación para {typeLocName} \"{name}\"",
-          "contentChoseRandom": "Elija una ganancia de {gain}."
-        },
-        "researchGainFailed": {
-          "flavor": "La mejora por investigación para {typeLocName} \"{name}\" ha fallado",
-          "content": "{actorName} ha fallado en su aprendizaje mediante investigación para {typeLocName} \"{name}\"."
-        },
-        "notifications": {
-          "noExperience": "{actorName} no tiene una marca de experiencia en {typeLocName} \"{name}\" y no puede ganar experiencia"
-        }
-      },
-      "runeMagicCard": {
-        "MissingJournalLinkTitle": "Edite el hechizo y añada una descripción para tener un enlace a un diario aquí",
-        "CastUsingRune": "Lanzando usando la runa:",
-        "RuneHasExperienceTitle": "Tiene marca de experiencia",
-        "RunePointCost": "Coste en Puntos de Runa:",
-        "OneUseWarning": "¡De un solo uso!",
-        "OneUseWarningTip": "¡Lanzar este hechizo reducirá tanto sus puntos de runa actuales como el máximo del culto!",
-        "MagicPointBoost": "Potenciación de puntos de magia:",
-        "MeditationOrRitual": "Meditación o prácticas rituales:",
-        "MeditationOrRitualValue0": "Ninguna",
-        "MeditationOrRitualValue5": "Meditación: 1 asalto de combate, +5% bono",
-        "MeditationOrRitualValue10": "Meditación: 2 asaltos de combate, +10% bono",
-        "MeditationOrRitualValue15": "Meditación: 5 asaltos de combate (1 minuto), +15% bono",
-        "MeditationOrRitualValue20": "Meditación: 25 asaltos de combate (5 minutos), +20% bono",
-        "MeditationOrRitualValue25": "Meditación: 50 asaltos de combate (10 minutos), +25% bono",
-        "MeditationOrRitualValue30": "Prácticas rituales: media hora, +30% bono",
-        "MeditationOrRitualValue35": "Prácticas rituales: 1 hora, +35% bono",
-        "MeditationOrRitualValue40": "Prácticas rituales: 5 horas, +40% bono",
-        "MeditationOrRitualValue45": "Prácticas rituales: 10 horas, +45% bono",
-        "MeditationOrRitualValue50": "Prácticas rituales: 1 día, +50% bono",
-        "MeditationOrRitualValue55": "Prácticas rituales: 2 días, +55% bono",
-        "MeditationOrRitualValue60": "Prácticas rituales: 1 semana, +60% bono",
-        "MeditationOrRitualValue65": "Prácticas rituales: 2 semanas, +65% bono",
-        "MeditationOrRitualValue70": "Prácticas rituales: 4 semanas, +70% bono",
-        "MeditationOrRitualValue75": "Prácticas rituales: 1 temporada, +75% bono",
-        "MeditationOrRitualValue80": "Prácticas rituales: 1 año, +80% bono",
-        "MeditationOrRitualValue85": "Prácticas rituales: 2 años, +85% bono",
-        "MeditationOrRitualValue90": "Prácticas rituales: 5 años, +90% bono",
-        "MeditationOrRitualValue95": "Prácticas rituales: 10 años, +95% bono",
-        "MeditationOrRitualValue100": "Prácticas rituales: 20 años, +100% bono",
-        "SkillAugmentation": "Refuerzo de habilidades:",
-        "SkillAugmentationValue0": "Ninguno",
-        "SkillAugmentationValue50": "Crítico, +50%",
-        "SkillAugmentationValue30": "Especial, +30%",
-        "SkillAugmentationValue20": "Éxito, +20%",
-        "SkillAugmentationValue-20": "Fallo, -20%",
-        "SkillAugmentationValue-50": "Pifia, -50%",
-        "getActorFromIdsWarning": "No se puede obtener el actor del id de actor o el id de icono",
-        "noSelectedRuneWarning": "Intentando tirar un conjuro de magia rúnica sin ninguna runa seleccionada en la tarjeta",
-        "resultMessageCritical": "El conjuto tiene efecto, no cuesta ningún punto de runa y {magicPointBoost} puntos de magia de la potenciación",
-        "resultMessageSpecial": "El conjuto tiene efecto, cuesta {runePointCost} puntos de runa y {magicPointBoost} puntos de magia de la potenciación",
-        "resultMessageSuccess": "El conjuto tiene efecto, cuesta {runePointCost} puntos de runa y {magicPointBoost} puntos de magia de la potenciación",
-        "resultMessageFailure": "El conjuto falla y no se pierde ningún punto de runa. Si fue potenciado, solo se perderá 1 punto de magia",
-        "resultMessageFumble": "El conjuto falla y se pierden {runePointCost} puntos de runa. Si fue potenciado, solo se perderá 1 punto de magia",
-        "SpentOneUseRunePoints": "¡{actorName} ha gastado {runePoints} puntos de runa de un solo uso del culto {cultName}!",
-        "validationNotEnoughRunePoints": "¡No le quedan suficientes puntos de runa!",
-        "validationNotEnoughMagicPoints": "¡No le quedan suficientes puntos de magia para la potenciación elegida!",
-        "runeMagicResultFlavor": "Magia rúnica: {name}",
-        "Cast": "Lanzamiento {spellName}"
-      },
-      "weaponCard": {
-        "Damage": "Daño",
-        "damageRollType": {
-          "normal": "Normal",
-          "special": "Especial",
-          "maxSpecial": "Máx. especial"
-        },
-        "fumbleRoll": "Tirar pifia",
-        "hitLocationRoll": "Tirar localización",
-        "Modifier": "Modificador",
-        "CantFindSkillError": "No se ha encontrado habilidad con itemId [{skillId}] en el actor {actorName} con el que mostrar la tarjeta del chat de arma",
-        "CantFindActorWarn": "No se ha encontrado el actor en este mundo con el que realizar la acción",
-        "UsedLastOfAmmoWarn": "Acaba de usar el último de tus {projectileName}!",
-        "OutOfAmmoWarn": "No dispone de más {projectileName} para {combatManeuverName}!",
-        "CantFindChatMessageError": "No se ha podido encontrar el mensaje en el chat",
-        "HitLocationRollFlavor": "Tirada de localización",
-        "UnknownButtonInCardError": "Botón desconocido \"{actionButton}\" en la tarjeta del chat de arma",
-        "WeaponCardFlavor": "Arma: {weaponName}",
-        "NoCombatManeuverInDamageRollError": "Sin maniobra de combate en la tirada de daño",
-        "CantFindActorToDoDamageRollWarn": "No se ha podido encontrar el actor en el mundo con el que tirar el daño",
-        "WeaponDoesNotHaveCombatManeuverError": "El arma no tiene esa maniobra de combate",
-        "WeaponDoesNotHaveAttachManeuverError": "El arma llamada \"{weaponName}\" no tiene una maniobra de combate ofensiva",
-        "WeaponDamageTag": "arma",
-        "DamageBonusDamageTag": "modificador al daño",
-        "CrushSpecialDamageTag": "especial aplastamiento",
-        "ImpaleSpecialDamageTag": "especial empalamiento",
-        "FumbleTableMissingWarn": "No se ha encontrado la tabla de pifias \"{fumbleTableName}\"",
-        "PluralResults": "{numberOfResults} resultados",
-        "SingularResult": "un resultado",
-        "FumbleResultFlavor": "Extrayendo {numberOfResults} de la tabla {fumbleTableName}"
-      }
-    },
-    "Item": {
-      "Armor": {
-        "NamePrefix": "Prefijo del nombre",
-        "ArmorTypeLabel": "Tipo de armadura",
-        "Material": "Material",
-        "HitLocations": "Localizaciones",
-        "AddNewCoveredHitLocationPlaceholder": "Añadir nueva localización cubierta",
-        "Absorbs": "Absorbe",
-        "MoveQuietlyPenalty": "Penalización a moverse en silencio",
-        "FitsSIZ": "Sirve para TAM",
-        "ArmorType": {
-          "Hood": "Capucha",
-          "BroadBrimmedHat": "Sombrero de ala ancha",
-          "Cap": "Gorro",
-          "CompositeHelm": "Yelmo compuesto",
-          "OpenHelm": "Yelmo abierto",
-          "ClosedHelm": "Yelmo cerrado",
-          "FullHelm": "Yelmo completo",
-          "Sleeves": "Mangas",
-          "Vambraces": "Brazales",
-          "Cuirass": "Coraza",
-          "Linothorax": "Linotórax",
-          "Hauberk": "Loriga",
-          "Segmented": "Segmentada",
-          "Skirt": "Falda",
-          "PantsTrews": "Pantalones/calzas",
-          "Greaves": "Grebas"
-        },
-        "ArmorMaterial": {
-          "Leather": "Cuero",
-          "HeavyLeather": "Cuero duro",
-          "StuddedLeather": "Cuero tachonado",
-          "BronzePlate": "Placas de bronce",
-          "BronzeSegmentedPlate": "Placas de bronce segmentada",
-          "BronzeDiscPlate": "Bezanteada",
-          "LightScale": "Escamas ligera",
-          "HeavyScale": "Escamas pesada",
-          "Cuirboilli": "Cuero hervido",
-          "RingMail": "Anillas",
-          "TurtleShell": "Caparazón",
-          "Quilted": "Acolchada",
-          "Linen": "Lino"
-        }
-      },
-      "Cult": {
-        "CultNamePlaceholder": "Nombre del culto",
-        "CultTaglinePlaceholder": "Lema del culto",
-        "AddNewRunePlaceholder": "Añadir nueva runa",
-        "HolyDays": "Días sagrados Days",
-        "RunePoints": "Puntos de runa",
-        "ActorsGifts": "Dones del actor",
-        "ActorsGeases": "Geas del actor",
-        "ActorsSubCults": "Subcultos del actor"
-      },
-      "EquippedStatus": {
-        "notCarried": "No cargado",
-        "carried": "Cargado",
-        "equipped": "Equipado"
-      },
-      "Gear": {
-        "Name": "Nombre",
-        "EncumbranceAbbr": "CRG",
-        "PriceReal": "Precio (real)",
-        "PriceEstimated": "Precio (estimado)",
-        "Location": "Ubicación",
-        "AttunedTo": "En sintonía con",
-        "Quantity": "Cantidad",
-        "Description": "Descripción",
-        "GMNotes": "Notas GM",
-        "IsContainerQ": "¿Es contenedor?",
-        "LunarsAbbr": "L",
-        "HitPointsAbbr": "PG",
-        "CurrentHitPoints": "PG actuales",
-        "HitPointLocation": "Localización de PG",
-        "PhysicalItemType": {
-          "unique": "Único",
-          "currency": "Moneda",
-          "consumable": "Consumible"
-        }
-      },
-      "HitLocation": {
-        "Name": "Nombre",
-        "HealthStatus": "Estado de salud",
-        "ActAs": "Actúa como",
-        "ForDamageCalculations": "para el cálculo de daño",
-        "ConnectedTo": "Conectado con",
-        "HitLocationOn": "Localización en",
-        "NaturalArmorPoints": "PA natural",
-        "BaseHPDelta": "Delta PG base (+/- de los PG de localización base)",
-        "AddWound": {
-          "Title": "Aplicar herida a {hitLocationName}",
-          "ApplyToTotalHitPointsQ": "¿Aplicar a los PG totales?",
-          "SubtractArmorPointsQ": "¿Restar PA?",
-          "btnAddWound": "Añadir herida"
-        },
-        "AddWoundChatContent": "{actorName} recibe una herida en {hitLocationName}. {notification}",
-        "HealWound": {
-          "Title": "Curar herida en {hitLocationName}",
-          "SelectWoundToHeal": "Seleccione la herida que quiere curar en {hitLocationName}",
-          "HitPointsToHeal": "PG curados: ",
-          "btnHealWound": "Curar herida"
-        },
-        "HealthStatusEnum": {
-          "healthy": "Sano",
-          "wounded": "Herido",
-          "useless": "Incapacitada",
-          "severed": "Amputada"
+        "Game": {
+            "MeleeRoundAbbr": "AC",
+            "ResultEnum": {
+                "0": "Hipercrítico",
+                "1": "Crítico especial",
+                "2": "Crítico",
+                "3": "Especial",
+                "4": "Éxito",
+                "5": "Fallo",
+                "6": "Pifia"
+            },
+            "RollCard": "Tirar con tarjeta (click)",
+            "RollQuick": "Tirada directa (dbl click)",
+            "RollCharacteristicQuick": "Tirada directa *5 (dbl click)",
+            "RollTitle": "Tirar con tarjeta (clic), tirada directa (doble clic)",
+            "WeaponUsage": {
+                "oneHand": "1M",
+                "offHand": "Mtorpe",
+                "twoHand": "2M",
+                "missile": "Distancia"
+            },
+            "RollDifficulty": {
+                "0": "Casi imposible (*0.5)",
+                "1": "Muy difícil (*1)",
+                "2": "Difícil (*2)",
+                "3": "Moderada (*3)",
+                "4": "Fácil (*4)",
+                "5": "Acción sencilla (*5)"
+            }
         },
         "Notification": {
-          "CantFindHitLocation": "No se ha podido encontrar localización con itemId [{hitLocationItemId}] en el actor ${actorName} con el que mostrar la tarjeta de chat de heridas",
-          "HitLocationDoesNotHaveCalculatedArmor": "La localización {hitLocationName} no tiene un campo calculado de PA totales",
-          "NoValueOnHitLocation": "No existe el valor en la localización ${hitLocationName}",
-          "NoMaxOnHitLocation": "Sin máximo en la localización ${hitLocationName}",
-          "NoActorOnTokenWarn": "Sin actor en el icono"
-        }
-      },
-      "HitLocationType": {
-        "limb": "Extremidad",
-        "head": "Cabeza",
-        "chest": "Pecho",
-        "abdomen": "Abdomen"
-      },
-      "Notification": {
-        "CircularGearLocationWarning": "Referencia circular en ubicación de equipo (A en B en A) - compruebe la ubicación: {itemLocation}",
-        "ItemIsNotContainerWarning": "{itemName} no es un contenedor",
-        "CantFindRootLocationNode": "No se ha podido encontrar el nodo raíz de la localización",
-        "LocationDidntFindItem": "no se ha encontrado el objeto en la ubicación",
-        "ExpectedCultItemError": "Se esperaba un culto",
-        "CantFindRunesCompendiumError": "No se ha podido encontrar el compendio de runas {runesCompendiumName}",
-        "CantFindCultRuneError": "No se ha podido encontrar la runa de culto {newRune} entre allRunesIndex",
-        "CantFindRuneInAllRunesCompendiumError": "No se ha podido encontrar la runa en el compendio",
-        "ItemWasNotHitLocationError": "Se ha llamado a hitLocation#onActorPrepareEmbeddedEntities sobre un objeto sin hitLocation",
-        "HitLocationDoesNotHaveActorError": "La localización no tiene un actor asociado",
-        "ActorDoesNotHaveMaxHpError": "El actor no tiene PG máximos",
-        "OpposingRuneDoesNotExistWarning": "La runa opuesta no existe",
-        "WrongItemTypeRuneMagicError": "RQG | itemtype incorrecto o sin objeto incrustrado en el actor PrepareEmbeddedEntities",
-        "ActorDoesNotHaveCultOnRuneMagicWarning": "RQG | El culto al que se hace referencia en la habilidad mágica ${item.name} no existe en el actor ${actor.name}",
-        "PrepareDerivedDataNotSkillError": "Se ha llamado a Skill#onActorPrepareDerivedData con algo que no es una habilidad",
-        "ActorNotCharacterError": "El actor no es del tipo personaje",
-        "CantFindWeaponSkillWarning": "No se ha podido encontrar la habilidad de armas",
-        "NoWeaponSkillFromSkillOriginWarning": "No se ha podido encontrar la habilidad de armas del skillOrigin \"{skillOrigin}\".",
-        "CantFindSkillAssociatedWithWeaponWarning": "No se ha podido encontrar la habilidad asociada con este arma",
-        "CantCreateActiveEffect": "No se puede crear el efecto activo",
-        "NoIdOnTokenError": "Sin ID en el icono",
-        "NoIdOnActorError": "Sin ID en el actor",
-        "ItemWithIdDoesNotHaveChanceError": "No se ha podido encontrar el objeto con ID {itemId} en el actor {actorName} con el que mostrar la tarjeta del chat",
-        "CouldNotFindActorByIdsWarn": "No se ha podido encontrar el actor con actor ID {actorId} ni el tokenID {tokenId} para realizar la tirada de atributo",
-        "CanOnlyDropJournalEntryWarning": "Solo puede arrastrar una entrada de diario en una hoja del tipo {itemType}",
-        "ErrorParsingItemData": "Error procesando datos del objeto",
-        "SimpleCalendarNotInstalled": "Este comando requiere el módulo Simple Calendar"
-      },
-      "Passion": {
-        "Name": "Nombre",
-        "Passion": "Pasión",
-        "Subject": "Objeto",
-        "Chance": "Probabilidades",
-        "Experience": "Experiencia",
-        "BackStory": "Trasfondo",
-        "PassionEnum": {
-          "Ambition": "Ambición",
-          "Cowardly": "Cobardía",
-          "Devotion": "Devoción",
-          "Fear": "Miedo",
-          "Hate": "Odio",
-          "Honor": "Honor",
-          "Loyalty": "Lealtad",
-          "Love": "Amor",
-          "Gluttony": "Gula",
-          "Vanity": "Vanidad"
-        }
-      },
-      "Rune": {
-        "Name": "Nombre",
-        "Rune": "Runa",
-        "Type": "Tipo",
-        "HasExperienceQ": "¿Tiene experiencia?",
-        "OpposingRune": "Runa opuesta",
-        "MinorRunes": "Runa menor",
-        "MasteredSorceryQ": "¿Dominada (hechicería)?",
-        "RuneType": {
-          "element": "Elemental",
-          "power": "Poder",
-          "form": "Forma",
-          "condition": "Condición",
-          "technique": "Técnica"
-        }
-      },
-      "RuneMagic": {
-        "Range": "Alcance",
-        "Duration": "Duración",
-        "StackableQ": "¿Apilable?",
-        "OneUseQ": "¿Único uso?",
-        "Cult": "Culto",
-        "Runes": "Runas:",
-        "AddNewRunePlaceholder": "Añadir nueva runa",
-        "runeMagicCultDialog": {
-          "title": "¿A qué culto pertenece este conjuro rúnico?",
-          "btnAddRuneMagic": "Añadir conjuro rúnico",
-          "Actor": "Actor:",
-          "RuneMagic": "Conjuro rúnico:"
-        }
-      },
-      "Skill": {
-        "Name": "Nombre",
-        "SkillName": "Nombre de la habilidad",
-        "Specialization": "Especialización",
-        "Category": "Categoría",
-        "CategoryModifier": "Modificacor de categoría",
-        "BaseChance": "Probabilidad base",
-        "LearnedChance": "Propabilidad aprendizaje",
-        "Chance": "Probabilidad",
-        "CanGainExperienceQ": "¿Puede ganar experiencia?",
-        "HasExperienceQ": "¿Tiene experiencia?",
-        "SorceryRunes": "Runas de hechicería:",
-        "Notification": {
-          "CantFindSkillJournalEntryError": "No se ha podido encontrar el diaro con el que quiere enlazar la hoja {skillName}"
+            "Error": {}
         },
-        "SkillCategory": {}
-      },
-      "Spell": {
-        "RitualQ": "¿Ritual?",
-        "EnchantmentQ": "¿Encantamiento?",
-        "DurationEnum": {
-          "": "Ninguno",
-          "instant": "Instantáneo",
-          "temporal": "Temporal",
-          "focused": "Foco",
-          "permanent": "Permanente",
-          "special": "Especial"
+        "Settings": {
+            "HitLocations": {
+                "dialogTitle": "Ajustes de nombres de localizaciones",
+                "settingName": "Nombres de localizaciones",
+                "settingLabel": "Configure los nombres de localizaciones disponibles",
+                "settingHint": "Los nombres de las localizaciones se usan en los menús desplegables en la cobertura de armaduras y cuando se pone nombre a una nueva localización",
+                "addLocationPlaceholder": "Añadir nueva localización"
+            },
+            "DefaultItemIcons": {
+                "dialogTitle": "Ajuste de iconos por defecto de objetos",
+                "settingName": "Iconos por defecto de objetos",
+                "settingLabel": "Configure los iconos por defecto para objetos nuevos",
+                "settingHint": "Ajuste los iconos por defecto cuando se creen nuevos objetos"
+            },
+            "RunesCompendium": {
+                "settingName": "Compendio de runas",
+                "settingHint": "El sistema usará las runas del compendio especificado. Incluya todas las runas en el compendio"
+            },
+            "FumbleRollTable": {
+                "settingName": "Tabla de pifias",
+                "settingHint": "Nombre de la tabla de pifias - se usará en combate"
+            },
+            "SpecialCrit": {
+                "settingName": "Resultados especiales e hipercríticos",
+                "settingHint": "*** Versión alfa - aún no implementado totalmente *** Añade los resultados de crítico especial (skill/100) e hipercrítico (skill/500)"
+            },
+            "MagicRuneName": {
+                "settingName": "Nombre de la runa Magia (condition)",
+                "settingHint": "Si un conjuro rúnica tiene esta runa, se considera \"Común\", y un aventurero podrá lanzarlo usando cualquiera de las runas asociadas con los puntos de runa que gasten"
+            },
+            "SystemMigrationVersion": {
+                "settingName": "Versión de migración de sistema",
+                "settingHint": "¡No toque esta opción a menos de que sepa exactamente lo que está haciendo!"
+            }
         },
-        "RangeEnum": {
-          "": "Ninguno",
-          "self": "Personal",
-          "touch": "Toque",
-          "ranged": "Alcance",
-          "special": "Especial"
-        },
-        "ConcentrationEnum": {
-          "": "",
-          "active": "Activo",
-          "passive": "Pasivo"
-        }
-      },
-      "SpiritMagic": {
-        "VariableQ": "¿Variable?",
-        "Range": "Alcance",
-        "Duration": "Duración",
-        "Concentration": "Concentración",
-        "SpellFocus": "Foco del hechizo:",
-        "MatrixIndicator": "(En una matriz)",
-        "MatrixQ": "¿En una matriz?",
-        "LinkedToCompendium": "Enlazado con la entrada [{journalName}] del compendio [{compendium}]"
-      },
-      "Weapon": {
-        "UsesOfWeaponHeader": "Usos del arma",
-        "DropSkillToChange": "(Arrastre una habilidad sobre el arma para cambiar)",
-        "DropSkillToAdd": "¡Suelte una habilidad sobre este arma!",
-        "Damage": "Daño",
-        "MinimumStrengthAbbr": "FUE mín",
-        "MinimumDexterityAbbr": "DES mín",
-        "StrikeRankAbbr": "MR",
-        "CombatManeuversHeader": "Maniobras de combate",
-        "ActionLabel": "Etiqueta de acción",
-        "DamageType": "Tipo de daño",
-        "DamageTypeEnum": {
-          "impale": "Empalamiento",
-          "slash": "Tajo",
-          "crush": "Aplastamiento",
-          "parry": "Parada",
-          "special": "Especial"
-        },
-        "NaturalWeaponQ": "¿Arma natural?",
-        "ThrownWeaponQ": "¿Arma arrojadiza? (mod. daño a la mitad)",
-        "ProjectileWeaponQ": "¿Arma de proyectiles? (sin mod. daño, usa los proyectiles asociados)",
-        "RangedWeaponQ": "¿Arma a distancia? (sin mod. daño, sin proyectiles)",
-        "ProjectileQ": "¿Proyectiles? (munición)",
-        "Projectile": "Proyectiles",
-        "Range": "Alcance",
-        "Rate": "Tasa",
-        "SameDataAsOneHand": "Los mismos datos que a una mano",
-        "combatManeuver": {
-          "Throw": "Arrojar",
-          "Shoot": "Disparar",
-          "Thrust": "Punta",
-          "Cut": "Filo",
-          "Bash": "Golpe escudo",
-          "Parry": "Parada",
-          "Grapple": "Presa",
-          "Knockback": "Empujón"
-        }
-      }
-    },
-    "Foundry": {
-      "ActiveEffect": {
-        "Header": "🐛Efectos activos🧪",
-        "AddEffectTitle": "Añadir efecto",
-        "Label": "Etiqueta",
-        "Disabled": "Deshabilitado",
-        "StartTime": "Tiempo inicio",
-        "KeyValueMode": "Clave - Valor - Modo",
-        "NewActiveEffectName": "Nuevo efecto activo"
-      },
-      "CombatTracker": {
-        "DuplicateCombatant": "Duplicar contendiente",
-        "UpdateCombatant": "Actualizar contendiente",
-        "RemoveCombatant": "Quitar contendiente",
-        "RemoveAllDuplicates": "Quitar todos los duplicados",
-        "CombatantWithoutActor": "El contendiente \"{combatantName}\" hace referencia a un actor que ya no existe en el mundo"
-      },
-      "ContentLink": {
-        "CompendiumNameTitle": "Compendio [{compendiumName}]",
-        "WorldJournalEntry": "Entrada del diario en el mundo",
-        "DropToConnectJournal": "Arraste un diario a este objeto para conectarlo con una descripción",
-        "DropToReplaceJournal": "Arrastre un diario a este objeto para reemplazar la descripción"
-      }
-    },
-    "Game": {
-      "MeleeRoundAbbr": "AC",
-      "ResultEnum": {
-        "0": "Hipercrítico",
-        "1": "Crítico especial",
-        "2": "Crítico",
-        "3": "Especial",
-        "4": "Éxito",
-        "5": "Fallo",
-        "6": "Pifia"
-      },
-      "RollCard": "Tirar con tarjeta (click)",
-      "RollQuick": "Tirada directa (dbl click)",
-      "RollCharacteristicQuick": "Tirada directa *5 (dbl click)",
-      "RollTitle": "Tirar con tarjeta (clic), tirada directa (doble clic)",
-      "WeaponUsage": {
-        "oneHand": "1M",
-        "offHand": "Mtorpe",
-        "twoHand": "2M",
-        "missile": "Distancia"
-      },
-      "RollDifficulty": {
-        "0": "Casi imposible (*0.5)",
-        "1": "Muy difícil (*1)",
-        "2": "Difícil (*2)",
-        "3": "Moderada (*3)",
-        "4": "Fácil (*4)",
-        "5": "Acción sencilla (*5)"
-      }
-    },
-    "Notification": {
-      "Error": {}
-    },
-    "Settings": {
-      "HitLocations": {
-        "dialogTitle": "Ajustes de nombres de localizaciones",
-        "settingName": "Nombres de localizaciones",
-        "settingLabel": "Configure los nombres de localizaciones disponibles",
-        "settingHint": "Los nombres de las localizaciones se usan en los menús desplegables en la cobertura de armaduras y cuando se pone nombre a una nueva localización",
-        "addLocationPlaceholder": "Añadir nueva localización"
-      },
-      "DefaultItemIcons": {
-        "dialogTitle": "Ajuste de iconos por defecto de objetos",
-        "settingName": "Iconos por defecto de objetos",
-        "settingLabel": "Configure los iconos por defecto para objetos nuevos",
-        "settingHint": "Ajuste los iconos por defecto cuando se creen nuevos objetos"
-      },
-      "RunesCompendium": {
-        "settingName": "Compendio de runas",
-        "settingHint": "El sistema usará las runas del compendio especificado. Incluya todas las runas en el compendio"
-      },
-      "FumbleRollTable": {
-        "settingName": "Tabla de pifias",
-        "settingHint": "Nombre de la tabla de pifias - se usará en combate"
-      },
-      "SpecialCrit": {
-        "settingName": "Resultados especiales e hipercríticos",
-        "settingHint": "*** Versión alfa - aún no implementado totalmente *** Añade los resultados de crítico especial (skill/100) e hipercrítico (skill/500)"
-      },
-      "MagicRuneName": {
-        "settingName": "Nombre de la runa Magia (condition)",
-        "settingHint": "Si un conjuro rúnica tiene esta runa, se considera \"Común\", y un aventurero podrá lanzarlo usando cualquiera de las runas asociadas con los puntos de runa que gasten"
-      },
-      "SystemMigrationVersion": {
-        "settingName": "Versión de migración de sistema",
-        "settingHint": "¡No toque esta opción a menos de que sepa exactamente lo que está haciendo!"
-      }
-    },
-    "scripts": {
-      "general": {
-        "roll": "Tirar",
-        "rolled": "Tirada",
-        "cancel": "Cancelar",
-        "select": "Seleccionar",
-        "type": "Tipo",
-        "ability": "Aptitud",
-        "modifier": "Modificador",
-        "characteristic": "Característica",
-        "charac": "Carac.",
-        "value": "Valor",
-        "actor": "Actor",
-        "errorselect": "Por favor, seleccione un icono",
-        "errortarget": "Por favor, marque un objetivo",
-        "erroractor": "No se han creado actores en este mundo",
-        "mod": "Mod.",
-        "rollp": "Tirada (%)",
-        "result": "Resultado",
-        "base": "Base"
-      },
-      "augmentingAbilities": {
-        "title": "Reforzar Aptitudes",
-        "augmenting": "Refuerzo",
-        "augmented": "Aumentada",
-        "augFlavour": "Usando <span style=\"font-weight: bold;color: brown\">{augName} ({augBase}%)</span> para reforzar. La tirada ha sido {augRoll}% sobre una aptitud modificada de {augValue}%, un {augLabel}",
-        "skillFlavour": "Tirando <span style=\"font-weight: bold;color: brown\">{skillName} ({skillBase}%)</span> reforzada con {augName}. La tirada ha sido {skillRoll}% sobre una aptitud modificada de {skillValue}%, un {skillLabel}",
-        "aug": "Ref."
-      },
-      "characteristicRolls": {
-        "title": "Tiradas de Característica (RQG)",
+        "scripts": {
+            "general": {
+                "roll": "Tirar",
+                "rolled": "Tirada",
+                "cancel": "Cancelar",
+                "select": "Seleccionar",
+                "type": "Tipo",
+                "ability": "Aptitud",
+                "modifier": "Modificador",
+                "characteristic": "Característica",
+                "charac": "Carac.",
+                "value": "Valor",
+                "actor": "Actor",
+                "errorselect": "Por favor, seleccione un icono",
+                "errortarget": "Por favor, marque un objetivo",
+                "erroractor": "No se han creado actores en este mundo",
+                "mod": "Mod.",
+                "rollp": "Tirada (%)",
+                "result": "Resultado",
+                "base": "Base"
+            },
+            "augmentingAbilities": {
+                "title": "Reforzar Aptitudes",
+                "augmenting": "Refuerzo",
+                "augmented": "Aumentada",
+                "augFlavour": "Usando <span style=\"font-weight: bold;color: brown\">{augName} ({augBase}%)</span> para reforzar. La tirada ha sido {augRoll}% sobre una aptitud modificada de {augValue}%, un {augLabel}",
+                "skillFlavour": "Tirando <span style=\"font-weight: bold;color: brown\">{skillName} ({skillBase}%)</span> reforzada con {augName}. La tirada ha sido {skillRoll}% sobre una aptitud modificada de {skillValue}%, un {skillLabel}",
+                "aug": "Ref."
+            },
+            "characteristicRolls": {
+                "title": "Tiradas de Característica (RQG)",
 
-        "difficulty": "Dificultad",
-        "difficultyEnum": {
-          "1": "Acción sencilla",
-          "2": "Fácil",
-          "3": "Moderada",
-          "4": "Difícil",
-          "5": "Muy difícil",
-          "6": "Casi imposible"
-        },
-        "flavourString": "Tirando <span style=\"font-weight: bold;color: brown\">{charNam} ({charVal} x {charMul})</span>. La tirada ha sido {charRoll}% sobre una probabilidad modificada de {charValue}%, un {charLabel}"
-      },
-      "hitlocationRolls": {
-        "title": "Tiradas de localizaciones de golpe (RQG)",
-        "baseString": "Localizaciones de golpe de",
-        "hitlocation": "Localización de golpe",
-        "from": "de",
-        "to": "a",
-        "contentFlavour": "Tirando {formRoll} para localización de golpe",
-        "contentString": "<hr>La tirada ha sido <span style=\"font-weight: bold;color: green\">{skillRoll}</span>, golpe en <span style=\"font-weight: bold;color: brown\">{locTable}</span>",
-        "ontheground": "Caído en el suelo"
-      },
-      "opposedRolls": {
-        "title": "Tiradas Enfrentadas (RQG)",
-				"active": "Activo",
-				"pasive": "Pasivo",
-				"activeFlavour": "Tirada enfrentada, aptitud activa: <span style=\"font-weight: bold;color: brown\">{activeName} ({activeBase}%)</span> contra la aptitud pasiva: <span style=\"font-weight: bold;color: brown\">{pasiveName} ({pasiveBase}%)</span>",
-				"pasiveFlavour": "Resultado: <span style=\"font-weight: bold;color: brown\">{activeName} ({activeBase}%)</span> contra <span style=\"font-weight: bold;color: brown\">{pasiveName} ({pasiveBase}%)</span>",
-				"winner": "GANADOR",
-				"loser": "PERDEDOR",
-				"tie": "EMPATE"
-			},
-      "resistanceTable": {
-				"title": "Tabla de Resistencia (RQG)",
-				"target": "Objetivo",
-				"flavourString": "Tirando <span style=\"font-weight: bold;color: brown\">{charNam} ({charVal})</span> contra un objetivo de <span style=\"font-weight: bold;color: brown\">{charTar}</span>. La tirada ha sido {charRoll}% sobre una probabilidad modificada de {charValue}%, un {charLabel}"
-			},
-      "strikeranksHelper": {
-        "title": "Asistente de Momentos de Reacción (RQG)",
-				"token": "Icono seleccionado",
-				"actor": "Nombre del actor",
-				"dexsr": "MR DES",
-				"sizsr": "MR TAM",
-				"actorHint": "Nombre del actor vinculado al icono seleccionado",
-				"dexsrHint": "Momento de reacción por DES del actor",
-				"sizsrHint": "Momento de reacción por TAM del actor",
-				"generalTitle": "Opciones generales",
-				"generalIndependent": "Acción independiente",
-				"generalReadiness": "Requiere preparación",
-				"generalIndependentHint": "acción independiente, no añadir a la última entrada en el AC, incluirla como si fuese nueva",
-				"generalReadinessHint": "añade que se necesita preparar el ataque o hechizo (+5 MRs)",
-				"combatTitle": "Combate",
-				"combatAttack": "Ataque",
-				"combatAttackHint": "Muestra solo las armas equipadas y las armas naturales",
-				"magicTitle": "Magia",
-				"magicSpells": "Conjuros",
-				"magicRune": "Rúnica",
-				"magicMPs": "PMs",
-				"magicSpirit": "Espiritual",
-				"magicSorcery": "Hechicería",
-				"magicSpellsHint": "los conjuros rúnicos ocurren en el MR 1, el resto van en el MR por DES, se debe preparar un nuevo conjuro tras lanzar el primero",
-				"magicMPsHint": "número de PMs extra que se usan para reforzar el conjuro, añade +1 MR por cada PM por encima del primero",
-				"otherTitle": "Otras acciones",
-				"otherReady": "Preparación",
-				"otherMovement": "Movimiento",
-				"otherAimed": "Apuntar/destrabarse",
-				"otherOther": "Otro",
-				"otherSR": "MR",
-				"otherReadyHint": "antes de llevar a cabo una acción, o sacar el arma, o preparar un segundo conjuro",
-				"otherMovementHint": "un MR por cada 3m de movimiento",
-				"otherAimedHint": "todas estas acciones ocurren al final, en el MR 12",
-				"otherOtherHint": "cualquier otra acción, debe especificar el MR",
-				"removeTitle": "Quitar del AC",
-				"removeTokensCT": "Iconos en el AC",
-				"removeUpdate": "Actualizar",
-				"removeAll": "Todos los MRs",
-				"removeOnly": "Solo los vacíos",
-				"removeTokens": "Iconos",
-				"removeTokensHint": "lista las entradas/iconos en el AC, use el botón para actualizar el desplegable tras añadir/quitar combatientes",
-				"removeDesc": "Quitar MRs",
-				"removeDescHint": "quitar todos los MRs, solo los vacíos (los que no tienen MR) o entradas en un MR específico, para un icono (el seleccionado) o para todos",
-				"removeAllTokens": "Todos los iconos"
-			}
+                "difficulty": "Dificultad",
+                "difficultyEnum": {
+                    "1": "Acción sencilla",
+                    "2": "Fácil",
+                    "3": "Moderada",
+                    "4": "Difícil",
+                    "5": "Muy difícil",
+                    "6": "Casi imposible"
+                },
+                "flavourString": "Tirando <span style=\"font-weight: bold;color: brown\">{charNam} ({charVal} x {charMul})</span>. La tirada ha sido {charRoll}% sobre una probabilidad modificada de {charValue}%, un {charLabel}"
+            },
+            "hitlocationRolls": {
+                "title": "Tiradas de localizaciones de golpe (RQG)",
+                "baseString": "Localizaciones de golpe de",
+                "hitlocation": "Localización de golpe",
+                "from": "de",
+                "to": "a",
+                "contentFlavour": "Tirando {formRoll} para localización de golpe",
+                "contentString": "<hr>La tirada ha sido <span style=\"font-weight: bold;color: green\">{skillRoll}</span>, golpe en <span style=\"font-weight: bold;color: brown\">{locTable}</span>",
+                "ontheground": "Caído en el suelo"
+            },
+            "opposedRolls": {
+                "title": "Tiradas Enfrentadas (RQG)",
+                "active": "Activo",
+                "pasive": "Pasivo",
+                "activeFlavour": "Tirada enfrentada, aptitud activa: <span style=\"font-weight: bold;color: brown\">{activeName} ({activeBase}%)</span> contra la aptitud pasiva: <span style=\"font-weight: bold;color: brown\">{pasiveName} ({pasiveBase}%)</span>",
+                "pasiveFlavour": "Resultado: <span style=\"font-weight: bold;color: brown\">{activeName} ({activeBase}%)</span> contra <span style=\"font-weight: bold;color: brown\">{pasiveName} ({pasiveBase}%)</span>",
+                "winner": "GANADOR",
+                "loser": "PERDEDOR",
+                "tie": "EMPATE"
+            },
+            "resistanceTable": {
+                "title": "Tabla de Resistencia (RQG)",
+                "target": "Objetivo",
+                "flavourString": "Tirando <span style=\"font-weight: bold;color: brown\">{charNam} ({charVal})</span> contra un objetivo de <span style=\"font-weight: bold;color: brown\">{charTar}</span>. La tirada ha sido {charRoll}% sobre una probabilidad modificada de {charValue}%, un {charLabel}"
+            },
+            "strikeranksHelper": {
+                "title": "Asistente de Momentos de Reacción (RQG)",
+                "token": "Icono seleccionado",
+                "actor": "Nombre del actor",
+                "dexsr": "MR DES",
+                "sizsr": "MR TAM",
+                "actorHint": "Nombre del actor vinculado al icono seleccionado",
+                "dexsrHint": "Momento de reacción por DES del actor",
+                "sizsrHint": "Momento de reacción por TAM del actor",
+                "generalTitle": "Opciones generales",
+                "generalIndependent": "Acción independiente",
+                "generalReadiness": "Requiere preparación",
+                "generalIndependentHint": "acción independiente, no añadir a la última entrada en el AC, incluirla como si fuese nueva",
+                "generalReadinessHint": "añade que se necesita preparar el ataque o hechizo (+5 MRs)",
+                "combatTitle": "Combate",
+                "combatAttack": "Ataque",
+                "combatAttackHint": "Muestra solo las armas equipadas y las armas naturales",
+                "magicTitle": "Magia",
+                "magicSpells": "Conjuros",
+                "magicRune": "Rúnica",
+                "magicMPs": "PMs",
+                "magicSpirit": "Espiritual",
+                "magicSorcery": "Hechicería",
+                "magicSpellsHint": "los conjuros rúnicos ocurren en el MR 1, el resto van en el MR por DES, se debe preparar un nuevo conjuro tras lanzar el primero",
+                "magicMPsHint": "número de PMs extra que se usan para reforzar el conjuro, añade +1 MR por cada PM por encima del primero",
+                "otherTitle": "Otras acciones",
+                "otherReady": "Preparación",
+                "otherMovement": "Movimiento",
+                "otherAimed": "Apuntar/destrabarse",
+                "otherOther": "Otro",
+                "otherSR": "MR",
+                "otherReadyHint": "antes de llevar a cabo una acción, o sacar el arma, o preparar un segundo conjuro",
+                "otherMovementHint": "un MR por cada 3m de movimiento",
+                "otherAimedHint": "todas estas acciones ocurren al final, en el MR 12",
+                "otherOtherHint": "cualquier otra acción, debe especificar el MR",
+                "removeTitle": "Quitar del AC",
+                "removeTokensCT": "Iconos en el AC",
+                "removeUpdate": "Actualizar",
+                "removeAll": "Todos los MRs",
+                "removeOnly": "Solo los vacíos",
+                "removeTokens": "Iconos",
+                "removeTokensHint": "lista las entradas/iconos en el AC, use el botón para actualizar el desplegable tras añadir/quitar combatientes",
+                "removeDesc": "Quitar MRs",
+                "removeDescHint": "quitar todos los MRs, solo los vacíos (los que no tienen MR) o entradas en un MR específico, para un icono (el seleccionado) o para todos",
+                "removeAllTokens": "Todos los iconos"
+            },
+            "attackrollsInfo": {
+                "title": "Tiradas de Ataque (RQG)",
+                "attacker": {
+                    "1": "Attacker rolls normal damage.",
+                    "2": "Attacker rolls special damage.",
+                    "3": "Attacker does maximum special damage.",
+                    "4": "Attack parried or deflected.",
+                    "5": "Attacker misses.",
+                    "6": "Attacker rolls on Fumbles table."
+                },
+                "defender": {
+                    "1": "Defender’s parrying weapon takes 1 HP damage if rolled damage is greater than its current HP. Any excess damage goes to affected hit location.",
+                    "2": "Defender’s parrying weapon takes 1 HP damage if rolled damage is greater than its current HP. Any excess damage goes to adjacent hit location, with no armor protection.",
+                    "3": "Defender’s parrying weapon HP reduced by the damage rolled. Any excess damage goes to adjacent hit location, with no armor protection.",
+                    "4": "Defender takes damage, with no armor protection.",
+                    "5": "Defender takes damage, with no armor protection, and rolls on Fumbles table.",
+                    "6": "Defender rolls parrying weapon’s normal damage. Attacking weapon’s HP is reduced by 1 HP if damage over its current HP.",
+                    "7": "Defender’s parrying weapon takes 1HP damage if damage more than its current HP. Any excess damage goes to the affected hit location.",
+                    "8": "Defender’s parrying weapon takes damage over its HP, with same amount of damage going to adjacent hit location.",
+                    "9": "Defender takes damage.",
+                    "10": "Defender takes damage and rolls on Fumbles table.",
+                    "11": "Defender rolls parrying weapon’s special damage. Attacking weapon’s HP is reduced by any damage over its current HP.",
+                    "12": "Defender rolls parrying weapon’s normal damage. Attacking weapon’s HP is reduced by 1 HP if damage over its current HP.",
+                    "13": "Defender’s parrying weapon takes 1HP damage if damage more than its current HP. Any excess damage goes to the affected hit location.",
+                    "14": "Defender rolls parrying weapon’s special damage. Attacking weapon’s HP reduced by the damage rolled.",
+                    "15": "Defender rolls parrying weapon’s special damage. Attacking weapon’s HP reduced by any damage over its current HP.",
+                    "16": "Defender rolls parrying weapon’s normal damage. Attacking weapon’s HP reduced by 1 HP if damage over its current HP.",
+                    "17": "Defender misses.",
+                    "18": "Defender rolls on Fumbles table."
+                },
+                "dodge": {
+                    "1": "Attack is dodged successfully.",
+                    "2": "Attack misses.",
+                    "3": "Attacker rolls on Fumbles table.",
+                    "4": "Attack does special damage.",
+                    "5": "Attack does special damage, ignores armor.",
+                    "6": "Attack does maximum special damage, ignores armor.",
+                    "7": "Attack does normal damage."
+                }
+            }
+        }
     }
-  }
 }
