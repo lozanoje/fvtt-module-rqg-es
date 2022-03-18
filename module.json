@@ -24,7 +24,7 @@
       "path": "packs/macros.db",
       "system": "rqg",
       "package": "rqg-babele-es",
-      "entity": "Macro",
+      "type": "Macro",
       "private": false,
       "absPath": "packs/macros.db"
     }
