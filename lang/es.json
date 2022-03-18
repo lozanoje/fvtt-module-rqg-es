@@ -1025,11 +1025,12 @@
             },
             "attackrollsInfo": {
                 "title": "Tiradas de Ataque (RQG)",
-								"results": "Resultados",
-								"attack": "Ataque",
-								"defense": "Defensa",
-								"parry": "Parada",
-								"dodge": "Esquiva",
+				"results": "Resultados",
+				"attack": "Ataque",
+				"defense": "Defensa",
+				"parry": "Parada",
+				"dodge": "Esquiva",
+				"tochat": "Enviar al chat los resultados",
                 "attacker": {
                     "1": "El <span style=\"font-weight: bold;color: green\">atacante</span> tira el daño normal.",
                     "2": "El <span style=\"font-weight: bold;color: green\">atacante</span> inflige el daño especial.",

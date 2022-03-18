@@ -1020,11 +1020,12 @@
             },
             "attackrollsInfo": {
                 "title": "Opposed Rolls (RQG)",
-								"results": "Results",
-								"attack": "Attack",
-								"defense": "Defense",
-								"parry": "Parry",
-								"dodge": "Dodge",
+				"results": "Results",
+				"attack": "Attack",
+				"defense": "Defense",
+				"parry": "Parry",
+				"dodge": "Dodge",
+				"tochat": "Send results to chat",
                 "attacker": {
                     "1": "<span style=\"font-weight: bold;color: green\">Attacker</span> rolls normal damage.",
                     "2": "<span style=\"font-weight: bold;color: green\">Attacker</span> rolls special damage.",
