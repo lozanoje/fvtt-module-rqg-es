@@ -1020,12 +1020,27 @@
             },
             "attackrollsInfo": {
                 "title": "Opposed Rolls (RQG)",
-				"results": "Results",
-				"attack": "Attack",
-				"defense": "Defense",
-				"parry": "Parry",
-				"dodge": "Dodge",
-				"tochat": "Send results to chat",
+                "results": "Results",
+                "attack": "Attack",
+                "defense": "Defense",
+                "parry": "Parry",
+                "dodge": "Dodge",
+                "return": "Return",
+				"damageInput": "Damage input",
+				"location": "Location",
+				"damage": "Damage",
+                "damageEnum": {
+                    "1": "Equals or Exceeds HP",
+                    "2": "Equals or Exceeds Double HP",
+                    "3": "Equals or Exceeds Triple Location HP"
+                },
+                "locationEnum": {
+                    "1": "Head",
+                    "2": "Chest",
+                    "3": "Abdomen",
+                    "4": "Arm",
+                    "5": "Leg"
+                },
                 "attacker": {
                     "1": "<span style=\"font-weight: bold;color: green\">Attacker</span> rolls normal damage.",
                     "2": "<span style=\"font-weight: bold;color: green\">Attacker</span> rolls special damage.",
@@ -1062,6 +1077,24 @@
                     "5": "<span style=\"font-weight: bold;color: green\">Attack</span> does special damage, ignores armor.",
                     "6": "<span style=\"font-weight: bold;color: green\">Attack</span> does maximum special damage, ignores armor.",
                     "7": "<span style=\"font-weight: bold;color: green\">Attack</span> does normal damage."
+                },
+                "damageOutput": {
+                    "1": "Knocked unconscious, must be treated in 5 mins or will die.",
+                    "2": "Falls, can perform no action (including healing). Will bleed to death in 10 mins if untreated.",
+                    "3": "Both legs useless, falls. If able to heal, can do so. Will bleed to death in 10 mins if untreated.",
+                    "4": "Arm useless, drops anything held. Can stand and fight normally using other limbs.",
+                    "5": "If two-legged, falls. Attack chances while prone halved, attacks against prone figure +40%.",
+                    "6": "Knocked unconscious, will lose 1 HP per melee round until successfully treated.",
+                    "7": "Knocked unconscious, will lose 1 HP per melee round until successfully treated.",
+                    "8": "Knocked unconscious, will lose 1 HP per melee round until successfully treated.",
+                    "9": "Incapacitated, in shock, cannot act until treated.",
+                    "10": "Incapacitated, in shock, cannot act until treated.",
+                    "11": "Killed instantly.",
+                    "12": "Killed instantly.",
+                    "13": "Killed instantly.",
+                    "14": "Incapacitated, arm severed or maimed.",
+                    "15": "Incapacitated, leg severed or maimed."
+
                 }
             }
         }

@@ -1025,12 +1025,27 @@
             },
             "attackrollsInfo": {
                 "title": "Tiradas de Ataque (RQG)",
-				"results": "Resultados",
-				"attack": "Ataque",
-				"defense": "Defensa",
-				"parry": "Parada",
-				"dodge": "Esquiva",
-				"tochat": "Enviar al chat los resultados",
+                "results": "Resultados",
+                "attack": "Ataque",
+                "defense": "Defensa",
+                "parry": "Parada",
+                "dodge": "Esquiva",
+                "return": "Volver",
+				"damageInput": "Cantidad de daño",
+				"location": "Localización",
+				"damage": "Daño",
+                "damageEnum": {
+                    "1": "Mayor o igual que los PVs",
+                    "2": "Mayor o igual que el doble de PVs",
+                    "3": "Mayor o igual que el triple de HP"
+                },
+                "locationEnum": {
+                    "1": "Cabeza",
+                    "2": "Pecho",
+                    "3": "Abdomen",
+                    "4": "Brazo",
+                    "5": "Pierna"
+                },
                 "attacker": {
                     "1": "El <span style=\"font-weight: bold;color: green\">atacante</span> tira el daño normal.",
                     "2": "El <span style=\"font-weight: bold;color: green\">atacante</span> inflige el daño especial.",
@@ -1067,6 +1082,23 @@
                     "5": "El <span style=\"font-weight: bold;color: green\">ataque</span> inflige daño especial e ignora la armadura.",
                     "6": "El <span style=\"font-weight: bold;color: green\">ataque</span> inflige daño especial máximo e ignora la armadura.",
                     "7": "El <span style=\"font-weight: bold;color: green\">ataque</span> inflige el daño normal."
+                },
+                "damageOutput": {
+                    "1": "Inconsciente, muere si no es tratado en 5 min.",
+                    "2": "Cae al suelo, no puede realizar acciones (incluido curarse). Morirá desangrado en 10 min si no es tratado.",
+                    "3": "Ambas piernas inutilizadas, cae al suelo. Puede curarse, si sabe cómo. Morirá desangrado en 10 min si no es tratado.",
+                    "4": "Brazo inutilizado, deja caer lo que sea que estuviese sujetando. Puede mantenerse en pie y seguir luchando con normalidad usando cualquier otra extremidad.",
+                    "5": "Si tiene solo dos piertas, cae al suelo. Mientras esté caído su porcentaje de ataque se ve reducido a la mitad, los ataques contra oponentes caídos se realizan a +40%.",
+                    "6": "Inconsciente, pierde 1 PV por asalto de combate hasta que sea tratado.",
+                    "7": "Inconsciente, pierde 1 PV por asalto de combate hasta que sea tratado.",
+                    "8": "Inconsciente, pierde 1 PV por asalto de combate hasta que sea tratado.",
+                    "9": "Incapacitado y en estado de shock, no puede actuar hasta que sea tratado.",
+                    "10": "Incapacitado y en estado de shock, no puede actuar hasta que sea tratado.",
+                    "11": "Muerte instantánea.",
+                    "12": "Muerte instantánea.",
+                    "13": "Muerte instantánea.",
+                    "14": "Incapacitatado, brazo cercenado o mutilado.",
+                    "15": "Incapacitatado, pierna cercenada o mutilada."
                 }
             }
         }
