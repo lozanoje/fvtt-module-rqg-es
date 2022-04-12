@@ -1,8 +1,8 @@
 {
   "name": "fvtt-module-rqg-es",
-  "title": "RQG Babele Spanish",
-  "description": "Traducción de la implementación de RuneQuest Aventuras en Glorantha al español mediante babele",
-  "version": "1.140.8",
+  "title": "RuneQuest Glorantha - Español/Spanish",
+  "description": "Traducción del sistema RuneQuest Aventuras en Glorantha (sun-dragon-cult/fvtt-system-rqg) al español -  RuneQuest Glorantha spanish translation",
+  "version": "1.140.9",
   "minimumCoreVersion" : "9.238",
   "compatibleCoreVersion":"9.266",
   "author": "José E. Lozano (Viriato139ac)",
