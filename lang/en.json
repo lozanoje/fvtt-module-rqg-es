@@ -1026,9 +1026,9 @@
                 "parry": "Parry",
                 "dodge": "Dodge",
                 "return": "Return",
-				"damageInput": "Damage input",
-				"location": "Location",
-				"damage": "Damage",
+                "damageInput": "Damage input",
+                "location": "Location",
+                "damage": "Damage",
                 "damageEnum": {
                     "1": "Equals or Exceeds HP",
                     "2": "Equals or Exceeds Double HP",
@@ -1094,7 +1094,26 @@
                     "13": "Killed instantly.",
                     "14": "Incapacitated, arm severed or maimed.",
                     "15": "Incapacitated, leg severed or maimed."
-
+                }
+            },
+            "dateToChat": {
+                "errormoon": "Moon image not found",
+                "holyday": "Holy Day For",
+                "notes": "Notes",
+                "currentday": "Current day in",
+                "daysremaining": "Day {dayofyear} of {daysinyear}, {daysleftinyear} days remaining this year",
+                "week": "{weekrune} Week",
+                "weeknames": {
+                    "disorder": "Disorder",
+                    "harmony": "Harmony",
+                    "death": "Death",
+                    "fertility": "Fertility",
+                    "stasis": "Stasis",
+                    "movement": "Movement",
+                    "illusion": "Illusion",
+                    "truth": "Truth",
+                    "luck": "Luck",
+                    "fate": "Fate"
                 }
             }
         }

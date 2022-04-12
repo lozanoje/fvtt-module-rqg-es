@@ -1,2 +1,2 @@
-# rqg-babele-es
-rqg-babele-es
+# fvtt-module-rqg-es
+fvtt-module-rqg-es

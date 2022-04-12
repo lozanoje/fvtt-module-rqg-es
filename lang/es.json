@@ -1031,9 +1031,9 @@
                 "parry": "Parada",
                 "dodge": "Esquiva",
                 "return": "Volver",
-				"damageInput": "Cantidad de daño",
-				"location": "Localización",
-				"damage": "Daño",
+                "damageInput": "Cantidad de daño",
+                "location": "Localización",
+                "damage": "Daño",
                 "damageEnum": {
                     "1": "Mayor o igual que los PVs",
                     "2": "Mayor o igual que el doble de PVs",
@@ -1099,6 +1099,26 @@
                     "13": "Muerte instantánea.",
                     "14": "Incapacitatado, brazo cercenado o mutilado.",
                     "15": "Incapacitatado, pierna cercenada o mutilada."
+                }
+            },
+            "dateToChat": {
+                "errormoon": "No se ha encontrado el icono de la fase lunar",
+                "holyday": "Día sagrado para",
+                "notes": "Notas",
+                "currentday": "Estamos en",
+                "daysremaining": "Día {dayofyear} de {daysinyear}, quedan {daysleftinyear} días para fin de año",
+                "week": "Semana: {weekrune}",
+                "weeknames": {
+                    "disorder": "Desorden",
+                    "harmony": "Armonía",
+                    "death": "Muerte",
+                    "fertility": "Fertilidad",
+                    "stasis": "Inmovilidad",
+                    "movement": "Movimiento",
+                    "illusion": "Ilusión",
+                    "truth": "Verdad",
+                    "luck": "Suerte",
+                    "fate": "Destino"
                 }
             }
         }

@@ -1,21 +1,15 @@
 {
-  "name": "rqg-babele-es",
+  "name": "fvtt-module-rqg-es",
   "title": "RQG Babele Spanish",
   "description": "Traducción de la implementación de RuneQuest Aventuras en Glorantha al español mediante babele",
-  "version": "1.140.7",
+  "version": "1.140.8",
   "minimumCoreVersion" : "9",
   "compatibleCoreVersion":"9",
   "author": "José E. Lozano (Viriato139ac)",
-  "esmodules": ["babele-register.js"],
+  "esmodules": ["rqg-es-register.js"],
   "scripts": [],
   "styles": [],
-  "dependencies": [
-    {
-      "name": "babele",
-      "manifest": "https://gitlab.com/riccisi/foundryvtt-babele/raw/master/module/module.json",
-      "version": "1.20"
-    }
-  ],
+  "dependencies": [],
     "packs": [
     {
       "label": "Macros",
@@ -23,7 +17,7 @@
       "name": "macros",
       "path": "packs/macros.db",
       "system": "rqg",
-      "package": "rqg-babele-es",
+      "package": "fvtt-module-rqg-es",
       "type": "Macro",
       "private": false,
       "absPath": "packs/macros.db"
@@ -43,7 +37,7 @@
   ],
   "system": "rqg",
   "systemVersion": "1.14.0",
-  "url": "https://github.com/lozanoje/rqg-babele-es",
-  "manifest": "https://raw.githubusercontent.com/lozanoje/rqg-babele-es/main/module.json",
-  "download": "https://github.com/lozanoje/rqg-babele-es/archive/main.zip"
+  "url": "https://github.com/lozanoje/fvtt-module-rqg-es",
+  "manifest": "https://raw.githubusercontent.com/lozanoje/fvtt-module-rqg-es/main/module.json",
+  "download": "https://github.com/lozanoje/fvtt-module-rqg-es/archive/main.zip"
 }
