@@ -1,17 +1,45 @@
 {
-  "name": "fvtt-module-rqg-es",
   "title": "RuneQuest Glorantha - Español/Spanish",
   "description": "Traducción del sistema RuneQuest Aventuras en Glorantha (sun-dragon-cult/fvtt-system-rqg) al español -  RuneQuest Glorantha spanish translation",
-  "version": "1.170.1",
-  "minimumCoreVersion" : "9.238",
-  "compatibleCoreVersion":"9.280",
-  "author": "José E. Lozano (Viriato139ac)",
-  "esmodules": ["rqg-es-register.js"],
-  "scripts": [],
+  "version": "1.170.2",
+  "languages": [{
+      "lang": "es",
+      "name": "Español",
+      "path": "lang/es.json",
+      "flags": {}
+    }, {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json",
+      "flags": {}
+    }
+  ],
   "styles": [],
-  "dependencies": [],
-    "packs": [
-    {
+  "url": "https://github.com/lozanoje/fvtt-module-rqg-es",
+  "manifest": "https://raw.githubusercontent.com/lozanoje/fvtt-module-rqg-es/main/module.json",
+  "download": "https://github.com/lozanoje/fvtt-module-rqg-es/archive/main.zip",
+  "id": "fvtt-module-rqg-es",
+  "authors": [{
+      "name": "@Viriato139ac#0342",
+      "flags": {}
+    }
+  ],
+  "esmodules": [
+    "rqg-es-register.js"
+  ],
+  "relationships": {
+    "systems": [{
+        "id": "rqg",
+        "type": "system",
+        "compatibility": "1.17.0"
+      }
+    ]
+  },
+  "compatibility": {
+    "minimum": 10,
+    "verified": "10.285"
+  },
+  "packs": [{
       "label": "Macros",
       "name": "macros",
       "path": "packs/macros.db",
@@ -21,22 +49,5 @@
       "private": false,
       "absPath": "packs/macros.db"
     }
-  ],
-  "languages": [
-    {
-      "lang": "es",
-      "name": "Español",
-      "path": "lang/es.json"
-    },
-    {
-      "lang": "en",
-      "name": "English",
-      "path": "lang/en.json"
-    }
-  ],
-  "system": "rqg",
-  "systemVersion": "1.17.0",
-  "url": "https://github.com/lozanoje/fvtt-module-rqg-es",
-  "manifest": "https://raw.githubusercontent.com/lozanoje/fvtt-module-rqg-es/main/module.json",
-  "download": "https://github.com/lozanoje/fvtt-module-rqg-es/archive/main.zip"
+  ]
 }
