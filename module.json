@@ -2,7 +2,7 @@
   "name": "fvtt-module-rqg-es",
   "title": "RuneQuest Glorantha - Español/Spanish",
   "description": "Traducción del sistema RuneQuest Aventuras en Glorantha (sun-dragon-cult/fvtt-system-rqg) al español -  RuneQuest Glorantha spanish translation",
-  "version": "1.180.3",
+  "version": "1.180.4",
   "minimumCoreVersion" : "9.238",
   "compatibleCoreVersion":"9.280",
   "author": "José E. Lozano (Viriato139ac)",

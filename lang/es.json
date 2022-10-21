@@ -1163,8 +1163,8 @@
             },
             "strikeranksHelper": {
                 "title": "Asistente de Momentos de Reacción (RQG)",
-                "token": "Icono seleccionado",
-                "actor": "Nombre del actor",
+                "token": "Icono",
+                "actor": "Actor",
                 "dexsr": "MR DES",
                 "sizsr": "MR TAM",
                 "actorHint": "Nombre del actor vinculado al icono seleccionado",

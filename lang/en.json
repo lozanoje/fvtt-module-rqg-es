@@ -1158,8 +1158,8 @@
             },
             "strikeranksHelper": {
                 "title": "Strike Ranks Helper (RQG)",
-                "token": "Selected token",
-                "actor": "Actor's name",
+                "token": "Token",
+                "actor": "Actor",
                 "dexsr": "DEX SR",
                 "sizsr": "SIZ SR",
                 "actorHint": "Name of the actor linked to the selected token",
