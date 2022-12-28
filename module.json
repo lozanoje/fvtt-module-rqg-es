@@ -1,42 +1,52 @@
 {
-  "name": "fvtt-module-rqg-es",
-  "title": "RuneQuest Glorantha - Español/Spanish",
-  "description": "Traducción del sistema RuneQuest Aventuras en Glorantha (sun-dragon-cult/fvtt-system-rqg) al español -  RuneQuest Glorantha spanish translation",
-  "version": "1.180.5",
-  "minimumCoreVersion" : "9.238",
-  "compatibleCoreVersion":"9.280",
-  "author": "José E. Lozano (Viriato139ac)",
-  "esmodules": ["rqg-es-register.js"],
-  "scripts": [],
-  "styles": [],
-  "dependencies": [],
-    "packs": [
-    {
-      "label": "Macros",
-      "name": "macros",
-      "path": "packs/macros.db",
-      "system": "rqg",
-      "package": "fvtt-module-rqg-es",
-      "type": "Macro",
-      "private": false,
-      "absPath": "packs/macros.db"
-    }
-  ],
-  "languages": [
-    {
-      "lang": "es",
-      "name": "Español",
-      "path": "lang/es.json"
+    "id": "fvtt-module-rqg-es",
+    "title": "RuneQuest Glorantha - Español/Spanish",
+    "description": "Traducción del sistema RuneQuest Aventuras en Glorantha (sun-dragon-cult/fvtt-system-rqg) al español -  RuneQuest Glorantha spanish translation",
+    "version": "2.000.1",
+    "languages": [{
+            "lang": "es",
+            "name": "Español",
+            "path": "lang/es.json"
+        }, {
+            "lang": "en",
+            "name": "English",
+            "path": "lang/en.json"
+        }
+    ],
+    "styles": [],
+    "authors": [{
+            "name": "José E. Lozano",
+            "discord": "@Viriato139ac#0342",
+            "flags": {}
+        }
+    ],
+    "esmodules": [
+        "rqg-es-register.js"
+    ],
+    "relationships": {
+        "systems": [{
+                "id": "rqg",
+                "type": "system",
+                "compatibility": "2.0.0"
+            }
+        ]
     },
-    {
-      "lang": "en",
-      "name": "English",
-      "path": "lang/en.json"
-    }
-  ],
-  "system": "rqg",
-  "systemVersion": "1.18.0",
-  "url": "https://github.com/lozanoje/fvtt-module-rqg-es",
-  "manifest": "https://raw.githubusercontent.com/lozanoje/fvtt-module-rqg-es/main/module.json",
-  "download": "https://github.com/lozanoje/fvtt-module-rqg-es/archive/main.zip"
+    "compatibility": {
+        "minimum": 10,
+        "verified": "10.291"
+    },
+    "packs": [{
+            "label": "Macros",
+            "name": "macros",
+            "path": "packs/macros.db",
+            "system": "rqg",
+            "package": "fvtt-module-rqg-es",
+            "type": "Macro",
+            "private": false,
+            "absPath": "packs/macros.db"
+        }
+    ],
+    "url": "https://github.com/lozanoje/fvtt-module-rqg-es",
+    "manifest": "https://raw.githubusercontent.com/lozanoje/fvtt-module-rqg-es/main/module.json",
+    "download": "https://github.com/lozanoje/fvtt-module-rqg-es/archive/main.zip"
 }
