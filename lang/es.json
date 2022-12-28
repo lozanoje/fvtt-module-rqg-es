@@ -1342,6 +1342,17 @@
                     "luck": "Suerte",
                     "fate": "Destino"
                 }
+            },
+            "dataLoad": {
+							  "title": "Carga del sistema",
+                "actors": "Actores",
+                "journals": "Diarios",
+                "scenes": "Escenas",
+                "items": "Objetos",
+                "playlists": "Listas de reproducción",
+                "chat": "Chat",
+                "total": "Total",
+								"comment": "Resultados en unidades de código UTF-16 (estándar de js), cada caracter pueden ser 16 bits (2 bytes) o 32 bits (4 bytes)"
             }
         }
     },

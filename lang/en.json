@@ -1337,6 +1337,17 @@
                     "luck": "Luck",
                     "fate": "Fate"
                 }
+            },
+            "dataLoad": {
+							  "title": "Data Load",
+                "actors": "Actors",
+                "journals": "Journals",
+                "scenes": "Scenes",
+                "items": "Items",
+                "playlists": "Playlists",
+                "chat": "Chat",
+                "total": "Total",
+								"comment": "Results in UTF-16 code units (js standard), each character can be 16 bits (2 bytes) or 32 bits (4 bytes)"
             }
         }
   },
