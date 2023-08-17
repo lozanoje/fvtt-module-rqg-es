@@ -81,5 +81,44 @@ Hooks.once('ready', async function () {
                     updateMacro(ficherosjs[i])
             }
     };
+		
+    if (game.user.isGM) {
+function onlyUnique(value, index, array) {
+  return array.indexOf(value) === index;
+}
+let hitloc = game.settings.get("rqg", "hitLocations")["hitLocationItemNames"];
+hitloc.push("Cabeza",
+    "Abdomen",
+    "Pecho",
+    "Cuerpo",
+    "Cuartos delanteros",
+    "Cuartos traseros",
+    "Brazo izquierdo",
+    "Pierna izquierda",
+    "Pata central izquierda",
+    "Pata delantera izquierda",
+    "Cabeza izquierda",
+    "Ala izquierda",
+    "Brazo derecho",
+    "Pierna derecha",
+    "Pata central derecha",
+    "Pata delantera derecha",
+    "Cabeza derecha",
+    "Ala derecha",
+    "Cola",
+    "Tentáculo 1",
+    "Tentáculo 2",
+    "Tentáculo 3",
+    "Tentáculo 4",
+    "Tentáculo 5",
+    "Tentáculo 6",
+    "Tentáculo 7",
+    "Tentáculo 8",
+    "Tórax",
+    "Tronco");
+let hitlocunique = hitloc.filter(onlyUnique);
+let hitlocuniquearray = { hitLocationItemNames: hitlocunique }
+game.settings.set("rqg", "hitLocations", hitlocuniquearray);
+    };
 
 });
