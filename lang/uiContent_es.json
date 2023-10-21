@@ -3,22 +3,30 @@
     "LANGUAGE": "Español",
     "MAINTAINERS": "@Viriato139ac#0342"
   },
-  "ITEM": {
-    "TypeArmor": "Armadura",
-    "TypeCult": "Culto",
-    "TypeGear": "Equipo",
-    "TypeHitlocation": "Localización",
-    "TypeHomeland": "Tierra natal",
-    "TypeOccupation": "Ocupación",
-    "TypePassion": "Pasión",
-    "TypeRune": "Runa",
-    "TypeRunemagic": "Conjuro rúnico",
-    "TypeShamanicability": "Aptitud chamánica",
-    "TypeSkill": "Habilidad",
-    "TypeSorcerymagic": "Conjuro de hechicería",
-    "TypeSpiritmagic": "Conjuro de magia espiritual",
-    "TypeWeapon": "Arma",
-    "TypeReputation": "Reputación"
+  "TYPES": {
+    "Item": {
+        "armor": "Armadura",
+        "cult": "Culto",
+        "gear": "Equipo",
+        "hitLocation": "Localización",
+        "homeland": "Tierra natal",
+        "occupation": "Ocupación",
+        "passion": "Pasión",
+        "rune": "Runa",
+        "runeMagic": "Conjuro rúnico",
+        "shamanicAbility": "Aptitud chamánica",
+        "skill": "Habilidad",
+        "sorceryMagic": "Conjuro de hechicería",
+        "spiritMagic": "Conjuro de magia espiritual",
+        "weapon": "Arma",
+        "Reputation": "Reputación"
+      },
+    "Actor": {
+      "character": "Personaje"
+    }
+  },
+  "COMBAT": {
+    "InitiativeReset": "Reiniciar MR"
   },
   "RQG": {
     "ActorCreation": {
@@ -99,12 +107,15 @@
           "walk": "Andar",
           "swim": "Nadar",
           "fly": "Volar"
-        }
+        },
+        "MoveEquipped": "MOV equipado (listo para el combate) es {equippedMove} y la CRG total equipada es {equippedEnc}",
+        "MoveCarried": "MOV cargado (viaje) es {carriedMove} y la CRG total cargada es {carriedEnc}",
+        "MaxEnc": "La CRG máxima sin penalizaciones es {maxEnc}",
+        "OverWeight": "¡Se ha reducido el MOV debido al sobrepeso!"
       },
       "AwardExperience": {
         "GainedExperienceInfo": "{actorName} acaba de ganar una marca de experiencia en {itemName}!",
-        "ItemDoesntHaveExperienceError": "Se ha intentado añadir una marca de experiencia al objeto \"{itemName}\" con id \"{itemId}\" que no tiene la propiedad \"hasExperience\"",
-        "ItemNotFoundError": "Se ha intentado añadir una marca de experiencia al objeto con id \"{itemId}\" que no se ha encontrado en el actor \"{actorName}\" con id de actor \"{actorId}\""
+        "ItemDoesntHaveExperienceError": "Se ha intentado añadir una marca de experiencia al objeto \"{itemName}\" con id \"{itemId}\" que no tiene la propiedad \"hasExperience\""
       },
       "Background": {
         "Background": "Trasfondo",
@@ -114,8 +125,6 @@
         "Age": "Edad",
         "Gender": "Género",
         "Species": "Especie",
-        "DropSpeciesJournalEntryGM": "Suelte una entrada de diario aquí, o use el asistente de creación de aventureros",
-        "DropSpeciesJournalEntryPlayer": "Lo puede rellenar el GM o mediante el asistente de creación de aventureros",
         "TownHomeArea": "Ciudad/tierra natal",
         "Tribe": "Tribu",
         "Clan": "Clan",
@@ -216,7 +225,10 @@
         "HP": "PG",
         "Chance": "Probabilidad",
         "Damage": "Daño",
+        "Range": "Alcance:",
+        "Rate": "Tasa:",
         "SR": "MR",
+        "SRTooltip": "<h3>Modificadores a los Momentos de Reacción</h3><ul><li>Refuerzo +0</li><li>Preparar nuevo conjuro o usar un arma distinta +5</li><li>Recargar armas de proyectiles +5</li><li>Levantarse tras haber sido derribado +5</li><li>Sorprendido por un enemigo a menos de 3 m +3</li><li>Sorprendido por un enemigo a 4-9 m +1</li><li>Movimiento: cada 3 m +1</li><li>Puntos de magia usados tras el primero (que es gratis) +1</li></ul>",
         "Dodge": "Esquivar",
         "SpiritCombat": "Combate espiritual",
         "SpiritCombatDamage": "Daño en combate espiritual",
@@ -237,6 +249,8 @@
         "CurrencyConversionTipUnder1": "Un lunar equivale a {value} {name}s",
         "Name": "Nombre",
         "EncumbranceAbbr": "CRG",
+        "MaxEnc": "Máx CRG",
+        "OverWeight": "Llevas más peso que tu CRG máxima. Se ha reducido el MOV",
         "Location": "Ubicación",
         "Price": "Coste",
         "Total": "Total",
@@ -244,6 +258,8 @@
         "ExtendedAbbr": "Ext",
         "Skill": "Habilidad",
         "Damage": "Daño",
+        "Range": "Alcance",
+        "Rate": "Tasa",
         "MinimumStrength": "FUE",
         "MinimumDexterity": "DES",
         "HitPointsAbbr": "PG",
@@ -263,7 +279,8 @@
         "HealWound": "Curar herida",
         "AddWound": "Añadir herida",
         "NoHitLocations": "El personaje no tiene localizaciones de golpe, añada algunas",
-        "FlipSortOrder": "Orden inverso de localizaciones"
+        "FlipSortOrder": "Orden inverso de localizaciones",
+        "HitLocationDiceDoNotAddUp": "⚠ El dado de localización no cubre el rango 1-20. Tiene valores [{dice}]."
       },
       "Nav": {
         "Combat": "Combate",
@@ -293,6 +310,8 @@
         "ImportPassionCheckboxTitle": "Importar pasión: \"{passionName}\""
       },
       "Rune": {
+        "IncorrectRuneWarning": "El tipo de runa no es ni elemental, poder, forma, condicion o técnica. Actualícelo",
+        "TypeDontMatchTranslationTip": "El nombre del tipo de ruma no coincide con la localización actual del sistema. No es un error como tal, solo una inconsistencia entre traducciones.<br>Volver a seleccionar el tipo lo reiniciará para el estándar del sistema",
         "Condition": "Condición",
         "Elemental": "Elemental",
         "Form": "Forma",
@@ -333,6 +352,7 @@
         "UnspecifiedSkillWarning": "⚠ Por favor, especifique la especialización:",
         "SkillDescriptionTitle": "Descripción de la habilidad",
         "ImportSkillCheckboxTitle": "Importar habilidad: \"{skillName}\"",
+        "RequiresTraining": "No puede ganar experiencia, para aumentar necesita entrenamiento",
         "SkillCategory": {
           "agility": "Agilidad",
           "communication": "Comunicación",
@@ -606,6 +626,7 @@
         "DamageBonusDamageTag": "modificador al daño",
         "CrushSpecialDamageTag": "especial aplastamiento",
         "ImpaleSpecialDamageTag": "especial empalamiento",
+        "SlashSpecialDamageTag": "especial tajo",
         "FumbleTableMissingWarn": "No se ha encontrado la tabla de pifias \"{fumbleTableName}\"",
         "PluralResults": "{numberOfResults} resultados",
         "SingularResult": "un resultado",
@@ -663,7 +684,6 @@
         "Deity": "Deidad",
         "CultName": "Nombre del culto",
         "CultTagline": "Lema del culto",
-        "AddNewRunePlaceholder": "Añadir nueva runa",
         "Runes": "Runas",
         "HolyDays": "Días sagrados Days",
         "RunePoints": "Puntos de runa",
@@ -760,13 +780,7 @@
         "RuneLinks": "Enlaces de runas"
       },
       "Notification": {
-        "CircularGearLocationWarning": "Referencia circular en ubicación de equipo (A en B en A) - compruebe la ubicación: {itemLocation}",
-        "ItemIsNotContainerWarning": "{itemName} no es un contenedor",
-        "CantFindRootLocationNode": "No se ha podido encontrar el nodo raíz de la localización",
-        "LocationDidntFindItem": "no se ha encontrado el objeto en la ubicación",
-        "ExpectedCultItemError": "Se esperaba un culto",
-        "CantFindCultRuneError": "No se ha podido encontrar la runa de culto {newRune} entre allRunesIndex",
-        "CantFindRuneInAvailableRunesError": "No se ha podido encontrar la runa \"{runeName}\" en ningún compendio",
+        "CantFindRuneInAvailableRunesError": "No se ha podido encontrar la runa \"{rqid}\" en ningún compendio",
         "ItemWasNotHitLocationError": "Se ha llamado a hitLocation#onActorPrepareEmbeddedEntities sobre un objeto sin hitLocation",
         "HitLocationDoesNotHaveActorError": "La localización no tiene un actor asociado",
         "ActorDoesNotHaveMaxHpError": "El actor no tiene PG máximos",
@@ -776,8 +790,6 @@
         "PrepareDerivedDataNotSkillError": "Se ha llamado a Skill#onActorPrepareDerivedData con algo que no es una habilidad",
         "ActorNotCharacterError": "El actor no es del tipo personaje",
         "CantFindWeaponSkillWarning": "No se ha podido encontrar la habilidad de armas",
-        "NoWeaponSkillFromSkillOriginWarning": "No se ha podido encontrar la habilidad de armas del skillOrigin \"{skillOrigin}\".",
-        "CantFindSkillAssociatedWithWeaponWarning": "No se ha podido encontrar la habilidad asociada con este arma",
         "CantCreateActiveEffect": "No se puede crear el efecto activo",
         "NoIdOnTokenError": "Sin ID en el icono",
         "NoIdOnActorError": "Sin ID en el actor",
@@ -878,7 +890,6 @@
         "OneUseQ": "¿Único uso?",
         "GrantedByCult": "Concedido por culto",
         "Runes": "Runas",
-        "AddNewRunePlaceholder": "Añadir nueva runa",
         "runeMagicCultDialog": {
           "title": "¿A qué culto pertenece este conjuro rúnico?",
           "btnAddRuneMagic": "Añadir conjuro rúnico",
@@ -983,12 +994,12 @@
           "parry": "Parada",
           "special": "Especial"
         },
-        "NaturalWeaponQ": "¿Arma natural?",
-        "ThrownWeaponQ": "¿Arma arrojadiza? (mod. daño a la mitad)",
-        "ProjectileWeaponQ": "¿Arma de proyectiles? (sin mod. daño, usa los proyectiles asociados)",
-        "RangedWeaponQ": "¿Arma a distancia? (sin mod. daño, sin proyectiles)",
-        "ProjectileQ": "¿Proyectiles? (munición)",
-        "Projectile": "Proyectiles",
+        "NaturalWeaponQ": "Arma natural",
+        "ThrownWeaponQ": "Arma arrojadiza (se disminuye su cantidad con cada uso)",
+        "ProjectileWeaponQ": "Arma de proyectiles (se disminuye la cantidad de los proyectiles seleccionados con cada uso)",
+        "RangedWeaponQ": "Arma a distancia (no disminuye su cantidad)",
+        "ProjectileQ": "Proyectil (munición - se usa junto a un arma de proyectiles)",
+        "Projectile": "Proyectil",
         "Range": "Alcance",
         "Rate": "Tasa",
         "SameDataAsOneHand": "Los mismos datos que a una mano",
@@ -1022,9 +1033,9 @@
     },
     "Foundry": {
       "ActiveEffect": {
-        "Header": "🐛Efectos activos🧪",
+        "Header": "Efectos activos🧪",
         "AddEffectTitle": "Añadir efecto",
-        "Label": "Etiqueta",
+        "Name": "Nombre",
         "Disabled": "Deshabilitado",
         "StartTime": "Tiempo inicio",
         "KeyValueMode": "Clave - Valor - Modo",
@@ -1056,6 +1067,7 @@
     },
     "Game": {
       "MeleeRoundAbbr": "AC",
+      "SrMeleeRoundAbbr": "M/AC",
       "ResultEnum": {
         "0": "Hipercrítico",
         "1": "Crítico especial",
@@ -1093,6 +1105,7 @@
       "GenerateDefaultRqid": "Crear ID de sistema RuneQuest (Rqid) en base al documento actual. El rqid debe basarse en el nombre de documento en inglés",
       "rqidPriority": "Prioridad Rqid",
       "rqidLang": "Idioma",
+      "Folder": "Directorio",
       "FoundryId": "ID Foundry",
       "FoundryUuid": "UUID Foundry",
       "ParentFoundryId": "ID Foundry padre",
@@ -1103,7 +1116,9 @@
       "DocsInWorld": "{count} documentos en el mundo",
       "DocsInCompendiums": "{count} documentos en el compendio",
       "DuplicateWarning": "Aviso: ¡múltiples rqids con la misma prioridad!",
+      "CouldNotFindRune": "No se ha podido encontrar una runa en memoria con el rqid {rqid}",
       "Error": {
+        "NoWikiModule": "Por favor, active el módulo wiki requerido <a href='https://github.com/sun-dragon-cult/fvtt-system-rqg/wiki/Installing'>Consulte instrucciones de instalación</a>",
         "NoSheet": "No se ha encontrado la hoja del documento vinculado al rqid \"{rqid}\". Consulte la consola",
         "MoreThanOneRqidMatchInWorld": "Más de un documento RQG en el mundo (no en los paquetes de compendios) con el rqid \"{rqid}\", idioma \"{lang}\", y prioridad \"{priority}\". Por favor, revise los ajustes del sistema RQG. Consulte los ids de objeto en la consola",
         "MoreThanOneRqidMatchInPacks": "Más de un documento RQG en los paquetes de compendios instalados con el rqid \"{rqid}\", idioma \"{lang}\", y prioridad \"{priority}\". Por favor, revise los ajustes del sistema RQG. Consulte los ids de objeto en la consola",
@@ -1142,14 +1157,6 @@
         "settingName": "Idioma del mundo",
         "settingHint": "Idioma en el que se jugará esta aventura. Afecta que paquetes de compendios y descripciones en diarios se muestran. Se recomienda, aunque no es estrictamente necesario, que todos los jugadores establezcan este idioma en las opciones 'Preferencias de idioma en los ajustes básicos'"
       },
-      "ShowOnlyWorldLanguagePacks": {
-        "settingName": "Filtrar paquetes de compendios",
-        "settingHint": "Mostrar únicamente los compendios del sistema en el idioma especificado en 'Idioma del mundo' y ocultar el resto de compendios. Si no existen los compendios en el idioma especificado, se mostrarán los compendios en Inglés"
-      },
-      "ShowEnglishLanguagePacksAlso": {
-        "settingName": "Paquetes de compendios en Inglés",
-        "settingHint": "Mostrar los compendios en Inglés además de los correspondientes a 'Idioma del mundo'"
-      },
       "FumbleRollTable": {
         "settingName": "Tabla de pifias",
         "settingHint": "Nombre de la tabla de pifias - se usará en combate"
@@ -1157,10 +1164,6 @@
       "SpecialCrit": {
         "settingName": "Resultados especiales e hipercríticos",
         "settingHint": "*** Versión alfa - aún no implementado totalmente *** Añade los resultados de crítico especial (skill/100) e hipercrítico (skill/500)"
-      },
-      "MagicRuneName": {
-        "settingName": "Nombre de la runa Magia (condition)",
-        "settingHint": "Si un conjuro rúnica tiene esta runa, se considera \"Común\", y un aventurero podrá lanzarlo usando cualquiera de las runas asociadas con los puntos de runa que gasten"
       },
       "WorldMigrationVersion": {
         "settingName": "Versión de migración del mundo",
@@ -1201,6 +1204,7 @@
         "migrationTime": "La migración llevará algún tiempo si el mundo es grande. Por favor, sea paciente y no cierre el programa antes de que finalice",
         "btnMigrate": "Migrar mundo \"{worldTitle}\" a la versión {systemVersion}"
       },
+      "WorldNotUpdated": "Este mundo no ha sido actualizado a la versión actual del sistema ({systemVersion}). Espere hasta que su GM haya actializado y entonces refresque la página (F5 o cmd-R)",
       "applyingMigration": "Ejecutando migración del mundo a la versión {systemVersion}. Por favor, sea paciente y no cierre el programa o apague el servidor",
       "migrationFinished": "¡Se ha completado la migración del mundo a la versión {systemVersion}!",
       "actors": "Paso 1 / 4 - Migrando {count} actores",
@@ -1212,230 +1216,39 @@
       "SortItems": "Ordenar objetos alfabéticamente",
       "MultipleCults": "El personaje tiene más cultos,<br> consulte la pestaña de magia rúnica"
     },
-    "scripts": {
-      "general": {
-        "roll": "Tirar",
-        "rolled": "Tirada",
-        "cancel": "Cancelar",
-        "select": "Seleccionar",
-        "type": "Tipo",
-        "ability": "Aptitud",
-        "modifier": "Modificador",
-        "characteristic": "Característica",
-        "charac": "Carac.",
-        "value": "Valor",
-        "actor": "Actor",
-        "errorselect": "Por favor, seleccione un icono",
-        "errortarget": "Por favor, marque un objetivo",
-        "erroractor": "No se han creado actores en este mundo",
-        "mod": "Mod.",
-        "rollp": "Tirada (%)",
-        "result": "Resultado",
-        "base": "Base"
+    "SheetName": {
+      "Actor": {
+        "Character": "Hoja de personaje"
       },
-      "augmentingAbilities": {
-        "title": "Reforzar Aptitudes",
-        "augmenting": "Refuerzo",
-        "augmented": "Aumentada",
-        "augFlavour": "Usando <span style=\"font-weight: bold;color: brown\">{augName} ({augBase}%)</span> para reforzar. La tirada ha sido {augRoll}% sobre una aptitud modificada de {augValue}%, un {augLabel}",
-        "skillFlavour": "Tirando <span style=\"font-weight: bold;color: brown\">{skillName} ({skillBase}%)</span> reforzada con {augName}. La tirada ha sido {skillRoll}% sobre una aptitud modificada de {skillValue}%, un {skillLabel}",
-        "aug": "Ref."
+      "Item": {
+        "Armor": "Hoja de objeto armadura",
+        "Cult": "Hoja de objeto culto",
+        "Gear": "Hoja de objeto equipo",
+        "HitLocation": "Hoja de objeto localización",
+        "Homeland": "Hoja de objeto tierra natal",
+        "Occupation": "Hoja de objeto ocupación",
+        "Passion": "Hoja de objeto pasión",
+        "Rune": "Hoja de objeto runa",
+        "RuneMagicSpell": "Hoja de objeto magia rúnica",
+        "Skill": "Hoja de objeto habilidad",
+        "SpiritMagicSpell": "Hoja de objeto magia espiritual",
+        "Weapon": "Hoja de objeto arma"
       },
-      "characteristicRolls": {
-        "title": "Tiradas de Característica (RQG)",
-
-        "difficulty": "Dificultad",
-        "difficultyEnum": {
-          "1": "Acción sencilla",
-          "2": "Fácil",
-          "3": "Moderada",
-          "4": "Difícil",
-          "5": "Muy difícil",
-          "6": "Casi imposible"
+      "RollTable":"Hoja de tabla"
+    },
+    "Integrations": {
+      "DragRuler": {
+        "Speeds": {
+          "Attack": "atacar",
+          "Walk": "andar",
+          "Sprint": "correr"
         },
-        "flavourString": "Tirando <span style=\"font-weight: bold;color: brown\">{charNam} ({charVal} x {charMul})</span>. La tirada ha sido {charRoll}% sobre una probabilidad modificada de {charValue}%, un {charLabel}"
-      },
-      "hitlocationRolls": {
-        "title": "Tiradas de localizaciones de golpe (RQG)",
-        "baseString": "Localizaciones de golpe de",
-        "hitlocation": "Localización de golpe",
-        "from": "de",
-        "to": "a",
-        "contentFlavour": "Tirando {formRoll} para localización de golpe",
-        "contentString": "<hr>La tirada ha sido <span style=\"font-weight: bold;color: green\">{skillRoll}</span>, golpe en <span style=\"font-weight: bold;color: brown\">{locTable}</span>",
-        "ontheground": "Caído en el suelo"
-      },
-      "opposedRolls": {
-        "title": "Tiradas Enfrentadas (RQG)",
-        "active": "Activo",
-        "pasive": "Pasivo",
-        "activeFlavour": "Tirada enfrentada, aptitud activa: <span style=\"font-weight: bold;color: brown\">{activeName} ({activeBase}%)</span> contra la aptitud pasiva: <span style=\"font-weight: bold;color: brown\">{pasiveName} ({pasiveBase}%)</span>",
-        "pasiveFlavour": "Resultado: <span style=\"font-weight: bold;color: brown\">{activeName} ({activeBase}%)</span> contra <span style=\"font-weight: bold;color: brown\">{pasiveName} ({pasiveBase}%)</span>",
-        "winner": "GANADOR",
-        "loser": "PERDEDOR",
-        "tie": "EMPATE"
-      },
-      "resistanceTable": {
-        "title": "Tabla de Resistencia (RQG)",
-        "target": "Objetivo",
-        "flavourString": "Tirando <span style=\"font-weight: bold;color: brown\">{charNam} ({charVal})</span> contra un objetivo de <span style=\"font-weight: bold;color: brown\">{charTar}</span>. La tirada ha sido {charRoll}% sobre una probabilidad modificada de {charValue}%, un {charLabel}"
-      },
-      "strikeranksHelper": {
-        "title": "Asistente de Momentos de Reacción (RQG)",
-        "token": "Icono seleccionado",
-        "actor": "Nombre del actor",
-        "dexsr": "MR DES",
-        "sizsr": "MR TAM",
-        "actorHint": "Nombre del actor vinculado al icono seleccionado",
-        "dexsrHint": "Momento de reacción por DES del actor",
-        "sizsrHint": "Momento de reacción por TAM del actor",
-        "generalTitle": "Opciones generales",
-        "generalIndependent": "Acción independiente",
-        "generalReadiness": "Requiere preparación",
-        "generalSR": "Añadir SR",
-        "generalIndependentHint": "acción independiente, no añadir a la última entrada en el AC, incluirla como si fuese nueva",
-        "generalReadinessHint": "añade que se necesita preparar el ataque o hechizo (+5 MRs)",
-        "generalSRHint": "añade un número determinado de MR a la acción",
-        "combatTitle": "Combate",
-        "combatAttack": "Ataque",
-        "combatAttackHint": "Muestra solo las armas equipadas y las armas naturales",
-        "magicTitle": "Magia",
-        "magicSpells": "Conjuros",
-        "magicRune": "Rúnica",
-        "magicMPs": "PMs",
-        "magicSpirit": "Espiritual",
-        "magicSorcery": "Hechicería",
-        "magicSpellsHint": "los conjuros rúnicos ocurren en el MR 1, el resto van en el MR por DES, se debe preparar un nuevo conjuro tras lanzar el primero",
-        "magicMPsHint": "número de PMs extra que se usan para reforzar el conjuro, añade +1 MR por cada PM por encima del primero",
-        "otherTitle": "Otras acciones",
-        "otherReady": "Preparación",
-        "otherMovement": "Movimiento",
-        "otherAimed": "Apuntar/destrabarse",
-        "otherOther": "Otro",
-        "otherSR": "MR",
-        "otherReadyHint": "antes de llevar a cabo una acción, o sacar el arma, o preparar un segundo conjuro",
-        "otherMovementHint": "un MR por cada 3m de movimiento",
-        "otherAimedHint": "todas estas acciones ocurren al final, en el MR 12",
-        "otherOtherHint": "cualquier otra acción, debe especificar el MR",
-        "removeTitle": "Quitar del AC",
-        "removeTokensCT": "Iconos en el AC",
-        "removeUpdate": "Actualizar",
-        "removeAll": "Todos los MRs",
-        "removeOnly": "Solo los vacíos",
-        "removeTokens": "Iconos",
-        "removeTokensHint": "lista las entradas/iconos en el AC, use el botón para actualizar el desplegable tras añadir/quitar combatientes",
-        "removeDesc": "Quitar MRs",
-        "removeDescHint": "quitar todos los MRs, solo los vacíos (los que no tienen MR) o entradas en un MR específico, para un icono (el seleccionado) o para todos",
-        "removeAllTokens": "Todos los iconos"
-      },
-      "attackrollsInfo": {
-        "title": "Tiradas de Ataque (RQG)",
-        "results": "Resultados",
-        "attack": "Ataque",
-        "defense": "Defensa",
-        "parry": "Parada",
-        "dodge": "Esquiva",
-        "return": "Volver",
-        "damageInput": "Cantidad de daño",
-        "location": "Localización",
-        "damage": "Daño",
-        "damageEnum": {
-          "1": "Mayor o igual que los PVs",
-          "2": "Mayor o igual que el doble de PVs",
-          "3": "Mayor o igual que el triple de HP"
-        },
-        "locationEnum": {
-          "1": "Cabeza",
-          "2": "Pecho",
-          "3": "Abdomen",
-          "4": "Brazo",
-          "5": "Pierna"
-        },
-        "attacker": {
-          "1": "El <span style=\"font-weight: bold;color: green\">atacante</span> tira el daño normal.",
-          "2": "El <span style=\"font-weight: bold;color: green\">atacante</span> inflige el daño especial.",
-          "3": "El <span style=\"font-weight: bold;color: green\">atacante</span> inflige el daño especial máximo.",
-          "4": "<span style=\"font-weight: bold;color: green\">Ataque</span> detenido o rechazado.",
-          "5": "El <span style=\"font-weight: bold;color: green\">atacante</span> falla.",
-          "6": "El <span style=\"font-weight: bold;color: green\">atacante</span> tira en la tabla de pifias."
-        },
-        "defender": {
-          "1": "El arma del <span style=\"font-weight: bold;color: red\">defensor</span> sufre 1 punto de daño si la tirada de daño es mayor que sus PG actuales. Si quedan más puntos de daño, se infligen a la localización adyacente.",
-          "2": "El arma del <span style=\"font-weight: bold;color: red\">defensor</span> sufre 1 punto de daño si la tirada de daño es mayor que sus PG actuales. Si quedan más puntos de daño, se infligen a la localización adyacente sin reducción por armadura.",
-          "3": "El arma del <span style=\"font-weight: bold;color: red\">defensor</span> pierde tantos PG como el daño infligido. Si quedan más puntos de daño, se infligen a la localización adyacente sin reducción por armadura.",
-          "4": "El <span style=\"font-weight: bold;color: red\">defensor</span> sufre daño sin reducción por armadura.",
-          "5": "El <span style=\"font-weight: bold;color: red\">defensor</span> sufre daño sin reducción por armadura y tira en la tabla de pifias.",
-          "6": "El <span style=\"font-weight: bold;color: red\">defensor</span> tira el daño normal de su arma. Si es mayor que los PG del arma atacante, éstos se reducen en 1.",
-          "7": "El arma del <span style=\"font-weight: bold;color: red\">defensor</span> pierde 1 PG si el daño es mayor que sus PG actuales. Si sobra daño, se aplica a la localización de golpe adyacente.",
-          "8": "El arma del <span style=\"font-weight: bold;color: red\">defensor</span> pierde tantos PG como la diferencia entre el daño y sus PG actuales. Esa misma cantidad de daño se aplica a la localización de golpe adyacente.",
-          "9": "El <span style=\"font-weight: bold;color: red\">defensor</span> sufre la tirada de daño.",
-          "10": "El <span style=\"font-weight: bold;color: red\">defensor</span> sufre la tirada de daño y tira en la tabla de pifias.",
-          "11": "El <span style=\"font-weight: bold;color: red\">defensor</span> tira el daño especial de su arma. Todo daño que exceda los PG actuales del arma atacante los reduce en esa misma cantidad.",
-          "12": "El <span style=\"font-weight: bold;color: red\">defensor</span> tira el daño normal de su arma. Si es mayor que los PG del arma atacante, éstos se reducen en 1.",
-          "13": "El arma del <span style=\"font-weight: bold;color: red\">defensor</span> pierde 1 PG si el daño es mayor que sus PG actuales. Si sobra daño, se aplica a la localización de golpe afectada.",
-          "14": "El <span style=\"font-weight: bold;color: red\">defensor</span> tira el daño especial de su arma. El daño obtenido se resta de los PG del arma atacante.",
-          "15": "El <span style=\"font-weight: bold;color: red\">defensor</span> tira el daño especial de su arma. Todo daño que exceda los PG actuales del arma atacante los reduce en esa misma cantidad.",
-          "16": "El <span style=\"font-weight: bold;color: red\">defensor</span> tira el daño normal de su arma. Si es mayor que los PG del arma atacante, éstos se reducen en 1.",
-          "17": "El <span style=\"font-weight: bold;color: red\">defensor</span> falla.",
-          "18": "El <span style=\"font-weight: bold;color: red\">defensor</span> tira en la tabla de pifias."
-        },
-        "dodger": {
-          "1": "El <span style=\"font-weight: bold;color: green\">ataque</span> es esquivado con éxito.",
-          "2": "El <span style=\"font-weight: bold;color: green\">ataque</span> falla.",
-          "3": "El <span style=\"font-weight: bold;color: green\">atacante</span> tira en la tabla de pifias.",
-          "4": "El <span style=\"font-weight: bold;color: green\">ataque</span> inflige daño especial.",
-          "5": "El <span style=\"font-weight: bold;color: green\">ataque</span> inflige daño especial e ignora la armadura.",
-          "6": "El <span style=\"font-weight: bold;color: green\">ataque</span> inflige daño especial máximo e ignora la armadura.",
-          "7": "El <span style=\"font-weight: bold;color: green\">ataque</span> inflige el daño normal."
-        },
-        "damageOutput": {
-          "1": "Inconsciente, muere si no es tratado en 5 min.",
-          "2": "Cae al suelo, no puede realizar acciones (incluido curarse). Morirá desangrado en 10 min si no es tratado.",
-          "3": "Ambas piernas inutilizadas, cae al suelo. Puede curarse, si sabe cómo. Morirá desangrado en 10 min si no es tratado.",
-          "4": "Brazo inutilizado, deja caer lo que sea que estuviese sujetando. Puede mantenerse en pie y seguir luchando con normalidad usando cualquier otra extremidad.",
-          "5": "Si tiene solo dos piertas, cae al suelo. Mientras esté caído su porcentaje de ataque se ve reducido a la mitad, los ataques contra oponentes caídos se realizan a +40%.",
-          "6": "Inconsciente, pierde 1 PV por asalto de combate hasta que sea tratado.",
-          "7": "Inconsciente, pierde 1 PV por asalto de combate hasta que sea tratado.",
-          "8": "Inconsciente, pierde 1 PV por asalto de combate hasta que sea tratado.",
-          "9": "Incapacitado y en estado de shock, no puede actuar hasta que sea tratado.",
-          "10": "Incapacitado y en estado de shock, no puede actuar hasta que sea tratado.",
-          "11": "Muerte instantánea.",
-          "12": "Muerte instantánea.",
-          "13": "Muerte instantánea.",
-          "14": "Incapacitatado, brazo cercenado o mutilado.",
-          "15": "Incapacitatado, pierna cercenada o mutilada."
+        "Settings": {
+          "SprintMultiplier": {
+            "Name": "Multiplicador de velocidad al correr",
+            "Hint": "Este ajuste permite aplicar la regla opcional que permite correr más MOV en ciertas circunstancias. Por ejemplo, un personaje con MOV 8 con un multiplicador de velocidad de 3 podría correr 8 MOV * 3 m * 3 multiplicador = 72 m. Déjalo en 0 si quiere deshabilitar esta opción"
+          }
         }
-      },
-      "dateToChat": {
-        "errormoon": "No se ha encontrado el icono de la fase lunar",
-        "holyday": "Día sagrado para",
-        "notes": "Notas",
-        "currentday": "Estamos en",
-        "daysremaining": "Día {dayofyear} de {daysinyear}, quedan {daysleftinyear} días para fin de año",
-        "week": "Semana: {weekrune}",
-        "weeknames": {
-          "disorder": "Desorden",
-          "harmony": "Armonía",
-          "death": "Muerte",
-          "fertility": "Fertilidad",
-          "stasis": "Inmovilidad",
-          "movement": "Movimiento",
-          "illusion": "Ilusión",
-          "truth": "Verdad",
-          "luck": "Suerte",
-          "fate": "Destino"
-        }
-      },
-      "dataLoad": {
-        "title": "Carga del sistema",
-        "actors": "Actores",
-        "journals": "Diarios",
-        "scenes": "Escenas",
-        "items": "Objetos",
-        "playlists": "Listas de reproducción",
-        "chat": "Chat",
-        "total": "Total",
-        "comment": "Resultados en unidades de código UTF-16 (estándar de js), cada caracter pueden ser 16 bits (2 bytes) o 32 bits (4 bytes)"
       }
     }
   }
