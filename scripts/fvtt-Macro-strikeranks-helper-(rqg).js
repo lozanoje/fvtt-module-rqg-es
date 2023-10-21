@@ -1,11 +1,11 @@
 //
-// StrikeRanks Helper (RQG) v1.15
+// StrikeRanks Helper (RQG) v1.16
 // by Viriato139ac
 // thanks to wake for reformatting the weaponsOption code to show only equipped gear
 //
 
 const macroName = "StrikeRanks Helper";
-const macroVersion = "1.15";
+const macroVersion = "1.16";
 const macroImage = "icons/weapons/swords/swords-short.webp";
 
 (function () {
@@ -601,7 +601,7 @@ function strikeRanks() {
       content: contentString,
       buttons: {
         cancel: {
-          label: `Exit`,
+          label: `${game.i18n.localize("RQG.scripts.general.exit")}`,
           callback: (html) => console.log("Cancelled"),
         },
       },

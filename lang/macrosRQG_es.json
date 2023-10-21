@@ -19,7 +19,8 @@
         "mod": "Mod.",
         "rollp": "Tirada (%)",
         "result": "Resultado",
-        "base": "Base"
+        "base": "Base",
+        "exit": "Salir"
       },
       "augmentingAbilities": {
         "title": "Reforzar Aptitudes",
@@ -224,6 +225,11 @@
         "chat": "Chat",
         "total": "Total",
         "comment": "Resultados en unidades de código UTF-16 (estándar de js), cada caracter pueden ser 16 bits (2 bytes) o 32 bits (4 bytes)"
+      },
+      "tableRolls": {
+        "title": "Tirar en tabla",
+        "table": "Tabla",
+        "rollas": "Tirar como"
       }
     }
   }

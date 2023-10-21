@@ -1,10 +1,10 @@
 //
-// Table Rolls (Generic) v1.5
+// Table Rolls (Generic) v1.6
 // by Viriato139ac
 //
 
 const macroName = "Table Rolls";
-const macroVersion = "1.5";
+const macroVersion = "1.6";
 const macroImage = "icons/weapons/thrown/bomb-metal-brown.webp";
 
 const rollArray = [
@@ -46,14 +46,14 @@ function tableRolls() {
   </style>
   <table class="tg">
     <tr>
-    <td class="tg-r5a9" colspan="4">Table rolls</td>    
+    <td class="tg-r5a9" colspan="4">${game.i18n.localize("RQG.scripts.tableRolls.title")}</td>    
     </tr>
     <tr>
-    <td class="tg-d6y8" colspan="1">Table</td>
+    <td class="tg-d6y8" colspan="1">${game.i18n.localize("RQG.scripts.tableRolls.table")}</td>
     <td class="tg-d6y8" colspan="3" style="font-weight: bold;"><select name="selectedTable">${tableOptions}</select></td>
     </tr>
     <tr>
-    <td class="tg-d6y8" colspan="1">Roll as</td>
+    <td class="tg-d6y8" colspan="1">${game.i18n.localize("RQG.scripts.tableRolls.rollas")}</td>
     <td class="tg-d6y8" colspan="3" style="font-weight: bold;"><select name="selectedRoll">${rollOptions}</select></td>
     </tr>
     </table>
@@ -61,11 +61,11 @@ function tableRolls() {
 
   new Dialog(
     {
-      title: "Table Rolls (Generic)" + ` v` + macroVersion,
+      title: `${game.i18n.localize("RQG.scripts.tableRolls.title")}` + ` v` + macroVersion,
       content,
       buttons: {
         play: {
-          label: "Roll",
+          label: `${game.i18n.localize("RQG.scripts.general.roll")}`,
           callback: async (html) => {
             const selectedTable = html.find(`[name="selectedTable"]`).val();
             const selectedRoll = html.find(`[name="selectedRoll"]`).val();
@@ -106,7 +106,7 @@ function tableRolls() {
           },
         },
         cancel: {
-          label: "Cancel",
+          label: `${game.i18n.localize("RQG.scripts.general.cancel")}`,
           callback: (html) => console.log("Cancelled"),
         },
       },

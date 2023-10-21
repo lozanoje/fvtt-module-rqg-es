@@ -19,7 +19,8 @@
         "mod": "Mod",
         "rollp": "Roll (%)",
         "result": "Result",
-        "base": "Base"
+        "base": "Base",
+        "exit": "Exit"
       },
       "augmentingAbilities": {
         "title": "Augmenting Abilities (RQG)",
@@ -223,6 +224,11 @@
         "chat": "Chat",
         "total": "Total",
         "comment": "Results in UTF-16 code units (js standard), each character can be 16 bits (2 bytes) or 32 bits (4 bytes)"
+      },
+      "tableRolls": {
+        "title": "Table Rolls",
+        "table": "Table",
+        "rollas": "Roll As"
       }
     }
   }

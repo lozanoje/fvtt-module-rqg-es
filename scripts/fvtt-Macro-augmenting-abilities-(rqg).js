@@ -1,11 +1,11 @@
 //
-// Augmenting Abilities (RQG) v1.7
+// Augmenting Abilities (RQG) v1.8
 // by Viriato139ac
 // thanks to Freeze#2689 for the conditional selection code
 //
 
 const macroName = "Augmenting Abilities";
-const macroVersion = "1.7";
+const macroVersion = "1.8";
 const macroImage = "icons/skills/social/diplomacy-peace-alliance.webp";
 
 function nivelexito(diceResult, skillLevel) {
@@ -33,9 +33,9 @@ const lvlNames = [
 ];
 
 const typeArray = [
-  { name: "rune", desc: `${game.i18n.localize("ITEM.TypeRune")}` },
-  { name: "skill", desc: `${game.i18n.localize("ITEM.TypeSkill")}` },
-  { name: "passion", desc: `${game.i18n.localize("ITEM.TypePassion")}` },
+  { name: "rune", desc: `${game.i18n.localize("TYPES.Item.rune")}` },
+  { name: "skill", desc: `${game.i18n.localize("TYPES.Item.skill")}` },
+  { name: "passion", desc: `${game.i18n.localize("TYPES.Item.passion")}` },
 ];
 const typeOptions = typeArray.reduce(
   (a, b) => (a += `<option value="${b.name}">${b.desc}</option>`),

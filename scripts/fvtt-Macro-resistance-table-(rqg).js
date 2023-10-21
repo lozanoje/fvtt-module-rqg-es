@@ -1,10 +1,10 @@
 //
-// Resistance Table (RQG) v1.5
+// Resistance Table (RQG) v1.6
 // by Viriato139ac
 // thanks to Freeze#2689 for the conditional selection code
 
 const macroName = "Resistance Table";
-const macroVersion = "1.5";
+const macroVersion = "1.6";
 const macroImage = "icons/skills/social/diplomacy-handshake-yellow.webp";
 
 function nivelexito(diceResult, skillLevel) {
@@ -110,7 +110,7 @@ function resistanceTable() {
       content,
       buttons: {
         play: {
-          label: "Roll",
+          label: `${game.i18n.localize("RQG.scripts.general.roll")}`,
           callback: async (html) => {
             const charNam = html.find(`[name="charNam"]`).val();
             const charVal = html.find(`[name="charVal"]`).val();
@@ -184,7 +184,7 @@ function resistanceTable() {
           },
         },
         cancel: {
-          label: "Cancel",
+          label: `${game.i18n.localize("RQG.scripts.general.cancel")}`,
           callback: (html) => console.log("Cancelled"),
         },
       },

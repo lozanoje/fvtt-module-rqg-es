@@ -1,11 +1,11 @@
 //
-// Opposed Rolls (RQG) v1.9
+// Opposed Rolls (RQG) v1.10
 // by Viriato139ac
 // thanks to Freeze#2689 for the conditional selection code
 //
 
 const macroName = "Opposed Rolls";
-const macroVersion = "1.9";
+const macroVersion = "1.10";
 const macroImage = "icons/commodities/treasure/puzzle-box-glowing-blue.webp";
 
 function nivelexito(diceResult, skillLevel) {
@@ -38,9 +38,9 @@ const lvlNames = [
 // );
 
 const typeArray = [
-  { name: "rune", desc: `${game.i18n.localize("ITEM.TypeRune")}` },
-  { name: "skill", desc: `${game.i18n.localize("ITEM.TypeSkill")}` },
-  { name: "passion", desc: `${game.i18n.localize("ITEM.TypePassion")}` },
+  { name: "rune", desc: `${game.i18n.localize("TYPES.Item.rune")}` },
+  { name: "skill", desc: `${game.i18n.localize("TYPES.Item.skill")}` },
+  { name: "passion", desc: `${game.i18n.localize("TYPES.Item.passion")}` },
 ];
 const typeOptions = typeArray.reduce(
   (a, b) => (a += `<option value="${b.name}">${b.desc}</option>`),
@@ -130,7 +130,7 @@ function opposedRolls() {
 
   new Dialog(
     {
-      title: `${game.i18n.localize("RQG.scripts.augmentingAbilities.title")}` + ` v` + macroVersion,
+      title: `${game.i18n.localize("RQG.scripts.opposedRolls.title")}` + ` v` + macroVersion,
       content,
       buttons: {
         roll: {
