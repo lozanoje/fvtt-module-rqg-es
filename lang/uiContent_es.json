@@ -233,8 +233,7 @@
         "SpiritCombat": "Combate espiritual",
         "SpiritCombatDamage": "Daño en combate espiritual",
         "SetSRInCombatTracker": "Establezca MR en el asistente de combate",
-        "ProjectileWeaponAmmoNotSelectedAlert": "sin muni",
-        "ProjectileWeaponAmmoNotSelectedTip": "Edite el arma para seleccionar la munición"
+        "ProjectileWeaponAmmoNotSelectedAlert": "sin muni"
       },
       "Gear": {
         "ViewByItemType": "Vista por tipo de objeto",
@@ -756,7 +755,8 @@
           "HitLocationDoesNotHaveCalculatedArmor": "La localización {hitLocationName} no tiene un campo calculado de PA totales",
           "NoValueOnHitLocation": "No existe el valor en la localización ${hitLocationName}",
           "NoMaxOnHitLocation": "Sin máximo en la localización ${hitLocationName}",
-          "NoActorOnTokenWarn": "Sin actor en el icono"
+          "NoActorOnTokenWarn": "Sin actor en el icono",
+          "RqidNeededWarn": "Sin Rqid asignado. Se requiere un Rqid para asignar qué protege la armadura, etc."
         }
       },
       "HitLocationType": {
@@ -861,7 +861,8 @@
           "DropToConnectSkill": "Suelte un objeto de habilidad en este campo para conectar",
           "DropToReplaceSkill": "Suelte un objeto de habilidad en este campo para reemplazar",
           "DropToConnectOccupation": "Suelte una objeto de ocupación en este campo para conectar",
-          "DropToReplaceOccupation": "Suelte una objeto de ocupación en este campo para reemplazar"
+          "DropToReplaceOccupation": "Suelte una objeto de ocupación en este campo para reemplazar",
+          "DropToConnectHitLocation": "Suelte un objeto de localización en este campo para conectar"
         }
       },
       "Rune": {
@@ -879,6 +880,9 @@
           "form": "Forma",
           "condition": "Condición",
           "technique": "Técnica"
+        },
+        "Notification": {
+          "RqidNeededWarn": "Sin Rqid asignado. Se requiere un Rqid para que las runas puedan asignarse a los cultos, a la magia rúnica, etc."
         }
       },
       "RuneMagic": {
@@ -1005,14 +1009,16 @@
         "SameDataAsOneHand": "Los mismos datos que a una mano",
         "combatManeuver": {
           "Bite": "Morder",
-          "Throw": "Lanzamiento",
-          "Shoot": "Disparo",
+          "Throw": "Lanzar",
+          "Shoot": "Disparar",
           "Thrust": "Estocada",
           "Cut": "Filo",
           "Claw": "Garrazo",
           "Gore": "Cornear",
           "Hug": "Abrazar",
-          "Bash": "Golpe",
+          "Bash": "Porrazo",
+          "Hit": "Golpear",
+          "HeadButt": "Cabezazo",
           "Parry": "Parada",
           "Grapple": "Presa",
           "Knockback": "Empujón",
@@ -1136,13 +1142,6 @@
       }
     },
     "Settings": {
-      "HitLocations": {
-        "dialogTitle": "Ajustes de nombres de localizaciones",
-        "settingName": "Nombres de localizaciones",
-        "settingLabel": "Configure los nombres de localizaciones disponibles",
-        "settingHint": "Los nombres de las localizaciones se usan en los menús desplegables en la cobertura de armaduras y cuando se pone nombre a una nueva localización",
-        "addLocationPlaceholder": "Añadir nueva localización"
-      },
       "SortHitLocationsLowToHigh": {
         "settingName": "Ordenar localizaciones de menor a mayor",
         "settingHint": "Al activarlo, se ordenarán las localizaciones como en las estadísticas, con el valor más bajo primero. Este ajuste puede activarse en la tabla de salud de la hoja de actor"
