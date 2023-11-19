@@ -1,53 +1,110 @@
 {
-    "id": "fvtt-module-rqg-es",
-    "title": "Translation: Spanish [RuneQuest Glorantha]",
-    "description": "Traducción del sistema RuneQuest Aventuras en Glorantha (sun-dragon-cult/fvtt-system-rqg) al español -  RuneQuest Glorantha spanish translation",
-    "version": "3.30.1",
-    "languages": [{
-            "lang": "es",
-            "name": "Español",
-            "path": "lang/uiContent_es.json"
-        }, {
-            "lang": "es",
-            "name": "Español",
-            "path": "lang/macrosRQG_es.json"
-        }, {
-            "lang": "en",
-            "name": "English",
-            "path": "lang/macrosRQG_en.json"
-        }
+  "id": "fvtt-module-rqg-es",
+  "title": "Translation: Spanish [RuneQuest Glorantha]",
+  "description": "Traducción del sistema RuneQuest Aventuras en Glorantha (sun-dragon-cult/fvtt-system-rqg) al español -  RuneQuest Glorantha spanish translation",
+  "version": "3.30.2",
+  "languages": [{
+      "lang": "es",
+      "name": "Español",
+      "path": "lang/uiContent_es.json"
+    }, {
+      "lang": "es",
+      "name": "Español",
+      "path": "lang/macrosRQG_es.json"
+    }, {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/macrosRQG_en.json"
+    }
+  ],
+  "styles": [],
+  "authors": [{
+      "name": "José E. Lozano",
+      "discord": "@Viriato139ac#0342",
+      "flags": {}
+    }
+  ],
+  "esmodules": [
+    "rqg-es-register.js"
+  ],
+  "relationships": {
+    "systems": [{
+        "id": "rqg",
+        "type": "system",
+        "compatibility": "3.3.0"
+      }
     ],
-    "styles": [],
-    "authors": [{
-            "name": "José E. Lozano",
-            "discord": "@Viriato139ac#0342",
-            "flags": {}
-        }
-    ],
-    "esmodules": [
-        "rqg-es-register.js"
-    ],
-    "relationships": {
-        "systems": [{
-                "id": "rqg",
-                "type": "system",
-                "compatibility": "3.3.0"
-            }
-        ],
-	"requires": [
-      {
+    "requires": [{
         "id": "foundryvtt-es",
         "type": "module",
         "compatibility": {}
       }
     ]
-    },
-    "compatibility": {
-        "minimum": 11,
-        "verified": "11"
-    },
-    "packs": [],
-    "url": "https://github.com/lozanoje/fvtt-module-rqg-es",
-    "manifest": "https://raw.githubusercontent.com/lozanoje/fvtt-module-rqg-es/main/module.json",
-    "download": "https://github.com/lozanoje/fvtt-module-rqg-es/archive/main.zip"
+  },
+  "compatibility": {
+    "minimum": 11,
+    "verified": "11"
+  },
+  "packFolders": [{
+      "name": "Compendios en español",
+      "sorting": "a",
+      "color": "#b95050",
+      "packs": ["habilidades-basicas", "pasiones", "runas-personajes", "runas-todas", "localizaciones-humanoides"]
+    }
+  ],
+  "packs": [{
+      "label": "Habilidades",
+      "name": "habilidades-basicas",
+      "path": "packs/habilidades-basicas.db",
+      "system": "rqg",
+      "private": false,
+      "type": "Item",
+      "flags": {},
+      "package": "compendios-rqg-es",
+      "absPath": "packs/habilidades-basicas.db"
+    }, {
+      "label": "Pasiones",
+      "name": "pasiones",
+      "path": "packs/pasiones.db",
+      "system": "rqg",
+      "private": false,
+      "type": "Item",
+      "flags": {},
+      "package": "compendios-rqg-es",
+      "absPath": "packs/pasiones.db"
+    }, {
+      "label": "Runas | personajes",
+      "name": "runas-personajes",
+      "path": "packs/runas-personajes.db",
+      "system": "rqg",
+      "private": false,
+      "type": "Item",
+      "flags": {},
+      "package": "compendios-rqg-es",
+      "absPath": "packs/runas-personajes.db"
+    }, {
+      "label": "Runas | todas",
+      "name": "runas-todas",
+      "path": "packs/runas-todas.db",
+      "system": "rqg",
+      "private": false,
+      "type": "Item",
+      "flags": {},
+      "package": "compendios-rqg-es",
+      "absPath": "packs/runas-todas.db"
+    }, {
+      "label": "Localizaciones | humanoides",
+      "name": "localizaciones-humanoides",
+      "path": "packs/localizaciones-humanoides.db",
+      "system": "rqg",
+      "private": false,
+      "type": "Item",
+      "flags": {},
+      "package": "compendios-rqg-es",
+      "absPath": "packs/localizaciones-humanoides.db"
+    }
+  ],
+  "url": "https://github.com/lozanoje/fvtt-module-rqg-es",
+  "manifest": "https://raw.githubusercontent.com/lozanoje/fvtt-module-rqg-es/main/module.json",
+  "download": "https://github.com/lozanoje/fvtt-module-rqg-es/archive/main.zip"
 }
