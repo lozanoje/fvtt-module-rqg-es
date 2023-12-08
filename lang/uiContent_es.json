@@ -92,6 +92,8 @@
         "DexterityAbbr": "DES",
         "MagicPoints": "Puntos de magia",
         "CreatureQ": "¿Criatura?",
+        "Creature": "Esto es una criatura",
+        "CreatureExplanation": "Las criaturas tienen 0 en todos los modificadores de habilidad por categoría",
         "MovementAbbr": "MOV",
         "EncumbranceAbbr": "CRG",
         "EncumbranceFactor": "Factor de CRG",
@@ -235,17 +237,27 @@
         "SetSRInCombatTracker": "Establezca MR en el asistente de combate",
         "ProjectileWeaponAmmoNotSelectedAlert": "sin muni"
       },
+      "EditMode": {
+        "SwitchToEditMode": "Cambiar a Modo Edición",
+        "SwitchToPlayMode": "Cambiar a Modo Juego"
+      },
       "Gear": {
+        "AddNewGearUniqueTip": "Añadir nuevo equipo",
+        "AddNewGearCurrencyTip": "Añadir nueva moneda",
+        "AddNewGearConsumablesTip": "Añadir nuevo consumible",
         "ViewByItemType": "Vista por tipo de objeto",
         "ViewByLocation": "Vista por ubicación",
         "Gear": "Equipo",
+        "NewGear": "Nuevo equipo",
+        "NewCurrency": "Nueva moneda",
+        "NewConsumable": "Nuevo consumible",
         "Armor": "Armadura",
         "Consumables": "Consumibles",
         "Currency": "Dinero",
         "WeaponsAndShields": "Armas y escudos",
         "CurrencyConversionTipOver1": "Un {name} equivale a {value} lunares",
         "CurrencyConversionTipLunar": "Lunares es la moneda de cambio estándar",
-        "CurrencyConversionTipUnder1": "Un lunar equivale a {value} {name}s",
+        "CurrencyConversionTipUnder1": "Un lunar equivale a {value} {name}",
         "Name": "Nombre",
         "EncumbranceAbbr": "CRG",
         "MaxEnc": "Máx CRG",
@@ -318,6 +330,7 @@
       },
       "RuneMagic": {
         "EmbeddingRuneMagicWithoutCultWarning": "{characterName} debe unirse a un culto antes de aprender el conjuro de magia rúnica {spellName}",
+        "RunesNotVisibleForLaymembersWarning": "Necesitas ser iniciado de un culto para usar magia rúnica",
         "EditRuneMagicSpellTitle": "Editar conjuro rúnico",
         "DeleteRuneMagicSpellTitle": "Borrar conjuro rúnico",
         "ChooseCultForRuneSpell": "Elegir culto del conjuro rúnico {name}",
@@ -679,6 +692,7 @@
       },
       "Cult": {
         "AddNewSubCult": "Añadir nuevo subculto",
+        "AddCultRunePlaceholder": "Añadir runa del culto",
         "Name": "Nombre",
         "Deity": "Deidad",
         "CultName": "Nombre del culto",
@@ -766,6 +780,7 @@
         "abdomen": "Abdomen"
       },
       "Homeland": {
+        "AddHomelandRunePlaceholder": "Añadir runa de tierra natal",
         "Homeland": "Tierra natal",
         "Region": "Región o ciudad",
         "CultureJournalEntries": "Entradas del diario de la cultura",
@@ -866,6 +881,8 @@
         }
       },
       "Rune": {
+        "AddMinorRunePlaceholder": "Añadir runa menor",
+        "SetOpposingRunePlaceholder": "Elegir runa opuesta",
         "Name": "Nombre",
         "Rune": "Runa",
         "Type": "Tipo",
@@ -886,6 +903,7 @@
         }
       },
       "RuneMagic": {
+        "AddRuneMagicRunePlaceholder": "Añadir runa de magia rúnica",
         "Name": "Nombre",
         "Points": "Puntos",
         "Range": "Alcance",
@@ -925,6 +943,7 @@
         "WizardInstructions": "Instrucciones del asistente"
       },
       "Skill": {
+        "AddSorceryRunePlaceholder": "Añadir runa de hechicería",
         "Name": "Nombre",
         "SkillName": "Nombre de la habilidad",
         "Specialization": "Especialización",
@@ -1160,6 +1179,11 @@
         "settingName": "Tabla de pifias",
         "settingHint": "Nombre de la tabla de pifias - se usará en combate"
       },
+      "ShowHeropoints": {
+        "settingName": "Mostrar puntos de héroe",
+        "settingHint": "Muestra un campo para llevar la cuenta de la regla opcional de puntos de héroe"
+
+      },
       "SpecialCrit": {
         "settingName": "Resultados especiales e hipercríticos",
         "settingHint": "*** Versión alfa - aún no implementado totalmente *** Añade los resultados de crítico especial (skill/100) e hipercrítico (skill/500)"
@@ -1167,6 +1191,10 @@
       "WorldMigrationVersion": {
         "settingName": "Versión de migración del mundo",
         "settingHint": "La versión del sistema RQG a la que se ha migrado el mundo"
+      },
+      "ShowCharacteristicRatings": {
+        "settingName": "Mostrar valoración de características",
+        "settingHint": "Muestra una barra de colores que evalúa el valor de característica en relación a la formula que se usa para generarla. Rojo por debajjo de la media y verde por encima de la media. Puede ayudarle a evaluar las virtudes y defectos de un actor de un vistazo"
       }
     },
     "TokenEffects": {
