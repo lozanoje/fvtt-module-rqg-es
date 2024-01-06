@@ -1,7 +1,8 @@
 Hooks.once("init", () => {
   CONFIG.RQG.debug.showActorActiveEffectsTab = true;
-  document.getElementById("logo").src =
-    "/modules/fvtt-module-rqg-es/images/fvtt-rqg-es.webp";
+  //if (game.settings.get("core", "language") === "es") {
+//	  document.getElementById("logo").src = "/modules/fvtt-module-rqg-es/images/fvtt-rqg-es.webp";
+  //}
 });
 
 Hooks.once("ready", async function () {
@@ -121,12 +122,17 @@ Hooks.once("ready", async function () {
       if (ficherosjs[i].search(/\.js/) > -1) updateMacro(ficherosjs[i]);
     }
   }
-
-  /* Esto se ha eliminado en la 3.3.0, pero lo dejo porque la macro que asigna rqids para localizaciones todavía usa estos valores */
-  if (game.user.isGM) {
+  
     function onlyUnique(value, index, array) {
       return array.indexOf(value) === index;
     }
+	  console.log("language:" + game.settings.get("core", "language"))
+  if (game.settings.get("core", "language") === "es") {
+	  document.getElementById("logo").src = "/modules/fvtt-module-rqg-es/images/fvtt-rqg-es.webp";
+  }
+
+  /* Esto se ha eliminado en la 3.3.0, pero lo dejo porque la macro que asigna rqids para localizaciones todavía usa estos valores */
+  if (game.user.isGM && game.settings.get("core", "language") === "es") {
     let hitloc = game.settings.get("rqg", "hitLocations")[
       "hitLocationItemNames"
     ];
