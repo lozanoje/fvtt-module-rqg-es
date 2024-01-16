@@ -670,20 +670,21 @@
           "Greaves": "Grebas"
         },
         "ArmorMaterial": {
+          "SoftLeather": "Cuero blando",
           "Leather": "Cuero",
           "HeavyLeather": "Cuero duro",
           "StuddedLeather": "Cuero tachonado",
-          "BronzePlate": "Placas de bronce",
-          "BronzeSegmentedPlate": "Placas de bronce segmentada",
-          "DiskPlate": "Bezanteada",
-          "LightScale": "Escamas ligera",
-          "HeavyScale": "Escamas pesada",
           "Cuirboilli": "Cuero hervido",
-          "RingMail": "Anillas",
-          "TurtleShell": "Caparazón",
-          "Quilted": "Acolchada",
           "Linen": "Lino",
-          "Iron": "Hierro"
+          "Quilted": "Acolchada",
+          "BronzeRingMail": "Anillas de bronce",
+          "TurtleShell": "Caparazón",
+          "LightBronzeScale": "Escamas de bronce ligera",
+          "HeavyBronzeScale": "Escamas de bronce pesada", 
+          "SegmentedBronzePlate": "Placas de bronce segmentada",
+          "BronzeDiskPlate": "Bezanteada",
+          "BronzePlate": "Placas de bronce",
+          "IronPlate": "Placas de hierro"
         }
       },
       "Cult": {
@@ -888,11 +889,11 @@
         "MinorRunes": "Runa menor",
         "MasteredSorceryQ": "¿Dominada (hechicería)?",
         "RuneType": {
-          "element": "Elemental",
-          "power": "Poder",
-          "form": "Forma",
-          "condition": "Condición",
-          "technique": "Técnica"
+          "element": "elemental",
+          "power": "poder",
+          "form": "forma",
+          "condition": "condición",
+          "technique": "técnica"
         },
         "Notification": {
           "RqidNeededWarn": "Sin Rqid asignado. Se requiere un Rqid para que las runas puedan asignarse a los cultos, a la magia rúnica, etc."
@@ -1139,7 +1140,6 @@
       "DuplicateWarning": "Aviso: ¡múltiples rqids con la misma prioridad!",
       "CouldNotFindRune": "No se ha podido encontrar una runa en memoria con el rqid {rqid}",
       "Error": {
-        "NoWikiModule": "Por favor, active el módulo wiki requerido <a href='https://github.com/sun-dragon-cult/fvtt-system-rqg/wiki/Installing'>Consulte instrucciones de instalación</a>",
         "NoSheet": "No se ha encontrado la hoja del documento vinculado al rqid \"{rqid}\". Consulte la consola",
         "MoreThanOneRqidMatchInWorld": "Más de un documento RQG en el mundo (no en los paquetes de compendios) con el rqid \"{rqid}\", idioma \"{lang}\", y prioridad \"{priority}\". Por favor, revise los ajustes del sistema RQG. Consulte los ids de objeto en la consola",
         "MoreThanOneRqidMatchInPacks": "Más de un documento RQG en los paquetes de compendios instalados con el rqid \"{rqid}\", idioma \"{lang}\", y prioridad \"{priority}\". Por favor, revise los ajustes del sistema RQG. Consulte los ids de objeto en la consola",

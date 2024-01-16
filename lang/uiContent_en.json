@@ -670,20 +670,21 @@
           "Greaves": "Greaves"
         },
         "ArmorMaterial": {
+          "SoftLeather": "Soft Leather",
           "Leather": "Leather",
           "HeavyLeather": "Heavy Leather",
           "StuddedLeather": "Studded Leather",
-          "BronzePlate": "Bronze Plate",
-          "BronzeSegmentedPlate": "Segmented Bronze Plate",
-          "DiskPlate": "Disk Plate",
-          "LightScale": "Light Scale",
-          "HeavyScale": "Heavy Scale",
           "Cuirboilli": "Cuirboilli",
-          "RingMail": "Ring Mail",
-          "TurtleShell": "Turtle Shell",
-          "Quilted": "Quilted",
           "Linen": "Linen",
-          "Iron": "Iron"
+          "Quilted": "Quilted",
+          "BronzeRingMail": "Bronze Ring Mail",
+          "TurtleShell": "Turtle Shell",
+          "LightBronzeScale": "Light Bronze Scale",
+          "HeavyBronzeScale": "Heavy Bronze Scale",
+          "SegmentedBronzePlate": "Segmented Bronze Plate",
+          "BronzeDiskPlate": "Bronze Disk Plate",
+          "BronzePlate": "Bronze Plate",
+          "IronPlate": "Iron Plate"
         }
       },
       "Cult": {
@@ -888,11 +889,11 @@
         "MinorRunes": "Minor Runes",
         "MasteredSorceryQ": "Mastered (Sorcery)?",
         "RuneType": {
-          "element": "Element",
-          "power": "Power",
-          "form": "Form",
-          "condition": "Condition",
-          "technique": "Technique"
+          "element": "element",
+          "power": "power",
+          "form": "form",
+          "condition": "condition",
+          "technique": "technique"
         },
         "Notification": {
           "RqidNeededWarn": "No Rqid assigned. A Rqid is needed to make the rune available for cults, rune magic etc."
@@ -1139,7 +1140,6 @@
       "DuplicateWarning": "Warning: Multiple rqids with same priority!",
       "CouldNotFindRune": "Could not find cached rune with rqid {rqid}",
       "Error": {
-        "NoWikiModule": "Please enable the required wiki module <a href='https://github.com/sun-dragon-cult/fvtt-system-rqg/wiki/Installing'>See installing instructions</a>",
         "NoSheet": "No sheet found for document linked to by RQG System ID (rqid) \"{rqid}\". See console log.",
         "MoreThanOneRqidMatchInWorld": "More than one RQG Document in the world (not in compendium packs) matched the rqid \"{rqid}\", lang \"{lang}\", and priority \"{priority}\". Please review your RQG System settings.  See console log for item ids.",
         "MoreThanOneRqidMatchInPacks": "More than one RQG Document in installed compendium packs matched the rqid \"{rqid}\", lang \"{lang}\", and priority \"{priority}\". Please review your RQG System settings.  See console log for item ids.",
