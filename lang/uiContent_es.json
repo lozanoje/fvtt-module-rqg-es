@@ -173,7 +173,7 @@
         },
         "Occupation": {
           "Heading": "Ocupación actual",
-          "": " ",
+          "undefined": " ",
           "assistantShaman": "Aprendiz de chamán",
           "chariotDriver": "Auriga",
           "crafter": "Artesano",
@@ -961,7 +961,7 @@
         "RitualQ": "¿Ritual?",
         "EnchantmentQ": "¿Encantamiento?",
         "DurationEnum": {
-          "": "Ninguno",
+          "undefined": "Ninguno",
           "instant": "Instantáneo",
           "temporal": "Temporal",
           "focused": "Foco",
@@ -969,14 +969,14 @@
           "special": "Especial"
         },
         "RangeEnum": {
-          "": "Ninguno",
+          "undefined": "Ninguno",
           "self": "Personal",
           "touch": "Toque",
           "ranged": "Alcance",
           "special": "Especial"
         },
         "ConcentrationEnum": {
-          "": "",
+          "undefined": "",
           "active": "Activo",
           "passive": "Pasivo"
         }
