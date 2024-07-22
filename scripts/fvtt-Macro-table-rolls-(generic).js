@@ -1,10 +1,10 @@
 //
-// Table Rolls (Generic) v1.6
+// Table Rolls (Generic) v1.7
 // by Viriato139ac
 //
 
 const macroName = "Table Rolls";
-const macroVersion = "1.6";
+const macroVersion = "1.7";
 const macroImage = "icons/weapons/thrown/bomb-metal-brown.webp";
 
 const rollArray = [
@@ -72,8 +72,9 @@ function tableRolls() {
             let rm = game.settings.get("core", "rollMode");
             game.settings.set("core", "rollMode", selectedRoll)
             const table = game.tables.getName(selectedTable);
-            let charRoll = await new Roll(table.data.formula);
-            charRoll.roll();
+            let charRoll = await new Roll(table.formula);
+            //charRoll.roll();
+			await charRoll.evaluate();
             let flavourString = `Draws a result from the <span style="font-weight: bold;color: brown">${table.name}</span> table`;
             let contentString = `
               <hr>
@@ -84,7 +85,7 @@ function tableRolls() {
               </tr>
               <tr>
               <td style="text-align: center; vertical-align: middle;">${
-                table.data.formula
+                table.formula
               }</td>
               <td style="text-align: center; vertical-align: middle;">${
                 charRoll.result
@@ -92,7 +93,7 @@ function tableRolls() {
               </tr>
               </table>
               <hr>
-              ${table.getResultsForRoll(charRoll.result)[0].data.text}
+              ${table.getResultsForRoll(charRoll.result)[0].text}
               <hr>
               `;
 

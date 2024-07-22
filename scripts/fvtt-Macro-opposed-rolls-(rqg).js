@@ -1,11 +1,11 @@
 //
-// Opposed Rolls (RQG) v2.00
+// Opposed Rolls (RQG) v2.1
 // by Viriato139ac
 // thanks to Freeze#2689 for the conditional selection code
 //
 
 const macroName = "Opposed Rolls";
-const macroVersion = "2.00";
+const macroVersion = "2.1";
 const macroImage = "icons/commodities/treasure/puzzle-box-glowing-blue.webp";
 
 function nivelexito(diceResult, skillLevel) {
@@ -48,12 +48,12 @@ const typeOptions = typeArray.reduce(
 );
 
 const activeOptions = Array.from(canvas.tokens.controlled).reduce(
-  (a, b) => (a += `<option value="${game.actors.get(b.data.actorId).name}">${game.actors.get(b.data.actorId).name}</option>`),
+  (a, b) => (a += `<option value="${game.actors.get(b.document.actorId).name}">${game.actors.get(b.document.actorId).name}</option>`),
   ``
 );
 
 const pasiveOptions = Array.from(game.user.targets).reduce(
-  (a, b) => (a += `<option value="${game.actors.get(b.data.actorId).name}">${game.actors.get(b.data.actorId).name}</option>`),
+  (a, b) => (a += `<option value="${game.actors.get(b.document.actorId).name}">${game.actors.get(b.document.actorId).name}</option>`),
   ``
 );
 
@@ -140,34 +140,34 @@ function opposedRolls() {
             const activeActor = html.find(`[name="activeActor"]`).val();
             const activeToRoll = game.actors
               .getName(activeActor)
-              .data.items.find((i) => i.name === activeName);
+              .items.find((i) => i.name === activeName);
             const activeMod = html.find(`[name="activeMod"]`).val();
 
             let activeBase;
-            activeToRoll.data.type === "skill"
+            activeToRoll.type === "skill"
               ? (activeBase =
-									activeToRoll.data.data.baseChance +
-                  activeToRoll.data.data.gainedChance +
-                  game.actors.getName(activeActor).data.data
-                    .skillCategoryModifiers[activeToRoll.data.data.category])
-              : (activeBase = activeToRoll.data.data.chance);
+									activeToRoll.system.baseChance +
+                  activeToRoll.system.gainedChance +
+                  game.actors.getName(activeActor).system
+                    .skillCategoryModifiers[activeToRoll.system.category])
+              : (activeBase = activeToRoll.system.chance);
             let activeValue = Math.max(1, activeBase * 1 + activeMod * 1);
 
             const pasiveName = html.find(`[name="pasiveName"]`).val();
             const pasiveActor = html.find(`[name="pasiveActor"]`).val();
             const pasiveToRoll = game.actors
               .getName(pasiveActor)
-              .data.items.find((i) => i.name === pasiveName);
+              .items.find((i) => i.name === pasiveName);
             const pasiveMod = html.find(`[name="pasiveMod"]`).val();
 
             let pasiveBase;
-            pasiveToRoll.data.type === "skill"
+            pasiveToRoll.type === "skill"
               ? (pasiveBase =
-									pasiveToRoll.data.data.baseChance +
-                  pasiveToRoll.data.data.gainedChance +
-                  game.actors.getName(pasiveActor).data.data
-                    .skillCategoryModifiers[pasiveToRoll.data.data.category])
-              : (pasiveBase = pasiveToRoll.data.data.chance);
+									pasiveToRoll.system.baseChance +
+                  pasiveToRoll.system.gainedChance +
+                  game.actors.getName(pasiveActor).system
+                    .skillCategoryModifiers[pasiveToRoll.system.category])
+              : (pasiveBase = pasiveToRoll.system.chance);
             let pasiveValue = Math.max(1, pasiveBase * 1 + pasiveMod * 1);
 
             let skill100mod = Math.max(activeValue-100, pasiveValue-100,0)
@@ -177,7 +177,8 @@ function opposedRolls() {
             console.log(pasiveValueMod);
 
             let activeRoll = new Roll("1d100");
-            activeRoll.roll();
+            //activeRoll.roll();
+			await activeRoll.evaluate();
             let activeResult = nivelexito(activeRoll.result, activeValueMod);
             console.log(
               "active: Rolled " +
@@ -189,7 +190,8 @@ function opposedRolls() {
             );
 
             let pasiveRoll = new Roll("1d100");
-            pasiveRoll.roll();
+            //pasiveRoll.roll();
+			await pasiveRoll.evaluate();
             let pasiveResult = nivelexito(pasiveRoll.result, pasiveValueMod);
             console.log(
               "pasive: Rolled " +
@@ -356,7 +358,7 @@ await new Promise((resolve) => setTimeout(resolve, 250));
 $(document).ready(function () {
   const firstactiveOptions = game.actors
     .getName($("select[name=activeActor]")[0].value)
-    .data.items.filter(
+    .items.filter(
       (skill) => skill.type === $("select[name=activeType]")[0].value
     )
     .reduce(
@@ -367,7 +369,7 @@ $(document).ready(function () {
   $("select[name=activeType]").change(function () {
     const newactiveOptions = game.actors
       .getName($("select[name=activeActor]")[0].value)
-      .data.items.filter(
+      .items.filter(
         (skill) => skill.type === $("select[name=activeType]")[0].value
       )
       .reduce(
@@ -379,7 +381,7 @@ $(document).ready(function () {
   });
   const firstpasiveOptions = game.actors
     .getName($("select[name=pasiveActor]")[0].value)
-    .data.items.filter(
+    .items.filter(
       (skill) => skill.type === $("select[name=pasiveType]")[0].value
     )
     .reduce(
@@ -390,7 +392,7 @@ $(document).ready(function () {
   $("select[name=pasiveType]").change(function () {
     const newpasiveOptions = game.actors
       .getName($("select[name=pasiveActor]")[0].value)
-      .data.items.filter(
+      .items.filter(
         (skill) => skill.type === $("select[name=pasiveType]")[0].value
       )
       .reduce(

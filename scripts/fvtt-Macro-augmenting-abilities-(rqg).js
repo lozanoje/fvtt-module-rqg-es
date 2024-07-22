@@ -1,11 +1,11 @@
 //
-// Augmenting Abilities (RQG) v1.8
+// Augmenting Abilities (RQG) v1.9
 // by Viriato139ac
 // thanks to Freeze#2689 for the conditional selection code
 //
 
 const macroName = "Augmenting Abilities";
-const macroVersion = "1.8";
+const macroVersion = "1.9";
 const macroImage = "icons/skills/social/diplomacy-peace-alliance.webp";
 
 function nivelexito(diceResult, skillLevel) {
@@ -105,18 +105,20 @@ function augmentingAbilities() {
             const augToRoll = canvas.tokens.controlled[0].actor.items.find((i) => i.name === augName);
             const augMod = html.find(`[name="augMod"]`).val();
             let augBase;
-            augToRoll.data.type === "skill"
+            augToRoll.type === "skill"
               ? (augBase =
-                  augToRoll.data.data.baseChance +
-                  augToRoll.data.data.gainedChance +
-                  canvas.tokens.controlled[0].actor.data.data.skillCategoryModifiers[
-                    augToRoll.data.data.category
+                  augToRoll.system.baseChance +
+                  augToRoll.system.gainedChance +
+                  canvas.tokens.controlled[0].actor.system.skillCategoryModifiers[
+                    augToRoll.system.category
                   ])
-              : (augBase = augToRoll.data.data.chance);
+              : (augBase = augToRoll.system.chance);
             let augValue = Math.max(1, augBase * 1 + augMod * 1);
             console.log(augBase);
             let augRoll = new Roll("1d100");
-            augRoll.roll();
+            //augRoll.roll();
+			await augRoll.evaluate();
+			//augRoll.result
             let augResult = nivelexito(augRoll.result, augValue);
             console.log(
               "Aug: Rolled " +
@@ -136,20 +138,21 @@ function augmentingAbilities() {
             const skillMod = html.find(`[name="skillMod"]`).val();
 
             let skillBase;
-            skillToRoll.data.type === "skill"
+            skillToRoll.type === "skill"
               ? (skillBase =
-                  skillToRoll.data.data.baseChance +
-                  skillToRoll.data.data.gainedChance +
-                  canvas.tokens.controlled[0].actor.data.data.skillCategoryModifiers[
-                    skillToRoll.data.data.category
+                  skillToRoll.system.baseChance +
+                  skillToRoll.system.gainedChance +
+                  canvas.tokens.controlled[0].actor.system.skillCategoryModifiers[
+                    skillToRoll.system.category
                   ])
-              : (skillBase = skillToRoll.data.data.chance);
+              : (skillBase = skillToRoll.system.chance);
             let skillValue = Math.max(
               1,
               skillBase * 1 + augChances[augResult] * 1 + skillMod * 1
             );
             let skillRoll = new Roll("1d100");
-            skillRoll.roll();
+            //skillRoll.roll();
+			await skillRoll.evaluate();
             let skillResult = nivelexito(skillRoll.result, skillValue);
             console.log(
               "Ski: Rolled " +

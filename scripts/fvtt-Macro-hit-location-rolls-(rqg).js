@@ -1,10 +1,10 @@
 //
-// Hit Location Rolls (RQG) v1.8
+// Hit Location Rolls (RQG) v1.9
 // by Viriato139ac
 //
 
 const macroName = "Hit Location Rolls";
-const macroVersion = "1.8";
+const macroVersion = "1.9";
 const macroImage = "icons/sundries/flags/banner-standard-tattered-red.webp";
 
 const myDialogOptions = {
@@ -29,15 +29,15 @@ function hitlocationRolls() {
 
   targets.forEach((myTarget) => {
     const locItems = game.actors
-      .get(myTarget.data.actorId)
-      .data.items.filter((skill) => skill.type === "hitLocation");
+      .get(myTarget.document.actorId)
+      .items.filter((skill) => skill.type === "hitLocation");
 
     let locTable = [];
     locItems.forEach((loc) => {
       locTable.push({
         name: loc.name,
-        dieFrom: loc.data.data.dieFrom,
-        dieTo: loc.data.data.dieTo,
+        dieFrom: loc.system.dieFrom,
+        dieTo: loc.system.dieTo,
       });
     });
     locTable.sort((a, b) =>
@@ -55,7 +55,7 @@ function hitlocationRolls() {
       .tg .tg-r5a9{background-color:#34696d;border-color:#efefef;color:#ffffff;font-family:"Courier New", Courier, monospace !important;;text-align:left;vertical-align:middle}
       .tg .tg-049l{background-color:#f0f0f0;border-color:#efefef;font-family:"Courier New", Courier, monospace !important;;font-size:12px;text-align:left;vertical-align:middle}  
       </style>
-      ${game.i18n.localize("RQG.scripts.hitlocationRolls.baseString")} <span style="font-weight: bold;color: brown">${game.actors.get(myTarget.data.actorId).name}</span>
+      ${game.i18n.localize("RQG.scripts.hitlocationRolls.baseString")} <span style="font-weight: bold;color: brown">${game.actors.get(myTarget.document.actorId).name}</span>
       <hr>
       <table class="tg">
       <tr>
@@ -101,7 +101,8 @@ function hitlocationRolls() {
                 "1d" + Math.ceil(Math.max(...locTable.map((o) => o.dieTo), 0)/(ontheGround+1));
               // console.log(formRoll)
               let skillRoll = await new Roll(formRoll);
-              skillRoll.roll();
+              //skillRoll.roll();
+			  await skillRoll.evaluate();
               // console.log(skillRoll.result);
               locResult =
                 1 *

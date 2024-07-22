@@ -1,11 +1,11 @@
 //
-// StrikeRanks Helper (RQG) v1.16
+// StrikeRanks Helper (RQG) v1.17
 // by Viriato139ac
 // thanks to wake for reformatting the weaponsOption code to show only equipped gear
 //
 
 const macroName = "StrikeRanks Helper";
-const macroVersion = "1.16";
+const macroVersion = "1.17";
 const macroImage = "icons/weapons/swords/swords-short.webp";
 
 (function () {
@@ -103,11 +103,11 @@ function strikeRanks() {
   if (game.combat !== null) {
     /*
         const mycombat = game.combat;
-        const cttokens = Array.from(mycombat.data.combatants).map(function (a) {
-          return { token: a.data.tokenId, actor: a.data.actorId };
+        const cttokens = Array.from(mycombat.combatants).map(function (a) {
+          return { token: a.tokenId, actor: a.actorId };
         });
         const actors = Array.from(game.actors).map(function (a) {
-          return { name: a.data.name, actor: a.data._id };
+          return { name: a.name, actor: a._id };
         });
         const actortokens = mergeById(cttokens, actors);
         const uniqueTokens = [
@@ -121,11 +121,11 @@ function strikeRanks() {
             ``
           );
           */
-    const cttokens = Array.from(game.combat.data.combatants).map(function (a) {
-      return { tokenid: a.data.tokenId, actorid: a.data.actorId };
+    const cttokens = Array.from(game.combat.combatants).map(function (a) {
+      return { tokenid: a.tokenId, actorid: a.actorId };
     });
     const actors = Array.from(game.actors).map(function (a) {
-      return { actorname: a.data.name, actorid: a.data._id };
+      return { actorname: a.name, actorid: a._id };
     });
     const tokens = canvas.tokens.placeables.map(function (a) {
       return { tokenname: a.name, tokenid: a.id };
@@ -161,19 +161,19 @@ function strikeRanks() {
         const tokenId = Array.from(canvas.tokens.controlled)[0].id;
         const mycombat = game.combat === null ? await Combat.create({scene: canvas.scene.id, active: true}) : game.combat;
         
-          const combatEntries = mycombat.data.combatants
-          .filter((a) => a.data.tokenId === tokenId && a.data.initiative > 0)
+          const combatEntries = mycombat.combatants
+          .filter((a) => a.tokenId === tokenId && a.initiative > 0)
           .sort((a, b) =>
-            a.data.initiative < b.data.initiative
+            a.initiative < b.initiative
               ? 1
-              : b.data.initiative < a.data.initiative
+              : b.initiative < a.initiative
               ? -1
               : 0
           );
     
         let lastSR;
         Array.from(combatEntries).length > 0 && !isind
-          ? (lastSR = Math.floor(Array.from(combatEntries)[0].data.initiative))
+          ? (lastSR = Math.floor(Array.from(combatEntries)[0].initiative))
           : (lastSR = 0);
         let readySR;
         isrea ? readySR = 5 : readySR = 0;
@@ -200,7 +200,7 @@ function strikeRanks() {
           } else {
             const toCreate = canvas.tokens.controlled.map((t) => ({
               tokenId: t.id,
-              hidden: t.data.hidden,
+              hidden: t.hidden,
               actorId: t.actor.id,
               name: t.name + "/" + rankTextShortened,
               //name: t.actor.name + "/" + rankTextShortened,
@@ -219,19 +219,19 @@ function strikeRanks() {
         let combatEntryIds;
         if (tokenid === "alltokens"){
             if (derank === -1) {
-                combatEntryIds = mycombat.data.combatants.filter((a) => a.data.initiative === undefined).map(c=>c.id);
+                combatEntryIds = mycombat.combatants.filter((a) => a.initiative === undefined).map(c=>c.id);
               } else if (derank === 0) {
-                combatEntryIds = mycombat.data.combatants.map(c=>c.id);
+                combatEntryIds = mycombat.combatants.map(c=>c.id);
               } else {
-                combatEntryIds = mycombat.data.combatants.filter((a) => Math.floor(a.data.initiative) === 1*derank).map(c=>c.id);
+                combatEntryIds = mycombat.combatants.filter((a) => Math.floor(a.initiative) === 1*derank).map(c=>c.id);
               }
         }else{
             if (derank === -1) {
-                combatEntryIds = mycombat.data.combatants.filter((a) => a.data.tokenId === tokenid && a.data.initiative === undefined).map(c=>c.id);
+                combatEntryIds = mycombat.combatants.filter((a) => a.tokenId === tokenid && a.initiative === undefined).map(c=>c.id);
               } else if (derank === 0) {
-                combatEntryIds = mycombat.data.combatants.filter((a) => a.data.tokenId === tokenid).map(c=>c.id);
+                combatEntryIds = mycombat.combatants.filter((a) => a.tokenId === tokenid).map(c=>c.id);
               } else {
-                combatEntryIds = mycombat.data.combatants.filter((a) => a.data.tokenId === tokenid && Math.floor(a.data.initiative) === 1*derank).map(c=>c.id);
+                combatEntryIds = mycombat.combatants.filter((a) => a.tokenId === tokenid && Math.floor(a.initiative) === 1*derank).map(c=>c.id);
               }
         }
         await mycombat.deleteEmbeddedDocuments("Combatant", combatEntryIds);
@@ -253,16 +253,16 @@ function strikeRanks() {
     let select = canvas.tokens.controlled;
     let selected = select[0].actor;
 
-    const tname = selected.data.name;
+    const tname = selected.name;
     const toname = select[0].name;
-    const tdex = selected.data.data.attributes.dexStrikeRank;
-    const tsiz = selected.data.data.attributes.sizStrikeRank;
-    const dexvalue = selected.data.data.characteristics.dexterity.value;
+    const tdex = selected.system.attributes.dexStrikeRank;
+    const tsiz = selected.system.attributes.sizStrikeRank;
+    const dexvalue = selected.system.characteristics.dexterity.value;
 
     const runeArray = selected.items.filter((a) => a.type === "runeMagic");
     const runeOptions = runeArray.reduce(
       (a, b) =>
-        (a += `<option value="1">${b.name} [${b.data.data.points}] (SR: 1+EMP-1)</option>`),
+        (a += `<option value="1">${b.name} [${b.system.points}] (SR: 1+EMP-1)</option>`),
       ``
     );
 
@@ -271,32 +271,32 @@ function strikeRanks() {
       (a, b) =>
         (a +=
           `<option value="` +
-          parseInt(tdex + Math.max(0, 1 * b.data.data.points - 1)) +
-          `">${b.name} [${b.data.data.points}] (SR: DEX+MP-1+EMP)</option>`),
+          parseInt(tdex + Math.max(0, 1 * b.system.points - 1)) +
+          `">${b.name} [${b.system.points}] (SR: DEX+MP-1+EMP)</option>`),
       ``
     );
     const sorceryArray = selected.items.filter(
       (a) =>
         a.type === "skill" &&
-        a.data.data.category === "magic" &&
-        a.data.data.runes.length > 0
+        a.system.category === "magic" &&
+        a.system.runes.length > 0
     );
     const sorceryOptions = sorceryArray.reduce(
       (a, b) =>
-        (a += `<option value="${tdex}">${b.data.data.skillName} [-] (SR: DEX+MP-1+EMP)</option>`),
+        (a += `<option value="${tdex}">${b.system.skillName} [-] (SR: DEX+MP-1+EMP)</option>`),
       ``
     );
 
     const weaponsArray = selected.items.filter(
       (a) =>
         a.type === "weapon" &&
-        (a.data.data.equippedStatus === "equipped" ||
-          a.data.data.isNatural === true)
+        (a.system.equippedStatus === "equipped" ||
+          a.system.isNatural === true)
     );
     let weaponsList = [];
     weaponsArray.forEach((a) => {
-      const usages = Object.entries(a.data.data.usage)
-        .filter((e) => e[1].skillId)
+      const usages = Object.entries(a.system.usage)
+        .filter((e) => e[1].skillRqidLink)
         .map((u) => u[0]);
       for (let i = 0; i < usages.length; i++) {
         let aaa;
@@ -305,13 +305,13 @@ function strikeRanks() {
           aaa = tdex;
           bbb = a.name + " - " + usages[i] + " [0] (SR: DEX)";
         } else {
-          aaa = a.data.data.usage[`${usages[i]}`].strikeRank + tdex + tsiz;
+          aaa = a.system.usage[`${usages[i]}`].strikeRank + tdex + tsiz;
           bbb =
             a.name +
             " - " +
             usages[i] +
             " [" +
-            a.data.data.usage[`${usages[i]}`].strikeRank +
+            a.system.usage[`${usages[i]}`].strikeRank +
             "] (SR: DEX+SIZ+WEA)";
         }
         weaponsList.push(`<option value="${aaa}">${bbb}</option>`);
@@ -618,11 +618,11 @@ $(document).ready(function () {
     if (game.combat !== null) {
       /*
         const mycombat = game.combat;
-        const cttokens = Array.from(mycombat.data.combatants).map(function (a) {
-          return { token: a.data.tokenId, actor: a.data.actorId };
+        const cttokens = Array.from(mycombat.combatants).map(function (a) {
+          return { token: a.tokenId, actor: a.actorId };
         });
         const actors = Array.from(game.actors).map(function (a) {
-          return { name: a.data.name, actor: a.data._id };
+          return { name: a.name, actor: a._id };
         });
         const actortokens = mergeById(cttokens, actors);
         const uniqueTokens = [
@@ -636,13 +636,13 @@ $(document).ready(function () {
             ``
           );
           */
-      const cttokens = Array.from(game.combat.data.combatants).map(function (
+      const cttokens = Array.from(game.combat.combatants).map(function (
         a
       ) {
-        return { tokenid: a.data.tokenId, actorid: a.data.actorId };
+        return { tokenid: a.tokenId, actorid: a.actorId };
       });
       const actors = Array.from(game.actors).map(function (a) {
-        return { actorname: a.data.name, actorid: a.data._id };
+        return { actorname: a.name, actorid: a._id };
       });
       const tokens = canvas.tokens.placeables.map(function (a) {
         return { tokenname: a.name, tokenid: a.id };

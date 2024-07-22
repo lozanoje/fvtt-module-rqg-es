@@ -1,10 +1,10 @@
 //
-// Characteristic Rolls (RQG) v1.5
+// Characteristic Rolls (RQG) v1.6
 // by Viriato139ac
 // thanks to Freeze#2689 for the conditional selection code
 
 const macroName = "Characteristic Rolls";
-const macroVersion = "1.5";
+const macroVersion = "1.6";
 const macroImage = "icons/sundries/gaming/dice-runed-brown.webp";
 
 function nivelexito(diceResult, skillLevel) {
@@ -104,7 +104,7 @@ function characteristicRolls() {
   }
 
   const charOptions = Object.getOwnPropertyNames(
-    token.actor.data.data.characteristics
+    token.actor.system.characteristics
   ).reduce(
     (a, b) =>
       (a += `<option value="${b}">` + characteristics[`${b}`] + `</option>`),
@@ -158,7 +158,8 @@ function characteristicRolls() {
 
             let charValue = Math.max(1, charVal * charMul + charMod * 1);
             let charRoll = new Roll("1d100");
-            charRoll.roll();
+            //charRoll.roll();
+			await charRoll.evaluate();
             let charResult = nivelexito(charRoll.result, charValue);
 
             console.log(
@@ -229,7 +230,7 @@ function characteristicRolls() {
 await new Promise((resolve) => setTimeout(resolve, 250));
 $(document).ready(function () {
   const firstcharOptions =
-    token.actor.data.data.characteristics[$("select[name=charNam]")[0].value]
+    token.actor.system.characteristics[$("select[name=charNam]")[0].value]
       .value;
   console.log(
     "R: " + $("select[name=charNam]")[0].value + ": " + firstcharOptions
@@ -237,7 +238,7 @@ $(document).ready(function () {
   $("input[name=charVal]").val(firstcharOptions);
   $("select[name=charNam]").change(function () {
     const newcharOptions =
-      token.actor.data.data.characteristics[$("select[name=charNam]")[0].value]
+      token.actor.system.characteristics[$("select[name=charNam]")[0].value]
         .value;
     console.log(
       "C: " + $("select[name=charNam]")[0].value + ": " + newcharOptions

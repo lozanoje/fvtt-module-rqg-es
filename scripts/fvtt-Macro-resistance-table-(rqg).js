@@ -1,10 +1,10 @@
 //
-// Resistance Table (RQG) v1.6
+// Resistance Table (RQG) v1.7
 // by Viriato139ac
 // thanks to Freeze#2689 for the conditional selection code
 
 const macroName = "Resistance Table";
-const macroVersion = "1.6";
+const macroVersion = "1.7";
 const macroImage = "icons/skills/social/diplomacy-handshake-yellow.webp";
 
 function nivelexito(diceResult, skillLevel) {
@@ -63,10 +63,10 @@ function resistanceTable() {
   }
 
   // const charOptions = Object.getOwnPropertyNames(
-  //   token.actor.data.data.characteristics
+  //   token.actor.system.characteristics
   // ).reduce((a, b) => (a += `<option value="${b}">${b}</option>`), ``);
   const charOptions = Object.getOwnPropertyNames(
-    token.actor.data.data.characteristics
+    token.actor.system.characteristics
   ).reduce(
     (a, b) =>
       (a += `<option value="${b}">` + characteristics[`${b}`] + `</option>`),
@@ -122,7 +122,8 @@ function resistanceTable() {
               50 + (charVal * 1 - charTar * 1) * 5 + charMod * 1
             );
             let charRoll = new Roll("1d100");
-            charRoll.roll();
+            //charRoll.roll();
+			await charRoll.evaluate();
             let charResult = nivelexito(charRoll.result, charValue);
 
             console.log(
@@ -197,7 +198,7 @@ function resistanceTable() {
 await new Promise((resolve) => setTimeout(resolve, 250));
 $(document).ready(function () {
   const firstcharOptions =
-    token.actor.data.data.characteristics[$("select[name=charNam]")[0].value]
+    token.actor.system.characteristics[$("select[name=charNam]")[0].value]
       .value;
   console.log(
     "R: " + $("select[name=charNam]")[0].value + ": " + firstcharOptions
@@ -205,7 +206,7 @@ $(document).ready(function () {
   $("input[name=charVal]").val(firstcharOptions);
   $("select[name=charNam]").change(function () {
     const newcharOptions =
-      token.actor.data.data.characteristics[$("select[name=charNam]")[0].value]
+      token.actor.system.characteristics[$("select[name=charNam]")[0].value]
         .value;
     console.log(
       "C: " + $("select[name=charNam]")[0].value + ": " + newcharOptions
