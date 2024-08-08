@@ -1,11 +1,11 @@
 //
-// StrikeRanks Helper (RQG) v1.17
+// StrikeRanks Helper (RQG) v1.18
 // by Viriato139ac
 // thanks to wake for reformatting the weaponsOption code to show only equipped gear
 //
 
 const macroName = "StrikeRanks Helper";
-const macroVersion = "1.17";
+const macroVersion = "1.18";
 const macroImage = "icons/weapons/swords/swords-short.webp";
 
 (function () {
@@ -279,6 +279,7 @@ function strikeRanks() {
       (a) =>
         a.type === "skill" &&
         a.system.category === "magic" &&
+				a.system.runes !== undefined &&
         a.system.runes.length > 0
     );
     const sorceryOptions = sorceryArray.reduce(

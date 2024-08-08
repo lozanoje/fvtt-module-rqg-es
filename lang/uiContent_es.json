@@ -1178,7 +1178,6 @@
       "ShowHeropoints": {
         "settingName": "Mostrar puntos de héroe",
         "settingHint": "Muestra un campo para llevar la cuenta de la regla opcional de puntos de héroe"
-
       },
       "SpecialCrit": {
         "settingName": "Resultados especiales e hipercríticos",
@@ -1257,7 +1256,7 @@
         "SpiritMagicSpell": "Hoja de objeto magia espiritual",
         "Weapon": "Hoja de objeto arma"
       },
-      "RollTable":"Hoja de tabla"
+      "RollTable": "Hoja de tabla"
     },
     "Integrations": {
       "DragRuler": {
