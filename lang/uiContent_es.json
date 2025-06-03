@@ -1,24 +1,27 @@
 {
   "TYPES": {
     "Item": {
-        "armor": "Armadura",
-        "cult": "Culto",
-        "gear": "Equipo",
-        "hitLocation": "Localización",
-        "homeland": "Tierra natal",
-        "occupation": "Ocupación",
-        "passion": "Pasión",
-        "rune": "Runa",
-        "runeMagic": "Conjuro rúnico",
-        "shamanicAbility": "Aptitud chamánica",
-        "skill": "Habilidad",
-        "sorceryMagic": "Conjuro de hechicería",
-        "spiritMagic": "Conjuro de magia espiritual",
-        "weapon": "Arma",
-        "Reputation": "Reputación"
-      },
+      "armor": "Armadura",
+      "cult": "Culto",
+      "gear": "Equipo",
+      "hitLocation": "Localización",
+      "homeland": "Tierra natal",
+      "occupation": "Ocupación",
+      "passion": "Pasión",
+      "rune": "Runa",
+      "runeMagic": "Conjuro rúnico",
+      "shamanicAbility": "Aptitud chamánica",
+      "skill": "Habilidad",
+      "sorceryMagic": "Conjuro de hechicería",
+      "spiritMagic": "Conjuro de magia espiritual",
+      "weapon": "Arma",
+      "reputation": "Reputación"
+    },
     "Actor": {
       "character": "Personaje"
+    },
+    "ChatMessage": {
+      "combat": "Combate"
     }
   },
   "COMBAT": {
@@ -200,18 +203,18 @@
         "Characteristic": "Característica",
         "format": "{name} ({abbr})",
         "strength": "FUE",
-        "constitution": "CON",
-        "size": "TAM",
-        "dexterity": "DES",
-        "intelligence": "INT",
-        "power": "POD",
-        "charisma": "CAR",
         "strength-full": "Fuerza",
+        "constitution": "CON",
         "constitution-full": "Constitución",
+        "size": "TAM",
         "size-full": "Tamaño",
+        "dexterity": "DES",
         "dexterity-full": "Destreza",
+        "intelligence": "INT",
         "intelligence-full": "Inteligencia",
+        "power": "POD",
         "power-full": "Poder",
+        "charisma": "CAR",
         "charisma-full": "Carisma"
       },
       "Combat": {
@@ -437,7 +440,111 @@
         "CantEditSpiritMagicError": "No se ha encontrado el itemSheet de [{itemId}] en el actor {actorName} para editar el conjuro espiritual desde el menú contextual de magia espiritual"
       }
     },
+    "ChatMessage": {
+      "Combat": {
+        "RollDamageAndHitLocation": "Tirar daño y localización",
+        "RollDamage": "Tirar daño",
+        "ApplyActorDamage": "Aplicar daño al actor",
+        "ApplyWeaponDamage": "Aplicar Damage al arma",
+        "RollAttackerFumble": "Tirar pifia atacante",
+        "RollDefenderFumble": "Tirar pifia defensor",
+        "AttackerFumble": "Pifia atacante",
+        "DefenderFumble": "Pifia defensor",
+        "ApplyNaturalWeaponDamageNotImplemented": "Aún no está implementada la aplicación de daño a armas naturales.<br>Añada manualmente {weaponDamage} de daño a la localización apropiada, los PA no se reducen de {weaponDamage}.<br>Luego, cierre esta notificación."
+      }
+    },
     "Dialog": {
+      "Attack": {
+        "Title": "Atacar",
+        "NoTargetSelected": "Sin objetivo",
+        "AttackingWeapon": "Arma atacante",
+        "WeaponUsage": "Uso",
+        "ReduceAmmoQuantity": "Reducir munición",
+        "ProneTarget": "Objetivo caído",
+        "UnawareTarget": "Objetivo distraido",
+        "Darkness": "Oscuridad",
+        "OtherModifier": "Otro modificador",
+        "DamageBonusFrom": "Bonif. daño",
+        "ExtraDamage": "Daño extra",
+        "UsedLastOfAmmoWarn": "Ha usado el último de sus {projectileName}!",
+        "OutOfAmmoWarn": "No tiene {projectileName} para {combatManeuverName}!",
+        "OutOfAmmo": "Sin munición",
+        "AmmoQuantity": "Munición",
+        "AimedBlow": "Disparo apuntado",
+        "HitLocationFormula": "Fórmula localización",
+        "HitLocationFormulaOptions": {
+          "1d20": "Normal (1d20)",
+          "1d10": "Desde abajo (1d10)",
+          "1d10+10": "Desde arriba (1d10 + 10)"
+        },
+        "NoTokenToAttackWith": "No tiene ninguna ficha en esta escena para realizar un ataque"
+      },
+      "Defence": {
+        "Title": "Defender",
+        "Defence": "Defensa",
+        "Parry": "Parada",
+        "ParryingWeaponUuid": "Arma de parada",
+        "ParryingWeaponUsage": "Uso",
+        "OtherModifier": "Otro modificador",
+        "Ignore": "Ignorar",
+        "Ignored": "Ignorado",
+        "MasterOpponentModifier": "Penalizador maestría oponente",
+        "SubsequentDefenceModifier": "Mod. defensas sucesivas",
+        "SubsequentDefenceOptions": {
+          "First": "1a -0%",
+          "Second": "2a -20%",
+          "Third": "3a -40%",
+          "Fourth": "4a -60%",
+          "Fifth": "5a -80%",
+          "Sixth": "6a -100%"
+        },
+        "NoTokenToDefendWith": "No tiene ninguna ficha en esta escena para defenderse de este ataque"
+      },
+      "AbilityRoll": {
+        "Title": "Tirada de habilidad",
+        "Augment": "Refuerzo",
+        "Meditate": "Meditación",
+        "OtherModifier": "Otro modificador"
+      },
+      "CharacteristicRoll": {
+        "Title": "Tirada de característica",
+        "Difficulty": "Dificultad",
+        "Augment": "Refuerzo",
+        "Meditate": "Meditación",
+        "OtherModifier": "Otro modificador",
+        "RollDifficultyLevel": {
+          "0": "Casi imposible (/2)",
+          "1": "Muy difícil (*1)",
+          "2": "Difícil (*2)",
+          "3": "Moderada (*3)",
+          "4": "Fácil (*4)",
+          "5": "Acción sencilla (*5)",
+          "6": "Acción muy sencilla (*6)"
+        }
+      },
+      "SpiritMagicRoll": {
+        "Title": "Lanzar magia espiritual",
+        "LevelUsed": "Nivel",
+        "Boost": "Pontenciación",
+        "Augment": "Refuerzo",
+        "Meditate": "Meditación",
+        "OtherModifier": "Otro modificador",
+        "SuccessfullyCastInfo": "Se la lanzado un conjuro de magia espiritual con éxito, se han usado {amount} puntos de magia."
+      },
+      "RuneMagicRoll": {
+        "Title": "Lanzar magia rúnica",
+        "LevelUsed": "Nivel",
+        "RuneUsed": "Usar runa",
+        "Boost": "Pontenciación",
+        "Augment": "Refuerzo",
+        "MeditateRitual": "Meditación / ritual",
+        "Ritual": "ritual",
+        "Meditate": "meditación",
+        "OtherModifier": "Otro modificador",
+        "NotEnoughRunePoints": "No dispone de suficientes puntos de magia para lanzar este conjuro.",
+        "OneUseHeader": "Un solo uso",
+        "OneUseDescription": "Al lanzar este conjuro se reducirá tanto los puntos de runa actuales como los totales de este culto"
+      },
       "BatchRqidEditor": {
         "Title": "Ajustar en bloque los IDs de sistema (Rqid)",
         "ExistingRqidsHeader": "Rqids existentes",
@@ -450,18 +557,50 @@
       "Common": {
         "yes": "sí",
         "no": "no",
-        "btnYes": "Sí",
-        "btnNo": "No",
         "btnCancel": "Cancelar",
         "btnConfirm": "Confirmar",
-        "OtherModifiers": "Otros modificadores",
-        "RollFormat": "Tirada ({chance}%)",
-        "CantFindChatMessageError": "No se ha podido encontrar el mensaje en el chat"
-      },
-      "characteristicChat": {
-        "ChatFlavor": "Característica: {name} ({value})",
-        "RollFlavor": "Tirada {name} {difficulty}",
-        "RollFlavorModifier": "<br/>Con otros modificadores {modifier}"
+        "TargetChance": "Probabilidad",
+        "IsAttacking": "ataca a {defenderName}",
+        "Halved": "A la mitad",
+        "Modifiers": "Modificadores",
+        "Actor": "Actor",
+        "AttackingActor": "Actor atacante",
+        "DefendingActor": "Actor defensor",
+        "AugmentOptions": {
+          "None": "Ninguno",
+          "CriticalSuccess": "Crítico +50%",
+          "SpecialSuccess": "Especial +30%",
+          "Success": "Éxito +20%",
+          "Failure": "Fallo -20%",
+          "Fumble": "Pifia -50%"
+        },
+        "MeditateOptions": {
+          "Title": "Meditación",
+          "None": "Ninguna",
+          "1mr": "1 asalto +5%",
+          "2mr": "2 asaltos +10%",
+          "5mr": "5 asaltos (1 min) +15%",
+          "25mr": "25 asaltos (5 min) +20%",
+          "50mr": "50 asaltos (10 min) +25%"
+        },
+        "RitualOptions": {
+          "Title": "Ritual",
+          "30min": "Media hora +30%",
+          "1h": "1 hora +35%",
+          "5h": "5 horas +40%",
+          "10h": "10 horas +45%",
+          "1d": "1 día +50%",
+          "2d": "2 días +55%",
+          "1week": "1 semana +60%",
+          "2weeks": "2 semanas +65%",
+          "4weeks": "4 semanas +70%",
+          "1season": "1 estación +75%",
+          "1year": "1 año +80%",
+          "2years": "2 años +85%",
+          "5years": "5 años +90%",
+          "10years": "10 años +95%",
+          "20years": "20 años +100%"
+        }
       },
       "confirmCopyIntangibleItem": {
         "title": "¿Quiere traspasar {itemName} a {targetActor}?",
@@ -476,23 +615,6 @@
         "ReallyGiveItemSingle": "¿Quiere traspasar {itemName} a {targetActor}?  Se borrará del inventario de {sourceActor}",
         "ReallyGiveItemQuantity": "¿Quiere traspasar {itemName} a {targetActor}?  Se borrará del inventario de {sourceActor}, o se reducirá la cantidad del inventario de {sourceActor}",
         "GiveHowMany": "¿Cuántos {itemName} traspasar a {targetActor}? El inventario de {sourceActor} de este objeto se deducirá la cantidad escogida, o el objeto será borrado si la cantidad excede el máximo de {maxQty}"
-      },
-      "itemChat": {
-        "RollFlavor": "Tirada {name}",
-        "RollFlavorModifier": "<br/>Con otros modificadores {modifier}"
-      },
-      "reputationChat": {
-        "CheckReputationFlavor": "Tirada de reputación",
-        "Reputation": "Reputación"
-      },
-      "spiritMagicChat": {
-        "CantCastSpellAboveLearnedLevel": "No se puede lanzar un conjuro por encima del nivel aprendido",
-        "NotEnoughMagicPoints": "Sin puntos de magia suficientes para lanzar el conjuro",
-        "SuccessfullyCastInfo": "Lanzamiento con éxito del conjuro espiritual, se han usado {amount} puntos de magia",
-        "ChatFlavor": "Magia espiritual: {name}",
-        "Cast": "Lanzamiento {spellName}",
-        "Level": "Nivel",
-        "Boost": "Potenciación"
       },
       "confirmItemDeleteDialog": {
         "title": "Borrar {itemType}: {itemName}",
@@ -556,89 +678,10 @@
           "noExperience": "{actorName} no tiene una marca de experiencia en {typeLocName} \"{name}\" y no puede ganar experiencia"
         }
       },
-      "runeMagicChat": {
-        "MissingJournalLinkTitle": "Edite el hechizo y añada una descripción para tener un enlace a un diario aquí",
-        "CastUsingRune": "Lanzando usando la runa",
-        "RuneHasExperienceTitle": "Tiene marca de experiencia",
-        "RunePointCost": "Coste en Puntos de Runa",
-        "OneUseWarning": "¡De un solo uso!",
-        "OneUseWarningTip": "¡Lanzar este hechizo reducirá tanto sus puntos de runa actuales como el máximo del culto!",
-        "MagicPointBoost": "Potenciación de puntos de magia",
-        "MeditationOrRitual": "Meditación o prácticas rituales",
-        "MeditationOrRitualValue0": "Ninguna",
-        "MeditationOrRitualValue5": "Meditación: 1 asalto de combate, +5% bono",
-        "MeditationOrRitualValue10": "Meditación: 2 asaltos de combate, +10% bono",
-        "MeditationOrRitualValue15": "Meditación: 5 asaltos de combate (1 minuto), +15% bono",
-        "MeditationOrRitualValue20": "Meditación: 25 asaltos de combate (5 minutos), +20% bono",
-        "MeditationOrRitualValue25": "Meditación: 50 asaltos de combate (10 minutos), +25% bono",
-        "MeditationOrRitualValue30": "Prácticas rituales: media hora, +30% bono",
-        "MeditationOrRitualValue35": "Prácticas rituales: 1 hora, +35% bono",
-        "MeditationOrRitualValue40": "Prácticas rituales: 5 horas, +40% bono",
-        "MeditationOrRitualValue45": "Prácticas rituales: 10 horas, +45% bono",
-        "MeditationOrRitualValue50": "Prácticas rituales: 1 día, +50% bono",
-        "MeditationOrRitualValue55": "Prácticas rituales: 2 días, +55% bono",
-        "MeditationOrRitualValue60": "Prácticas rituales: 1 semana, +60% bono",
-        "MeditationOrRitualValue65": "Prácticas rituales: 2 semanas, +65% bono",
-        "MeditationOrRitualValue70": "Prácticas rituales: 4 semanas, +70% bono",
-        "MeditationOrRitualValue75": "Prácticas rituales: 1 temporada, +75% bono",
-        "MeditationOrRitualValue80": "Prácticas rituales: 1 año, +80% bono",
-        "MeditationOrRitualValue85": "Prácticas rituales: 2 años, +85% bono",
-        "MeditationOrRitualValue90": "Prácticas rituales: 5 años, +90% bono",
-        "MeditationOrRitualValue95": "Prácticas rituales: 10 años, +95% bono",
-        "MeditationOrRitualValue100": "Prácticas rituales: 20 años, +100% bono",
-        "SkillAugmentation": "Refuerzo de habilidades",
-        "SkillAugmentationValue0": "Ninguno",
-        "SkillAugmentationValue50": "Crítico, +50%",
-        "SkillAugmentationValue30": "Especial, +30%",
-        "SkillAugmentationValue20": "Éxito, +20%",
-        "SkillAugmentationValue-20": "Fallo, -20%",
-        "SkillAugmentationValue-50": "Pifia, -50%",
-        "noSelectedRuneWarning": "Intentando tirar un conjuro de magia rúnica sin ninguna runa seleccionada en la tarjeta",
-        "resultMessageCritical": "El conjuro tiene efecto, no cuesta ningún punto de runa y {magicPointBoost} puntos de magia de la potenciación",
-        "resultMessageSpecial": "El conjuro tiene efecto, cuesta {runePointCost} puntos de runa y {magicPointBoost} puntos de magia de la potenciación",
-        "resultMessageSuccess": "El conjuro tiene efecto, cuesta {runePointCost} puntos de runa y {magicPointBoost} puntos de magia de la potenciación",
-        "resultMessageFailure": "El conjuro falla y no se pierde ningún punto de runa. Si fue potenciado, solo se perderá 1 punto de magia",
-        "resultMessageFumble": "El conjuro falla y se pierden {runePointCost} puntos de runa. Si fue potenciado, solo se perderá 1 punto de magia",
-        "SpentOneUseRunePoints": "¡{actorName} ha gastado {runePoints} puntos de runa de un solo uso del culto {cultName}!",
-        "validationNotEnoughRunePoints": "¡No le quedan suficientes puntos de runa!",
-        "validationNotEnoughMagicPoints": "¡No le quedan suficientes puntos de magia para la potenciación elegida!",
-        "runeMagicResultFlavor": "Magia rúnica: {name}",
-        "Cast": "Lanzamiento {spellName}"
-      },
       "requestSkillSpecialization": {
         "title": "Escoja especialización en la habilidad",
         "inputRequired": "Se requiere especialización en la habilidad",
         "btnSetSpecialization": "Asignar especialización"
-      },
-      "weaponChat": {
-        "Damage": "Daño",
-        "damageRollType": {
-          "normal": "Normal",
-          "special": "Especial",
-          "maxSpecial": "Máx. especial"
-        },
-        "fumbleRoll": "Tirar pifia",
-        "hitLocationRoll": "Tirar localización",
-        "Modifier": "Modificador",
-        "CantFindActorWarn": "No se ha encontrado el actor en este mundo con el que realizar la acción",
-        "UsedLastOfAmmoWarn": "Acaba de usar el último de tus {projectileName}!",
-        "OutOfAmmoWarn": "No dispone de más {projectileName} para {combatManeuverName}!",
-        "HitLocationRollFlavor": "Tirada de localización",
-        "UnknownButtonInChatError": "Botón desconocido \"{actionButton}\" en tarjeta de chat de arma",
-        "WeaponChatFlavor": "Arma: {weaponName}",
-        "NoCombatManeuverInDamageRollError": "Sin maniobra de combate en la tirada de daño",
-        "CantFindActorToDoDamageRollWarn": "No se ha podido encontrar el actor en el mundo con el que tirar el daño",
-        "WeaponDoesNotHaveCombatManeuverError": "El arma no tiene esa maniobra de combate",
-        "WeaponDoesNotHaveAttachManeuverError": "El arma llamada \"{weaponName}\" no tiene una maniobra de combate ofensiva",
-        "WeaponDamageTag": "arma",
-        "DamageBonusDamageTag": "modificador al daño",
-        "CrushSpecialDamageTag": "especial aplastamiento",
-        "ImpaleSpecialDamageTag": "especial empalamiento",
-        "SlashSpecialDamageTag": "especial tajo",
-        "FumbleTableMissingWarn": "No se ha encontrado la tabla de pifias \"{fumbleTableName}\"",
-        "PluralResults": "{numberOfResults} resultados",
-        "SingularResult": "un resultado",
-        "FumbleResultFlavor": "Extrayendo {numberOfResults} de la tabla {fumbleTableName}"
       }
     },
     "Item": {
@@ -680,7 +723,7 @@
           "BronzeRingMail": "Anillas de bronce",
           "TurtleShell": "Caparazón",
           "LightBronzeScale": "Escamas de bronce ligera",
-          "HeavyBronzeScale": "Escamas de bronce pesada", 
+          "HeavyBronzeScale": "Escamas de bronce pesada",
           "SegmentedBronzePlate": "Placas de bronce segmentada",
           "BronzeDiskPlate": "Bezanteada",
           "BronzePlate": "Placas de bronce",
@@ -749,6 +792,7 @@
           "btnAddWound": "Añadir herida"
         },
         "AddWoundChatContent": "{actorName} recibe una herida en {hitLocationName}. {notification}",
+        "IncapacitationRule": "Pasar una tirada de (CON-{damage})*5 o desmayarse, a menos que ya se haya desmayado debido al daño. Si se falla, el personaje queda inconsciente durante [[/r 1d6]] horas o hasta que lo despierten.",
         "HealWound": {
           "Title": "Curar herida en {hitLocationName}",
           "SelectWoundToHeal": "Seleccione la herida que quiere curar en {hitLocationName}",
@@ -762,6 +806,7 @@
           "severed": "Amputada"
         },
         "Notification": {
+          "CantFindItem": "No se encontró un objeto en los cambios de localización",
           "CantFindHitLocation": "No se ha podido encontrar localización con itemId [{hitLocationItemId}] en el actor ${actorName} con el que mostrar la tarjeta de chat de heridas",
           "HitLocationDoesNotHaveCalculatedArmor": "La localización {hitLocationName} no tiene un campo calculado de PA totales",
           "NoValueOnHitLocation": "No existe el valor en la localización ${hitLocationName}",
@@ -905,10 +950,14 @@
         "Points": "Puntos",
         "Range": "Alcance",
         "Duration": "Duración",
-        "StackableQ": "¿Apilable?",
-        "OneUseQ": "¿Único uso?",
+        "Stackable": "Apilable",
+        "OneUse": "Único uso",
         "GrantedByCult": "Concedido por culto",
         "Runes": "Runas",
+        "CastingCostInfo": "{actorName} ha usado {runePointAmount} puntos de runa y {magicPointAmount} puntos de magia para lanzar un conjuro rúnico.",
+        "SpentOneUseRunePoints": "{actorName} ha gastado {runePoints} puntos de runa de uso único del culto {cultName}",
+        "validationNotEnoughRunePoints": "No le quedan suficientes puntos de runa",
+        "validationNotEnoughMagicPoints": "No le quedan suficientes puntos de magia para potenciar",
         "runeMagicCultDialog": {
           "title": "¿A qué culto pertenece este conjuro rúnico?",
           "btnAddRuneMagic": "Añadir conjuro rúnico",
@@ -958,8 +1007,8 @@
         "SkillCategory": {}
       },
       "Spell": {
-        "RitualQ": "¿Ritual?",
-        "EnchantmentQ": "¿Encantamiento?",
+        "Ritual": "¿Ritual?",
+        "Enchantment": "¿Encantamiento?",
         "DurationEnum": {
           "undefined": "Ninguno",
           "instant": "Instantáneo",
@@ -984,14 +1033,16 @@
       "SpiritMagic": {
         "Name": "Nombre",
         "Points": "Puntos",
-        "VariableQ": "¿Variable?",
+        "Variable": "¿Variable?",
         "Range": "Alcance",
         "Duration": "Duración",
         "Concentration": "Concentración",
-        "SpellFocus": "Foco del hechizo",
+        "SpellFocus": "Foco del conjuro",
         "MatrixIndicator": "(En una matriz)",
-        "MatrixQ": "¿En una matriz?",
-        "LinkedToCompendium": "Enlazado con la entrada [{journalName}] del compendio [{compendium}]"
+        "MatrixQ": "En una matriz",
+        "LinkedToCompendium": "Enlazado con la entrada [{journalName}] del compendio [{compendium}]",
+        "CantCastSpellAboveLearnedLevel": "No se puede lanzar un conjuro por encima del nivel conocido.",
+        "NotEnoughMagicPoints": "No le quedan suficientes puntos de magia para lanzar este conjuro."
       },
       "Weapon": {
         "Name": "Nombre",
@@ -1044,6 +1095,64 @@
         }
       }
     },
+    "Roll": {
+      "AbilityRoll": {
+        "Base": "base",
+        "Augment": "refuerzo",
+        "Meditate": "meditación",
+        "SubsequentDefenceRoll": {
+          "First": "1a defensa",
+          "Second": "2a defensa",
+          "Third": "3a defensa",
+          "Fourth": "4a defensa",
+          "Fifth": "5a defensa",
+          "Sixth": "6a defensa"
+        },
+        "ProneTarget": "caído",
+        "UnawareTarget": "distraído",
+        "Darkness": "oscuridad",
+        "Halved": "a la mitad",
+        "AimedBlow": "tiro apuntado",
+        "OtherModifier": "otro modificador",
+        "MasterOpponentModifier": "maestría oponente"
+      },
+      "CharacteristicRoll": {
+        "Augment": "refuerzo",
+        "Meditate": "meditación",
+        "Other": "otro",
+        "RollDifficultyLevel": {
+          "0": "casi imposible",
+          "1": "muy difícil",
+          "2": "difícil",
+          "3": "moderado",
+          "4": "fácil",
+          "5": "acción simple",
+          "6": "acción muy simple"
+        }
+      },
+      "HitLocationRoll": {
+        "FallbackHitLocationName": "Lozalización"
+      },
+      "SpiritMagicRoll": {
+        "Augment": "refuerzo",
+        "Meditate": "meditación",
+        "Base": "POD*5",
+        "MagicPointCost": "Se han usado {cost} puntos de magia"
+      },
+      "RuneMagicRoll": {
+        "Augment": "refuerzo",
+        "Meditate": "meditación",
+        "Ritual": "ritual",
+        "UsageCost": "Se han usado {runePointsCost} puntos de runa y {magicPointCost} puntos de magia.",
+        "OneUseUsageCost": "Se han usado {runePointsCost} puntos de runa permanentes y {magicPointCost} puntos de magia."
+      },
+      "DamageRoll": {
+        "Damage": "Daño",
+        "WeaponDamage": "daño del arma",
+        "DamageBonus": "bono de daño",
+        "SpecialDamage": "daño especial"
+      }
+    },
     "Hotbar": {
       "MacroName": {
         "ToChat": "Usar {name}",
@@ -1090,15 +1199,14 @@
     "Game": {
       "MeleeRoundAbbr": "AC",
       "SrMeleeRoundAbbr": "M/AC",
-      "ResultEnum": {
-        "0": "Hipercrítico",
-        "1": "Crítico especial",
-        "2": "Crítico",
-        "3": "Especial",
-        "4": "Éxito",
-        "5": "Fallo",
-        "6": "Pifia"
+      "AbilityResultEnum": {
+        "0": "Crítico",
+        "1": "Especial",
+        "2": "Éxito",
+        "3": "Fallo",
+        "4": "Pifia"
       },
+      "Roll": "Tirar",
       "RollChat": "Tirar con tarjeta (click)",
       "RollQuick": "Tirada directa (dbl click)",
       "RollCharacteristicQuick": "Tirada directa *5 (dbl click)",
@@ -1113,13 +1221,59 @@
         "twoHand-full": "Dos manos",
         "missile-full": "Distancia"
       },
-      "RollDifficulty": {
-        "0": "Casi imposible (*0.5)",
-        "1": "Muy difícil (*1)",
-        "2": "Difícil (*2)",
-        "3": "Moderada (*3)",
-        "4": "Fácil (*4)",
-        "5": "Acción sencilla (*5)"
+      "AttackParryResults": {
+        "0-0": "El <b>atacante</b> tira el daño normal.<br>El arma del <b>defensor</b> sufre 1 punto de daño si la tirada de daño es mayor que sus PG actuales. Si quedan más puntos de daño, se infligen a la localización adyacente.",
+        "0-1": "El <b>atacante</b> inflige el daño especial.<br>El arma del <b>defensor</b> sufre 1 punto de daño si la tirada de daño es mayor que sus PG actuales. Si quedan más puntos de daño, se infligen a la localización adyacente sin reducción por armadura.",
+        "0-2": "El <b>atacante</b> inflige el daño especial.<br>El arma del <b>defensor</b> pierde tantos PG como el daño infligido. Si quedan más puntos de daño, se infligen a la localización adyacente sin reducción por armadura.",
+        "0-3": "El <b>atacante</b> inflige el daño especial.<br>El <b>defensor</b> sufre daño sin reducción por armadura.",
+        "0-4": "El <b>atacante</b> impacta automáticamente e inflige el daño especial máximo.<br>El <b>defensor</b> sufre daño sin reducción por armadura y tira en la tabla de pifias.",
+        "1-0": "<b>Ataque</b> detenido o rechazado.<br>El <b>defensor</b> tira el daño normal de su arma. Si es mayor que los PG del arma atacante, éstos se reducen en 1.",
+        "1-1": "El <b>atacante</b> tira el daño normal.<br>El arma del <b>defensor</b> pierde 1 PG si el daño es mayor que sus PG actuales. Si sobra daño, se aplica a la localización de golpe adyacente.",
+        "1-2": "El <b>atacante</b> inflige el daño especial máximo.<br>El arma del <b>defensor</b> pierde tantos PG como la diferencia entre el daño y sus PG actuales. Esa misma cantidad de daño se aplica a la localización de golpe adyacente.",
+        "1-3": "El <b>atacante</b> inflige el daño especial máximo.<br>El <b>defensor</b> sufre la tirada de daño.",
+        "1-4": "El <b>atacante</b> inflige el daño especial.<br>El <b>defensor</b> sufre la tirada de daño y tira en la tabla de pifias.",
+        "2-0": "<b>Ataque</b> detenido o rechazado.<br>El <b>defensor</b> tira el daño especial de su arma. Todo daño que exceda los PG actuales del arma atacante los reduce en esa misma cantidad.",
+        "2-1": "<b>Ataque</b> detenido o rechazado.<br>El <b>defensor</b> tira el daño normal de su arma. Si es mayor que los PG del arma atacante, éstos se reducen en 1.",
+        "2-2": "El <b>atacante</b> tira el daño normal.<br>El arma del <b>defensor</b> pierde 1 PG si el daño es mayor que sus PG actuales. Si sobra daño, se aplica a la localización de golpe afectada.",
+        "2-3": "El <b>atacante</b> tira el daño normal.<br>El <b>defensor</b> sufre la tirada de daño.",
+        "2-4": "El <b>atacante</b> tira el daño normal.<br>El <b>defensor</b> sufre la tirada de daño y tira en la tabla de pifias.",
+        "3-0": "<b>Ataque</b> detenido o rechazado.<br>El <b>defensor</b> tira el daño especial de su arma. El daño obtenido se resta de los PG del arma atacante.",
+        "3-1": "<b>Ataque</b> detenido o rechazado.<br>.",
+        "3-2": "<b>Ataque</b> detenido o rechazado.<br>El <b>defensor</b> tira el daño normal de su arma. Si es mayor que los PG del arma atacante, éstos se reducen en 1.",
+        "3-3": "El <b>atacante</b> falla.<br>El <b>defensor</b> falla.",
+        "3-4": "El <b>atacante</b> tira el daño normal.<br>El <b>defensor</b> sufre la tirada de daño y tira en la tabla de pifias.",
+        "4-0": "El <b>atacante</b> tira en la tabla de pifias.<br>El <b>defensor</b> tira el daño especial de su arma. El daño obtenido se resta de los PG del arma atacante.",
+        "4-1": "El <b>atacante</b> tira en la tabla de pifias.<br>El <b>defensor</b> tira el daño especial de su arma. Todo daño que exceda los PG actuales del arma atacante los reduce en esa misma cantidad.",
+        "4-2": "El <b>atacante</b> tira en la tabla de pifias.<br>El <b>defensor</b> tira el daño normal de su arma. Si es mayor que los PG del arma atacante, éstos se reducen en 1.",
+        "4-3": "El <b>atacante</b> tira en la tabla de pifias.<br>El <b>defensor</b> falla.",
+        "4-4": "El <b>atacante</b> tira en la tabla de pifias.<br>El <b>defensor</b> tira en la tabla de pifias."
+      },
+      "DodgeResults": {
+        "0-0": "El <b>ataque</b> es esquivado con éxito.",
+        "0-1": "El <b>ataque</b> inflige daño especial.",
+        "0-2": "El <b>ataque</b> inflige daño especial e ignora la armadura.",
+        "0-3": "El <b>ataque</b> inflige daño especial máximo e ignora la armadura.",
+        "0-4": "El <b>ataque</b> inflige daño especial máximo e ignora la armadura.<br>El <b>defensor</b> tira en la tabla de pifias.",
+        "1-0": "El <b>ataque</b> es esquivado con éxito.",
+        "1-1": "El <b>ataque</b> es esquivado con éxito.",
+        "1-2": "El <b>ataque</b> inflige daño especial.",
+        "1-3": "El <b>ataque</b> inflige daño especial.",
+        "1-4": "El <b>ataque</b> inflige daño especial.<br>El <b>defensor</b> tira en la tabla de pifias.",
+        "2-0": "El <b>ataque</b> es esquivado con éxito.",
+        "2-1": "El <b>ataque</b> es esquivado con éxito.",
+        "2-2": "El <b>ataque</b> es esquivado con éxito.",
+        "2-3": "El <b>ataque</b> inflige el daño normal.",
+        "2-4": "El <b>ataque</b> inflige daño normal.<br>El <b>defensor</b> tira en la tabla de pifias.",
+        "3-0": "El <b>ataque</b> falla.",
+        "3-1": "El <b>ataque</b> falla.",
+        "3-2": "El <b>ataque</b> falla.",
+        "3-3": "El <b>ataque</b> falla.",
+        "3-4": "El <b>ataque</b> inflige daño normal.<br>El <b>defensor</b> tira en la tabla de pifias.",
+        "4-0": "El <b>atacante</b> tira en la tabla de pifias.",
+        "4-1": "El <b>atacante</b> tira en la tabla de pifias.",
+        "4-2": "El <b>atacante</b> tira en la tabla de pifias.",
+        "4-3": "El <b>atacante</b> tira en la tabla de pifias.",
+        "4-4": "El <b>ataque</b> falla y el <b>atacante</b> tira en la tabla de pifias.<br>El <b>defensor</b> tira en la tabla de pifias."
       }
     },
     "RQGSystem": {
@@ -1143,7 +1297,8 @@
         "NoSheet": "No se ha encontrado la hoja del documento vinculado al rqid \"{rqid}\". Consulte la consola",
         "MoreThanOneRqidMatchInWorld": "Más de un documento RQG en el mundo (no en los paquetes de compendios) con el rqid \"{rqid}\", idioma \"{lang}\", y prioridad \"{priority}\". Por favor, revise los ajustes del sistema RQG. Consulte los ids de objeto en la consola",
         "MoreThanOneRqidMatchInPacks": "Más de un documento RQG en los paquetes de compendios instalados con el rqid \"{rqid}\", idioma \"{lang}\", y prioridad \"{priority}\". Por favor, revise los ajustes del sistema RQG. Consulte los ids de objeto en la consola",
-        "DocumentNotFoundByRqid": "No se ha encontrado ningún documento en el mundo o los paquetes de compendios con rqid \"{rqid}\", idioma \"{lang}\". Consulte la consola"
+        "DocumentNotFoundByRqid": "No se ha encontrado ningún documento en el mundo o los paquetes de compendios con rqid \"{rqid}\", idioma \"{lang}\". Consulte la consola",
+        "FumbleTableMissing": "No se ha encontrado la tirada de pifias \"{fumbleTableName}\"."
       }
     },
     "Notification": {
@@ -1178,10 +1333,6 @@
       "ShowHeropoints": {
         "settingName": "Mostrar puntos de héroe",
         "settingHint": "Muestra un campo para llevar la cuenta de la regla opcional de puntos de héroe"
-      },
-      "SpecialCrit": {
-        "settingName": "Resultados especiales e hipercríticos",
-        "settingHint": "*** Versión alfa - aún no implementado totalmente *** Añade los resultados de crítico especial (skill/100) e hipercrítico (skill/500)"
       },
       "WorldMigrationVersion": {
         "settingName": "Versión de migración del mundo",

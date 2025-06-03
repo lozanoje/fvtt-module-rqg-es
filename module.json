@@ -2,7 +2,7 @@
   "id": "fvtt-module-rqg-es",
   "title": "Translation: Spanish [RuneQuest Glorantha]",
   "description": "Traducción del sistema RuneQuest Aventuras en Glorantha (sun-dragon-cult/fvtt-system-rqg) al español -  RuneQuest Glorantha spanish translation",
-  "version": "3.49.2",
+  "version": "4.02.1",
   "languages": [{
       "lang": "es",
       "name": "Español",
@@ -31,7 +31,7 @@
     "systems": [{
         "id": "rqg",
         "type": "system",
-        "compatibility": "3.4.9"
+        "compatibility": "4.0.2"
       }
     ],
     "requires": [{
@@ -42,8 +42,8 @@
     ]
   },
   "compatibility": {
-    "minimum": "11",
-    "verified": "12.331",
+    "minimum": "12",
+    "verified": "12.343",
     "maximum": "12"
   },
   "packFolders": [{
