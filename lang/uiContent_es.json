@@ -176,7 +176,7 @@
         },
         "Occupation": {
           "Heading": "Ocupación actual",
-          "undefined": " ",
+          "none": " ",
           "assistantShaman": "Aprendiz de chamán",
           "chariotDriver": "Auriga",
           "crafter": "Artesano",
@@ -446,6 +446,7 @@
         "RollDamage": "Tirar daño",
         "ApplyActorDamage": "Aplicar daño al actor",
         "ApplyWeaponDamage": "Aplicar Damage al arma",
+        "CannotApplyDamageToUnlinkedActor": "No se puede aplicar daño a un actor no vinculado",
         "RollAttackerFumble": "Tirar pifia atacante",
         "RollDefenderFumble": "Tirar pifia defensor",
         "AttackerFumble": "Pifia atacante",
@@ -477,7 +478,8 @@
           "1d10": "Desde abajo (1d10)",
           "1d10+10": "Desde arriba (1d10 + 10)"
         },
-        "NoTokenToAttackWith": "No tiene ninguna ficha en esta escena para realizar un ataque"
+        "NoTokenToAttackWith": "No tiene ninguna ficha en esta escena para realizar un ataque",
+        "WeaponNotEmbedded": "No se puede encontrar el propietario del arma usada"
       },
       "Defence": {
         "Title": "Defender",
@@ -563,9 +565,12 @@
         "IsAttacking": "ataca a {defenderName}",
         "Halved": "A la mitad",
         "Modifiers": "Modificadores",
-        "Actor": "Actor",
-        "AttackingActor": "Actor atacante",
-        "DefendingActor": "Actor defensor",
+        "Character": "Personaje",
+        "AttackingActor": "Atacante",
+        "DefendingActor": "Defensor",
+        "TargetedToken": "ficha objetivo",
+        "Tokens": "fichas",
+        "Actors": "actores",
         "AugmentOptions": {
           "None": "Ninguno",
           "CriticalSuccess": "Crítico +50%",
@@ -1150,7 +1155,8 @@
         "Damage": "Daño",
         "WeaponDamage": "daño del arma",
         "DamageBonus": "bono de daño",
-        "SpecialDamage": "daño especial"
+        "SpecialDamage": "daño especial",
+        "ExtraDamage": "daño extra"
       }
     },
     "Hotbar": {
@@ -1175,8 +1181,6 @@
       },
       "CombatTracker": {
         "DuplicateCombatant": "Duplicar contendiente",
-        "UpdateCombatant": "Actualizar contendiente",
-        "RemoveCombatant": "Quitar contendiente",
         "RemoveAllDuplicates": "Quitar todos los duplicados",
         "CombatantWithoutActor": "El contendiente \"{combatantName}\" hace referencia a un actor que ya no existe en el mundo",
         "UnknownName": "Desconocido"
@@ -1188,9 +1192,14 @@
         "DropToReplaceJournal": "Arrastre un diario a este objeto para reemplazar la descripción"
       },
       "Settings": {
+        "Links": {
+          "ReleaseNotes": "Notas de la versión",
+          "Documentation": "Documentación",
+          "BugReports": "Reporte de errores"
+        },
         "Migrate": {
-          "TriggerButton": "Lanzar migración del mundo",
-          "TriggerTitle": "Lanzar migración de datos del mundo",
+          "TriggerButton": "Ejecutar migración del mundo",
+          "TriggerTitle": "Ejecutar migración de datos del mundo",
           "TriggerContents": "<p>Activar migración de datos del mundo y reiniciar</p>",
           "TriggerRestart": "Guardar y reiniciar"
         }
@@ -1211,6 +1220,7 @@
       "RollQuick": "Tirada directa (dbl click)",
       "RollCharacteristicQuick": "Tirada directa *5 (dbl click)",
       "RollTitle": "Tirar con tarjeta (clic), tirada directa (doble clic)",
+      "InitiateCombat": "Iniciar combate",
       "WeaponUsage": {
         "oneHand": "1M",
         "offHand": "Mtorpe",
@@ -1287,6 +1297,7 @@
       "ParentFoundryId": "ID Foundry padre",
       "GetThisDocument": "Obtener este documento",
       "GetDocumentLikeThis": "Obtener un documento como este",
+      "JournalLinkToDocumentLikeThis": "Enlace de diario a documentos como este",
       "CopyInputValue": "Copiar este valor al portapapeles",
       "OtherDocumentsHeader": "Documento con este Rqid e idioma (excluyendo documentos incrustados)",
       "DocsInWorld": "{count} documentos en el mundo",
@@ -1316,6 +1327,10 @@
         "settingName": "Ordenar localizaciones de menor a mayor",
         "settingHint": "Al activarlo, se ordenarán las localizaciones como en las estadísticas, con el valor más bajo primero. Este ajuste puede activarse en la tabla de salud de la hoja de actor"
       },
+      "AutoactivateChatTab": {
+        "settingName": "Autoactivar y expandir el chat",
+        "settingHint": "Al activarlo, se abre la barra del chat cuando se mandan tiradas al mismo."
+      },
       "DefaultItemIcons": {
         "dialogTitle": "Ajuste de iconos por defecto de objetos",
         "settingName": "Iconos por defecto de objetos",
@@ -1329,6 +1344,10 @@
       "FumbleRollTable": {
         "settingName": "Tabla de pifias",
         "settingHint": "Nombre de la tabla de pifias - se usará en combate"
+      },
+      "AllowCombatWithoutToken": {
+        "settingName": "Permitir combate sin fichas",
+        "settingHint": "Si se habilita, se puede iniciar un combate sin tener una ficha en la escena. Es útil si el GM quiere usar un estilo \"Teatro de la mente\". Esto reducirá los listados en los diálogos de combate tanto de atacantes como defensores, ya que solo se mostrarán los que tengan fichas en la escena actual."
       },
       "ShowHeropoints": {
         "settingName": "Mostrar puntos de héroe",

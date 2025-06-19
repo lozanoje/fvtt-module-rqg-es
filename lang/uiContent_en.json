@@ -176,7 +176,7 @@
         },
         "Occupation": {
           "Heading": "Current Occupation",
-          "undefined": " ",
+          "none": " ",
           "assistantShaman": "Assistant Shaman",
           "chariotDriver": "Chariot Driver",
           "crafter": "Crafter",
@@ -446,6 +446,7 @@
         "RollDamage": "Roll Damage",
         "ApplyActorDamage": "Apply Damage to Actor",
         "ApplyWeaponDamage": "Apply Damage to Weapon",
+        "CannotApplyDamageToUnlinkedActor": "Cannot apply damage to unlinked actor",
         "RollAttackerFumble": "Roll Attacker Fumble",
         "RollDefenderFumble": "Roll Defender Fumble",
         "AttackerFumble": "Attacker Fumble",
@@ -477,7 +478,8 @@
           "1d10": "From Below (1d10)",
           "1d10+10": "From Above (1d10 + 10)"
         },
-        "NoTokenToAttackWith": "You don't have any token in this scene to do an attack"
+        "NoTokenToAttackWith": "You don't have any token in this scene to do an attack",
+        "WeaponNotEmbedded": "Could not find the owner of the used weapon"
       },
       "Defence": {
         "Title": "Defend",
@@ -563,9 +565,12 @@
         "IsAttacking": "attacks {defenderName}",
         "Halved": "Halved Chance",
         "Modifiers": "Modifiers",
-        "Actor": "Actor",
-        "AttackingActor": "Attacking Actor",
-        "DefendingActor": "Defending Actor",
+        "Character": "Character",
+        "AttackingActor": "Attacker",
+        "DefendingActor": "Defender",
+        "TargetedToken": "targeted token",
+        "Tokens": "tokens",
+        "Actors": "actors",
         "AugmentOptions": {
           "None": "None",
           "CriticalSuccess": "Critical Success +50%",
@@ -1150,7 +1155,8 @@
         "Damage": "Damage",
         "WeaponDamage": "weapon damage",
         "DamageBonus": "damage bonus",
-        "SpecialDamage": "special damage"
+        "SpecialDamage": "special damage",
+        "ExtraDamage": "extra damage"
       }
     },
     "Hotbar": {
@@ -1175,8 +1181,6 @@
       },
       "CombatTracker": {
         "DuplicateCombatant": "Duplicate Combatant",
-        "UpdateCombatant": "Update Combatant",
-        "RemoveCombatant": "Remove Combatant",
         "RemoveAllDuplicates": "Remove All Duplicates",
         "CombatantWithoutActor": "The combatant \"{combatantName}\" references an actor that no longer exists within the world",
         "UnknownName": "Unknown"
@@ -1188,6 +1192,11 @@
         "DropToReplaceJournal": "Drop a journal entry on this item to replace the description."
       },
       "Settings": {
+        "Links": {
+          "ReleaseNotes": "Release Notes",
+          "Documentation": "Documentation",
+          "BugReports": "Bug Reports"
+        },
         "Migrate": {
           "TriggerButton": "Trigger World Migration",
           "TriggerTitle": "Trigger World Data Migration",
@@ -1211,6 +1220,7 @@
       "RollQuick": "Direct Roll (dbl click)",
       "RollCharacteristicQuick": "Direct Roll *5 (dbl click)",
       "RollTitle": "Roll via Dialog (click), Direct Roll (dbl click)",
+      "InitiateCombat": "Initiate combat",
       "WeaponUsage": {
         "oneHand": "1H",
         "offHand": "offH",
@@ -1287,6 +1297,7 @@
       "ParentFoundryId": "Parent Foundry ID",
       "GetThisDocument": "Get This Document",
       "GetDocumentLikeThis": "Get Document Like This",
+      "JournalLinkToDocumentLikeThis": "Journal Link to Documents Like This",
       "CopyInputValue": "Copy this value to the clipboard",
       "OtherDocumentsHeader": "Documents with this rqid and language (excluding embedded documents)",
       "DocsInWorld": "{count} documents in the world",
@@ -1316,6 +1327,10 @@
         "settingName": "Sort Hitlocations Low to High",
         "settingHint": "Activating this setting sorts the character hitlocation in the same way as stat blocks are sorted with the lowest die number first. The setting can be toggled in the actor sheet Health table."
       },
+      "AutoactivateChatTab": {
+        "settingName": "Autoactivate and expand the chat tab",
+        "settingHint": "Activating this setting opens the Chat Messages sidebar when rolls send messages to chat."
+      },
       "DefaultItemIcons": {
         "dialogTitle": "Default Item Icon Settings",
         "settingName": "Default Item Icons",
@@ -1329,6 +1344,10 @@
       "FumbleRollTable": {
         "settingName": "Fumble Roll Table",
         "settingHint": "The name of the Fumble roll table - will be used in combat"
+      },
+      "AllowCombatWithoutToken": {
+        "settingName": "Allow Combat without Token",
+        "settingHint": "If enabled, combat can be started without a token on a scene. This is useful for GMs who want to run \"theater of the mind\" style combats. Disabling will reduce the length of the combat dialog dropdowns of attackers and defenders so only tokens of the current scene are shown."
       },
       "ShowHeropoints": {
         "settingName": "Show Hero Points",
