@@ -1,10 +1,10 @@
 //
-// Attack Rolls Info (RQG) v1.5
+// Attack Rolls Info (RQG) v1.6
 // by Viriato139ac
 //
 
 const macroName = "AttackRolls Info";
-const macroVersion = "1.5";
+const macroVersion = "1.6";
 const macroImage = "icons/weapons/axes/axe-battle-broad-stone.webp";
 
 const myDialogOptions = {
@@ -93,27 +93,27 @@ const testResults = [
     {
         result: 0,
         colour: "goldenrod",
-        desc: `${game.i18n.localize("RQG.Game.ResultEnum.2")}`,
+        desc: `${game.i18n.localize("RQG.Game.AbilityResultEnum.0")}`,
     },
     {
         result: 1,
         colour: "blue",
-        desc: `${game.i18n.localize("RQG.Game.ResultEnum.3")}`,
+        desc: `${game.i18n.localize("RQG.Game.AbilityResultEnum.1")}`,
     },
     {
         result: 2,
         colour: "green",
-        desc: `${game.i18n.localize("RQG.Game.ResultEnum.4")}`,
+        desc: `${game.i18n.localize("RQG.Game.AbilityResultEnum.2")}`,
     },
     {
         result: 3,
         colour: "red",
-        desc: `${game.i18n.localize("RQG.Game.ResultEnum.5")}`,
+        desc: `${game.i18n.localize("RQG.Game.AbilityResultEnum.3")}`,
     },
     {
         result: 4,
         colour: "darkred",
-        desc: `${game.i18n.localize("RQG.Game.ResultEnum.6")}`,
+        desc: `${game.i18n.localize("RQG.Game.AbilityResultEnum.4")}`,
     },
 ];
 
@@ -166,34 +166,6 @@ const locationResults = [
 attackRollsInfo();
 
 function attackRollsInfo() {
-
-    // const testResults = [
-    //     {
-    //         result: 0,
-    //         colour: "goldenrod",
-    //         desc: `${game.i18n.localize("RQG.Game.ResultEnum.2")}`,
-    //     },
-    //     {
-    //         result: 1,
-    //         colour: "blue",
-    //         desc: `${game.i18n.localize("RQG.Game.ResultEnum.3")}`,
-    //     },
-    //     {
-    //         result: 2,
-    //         colour: "green",
-    //         desc: `${game.i18n.localize("RQG.Game.ResultEnum.4")}`,
-    //     },
-    //     {
-    //         result: 3,
-    //         colour: "red",
-    //         desc: `${game.i18n.localize("RQG.Game.ResultEnum.5")}`,
-    //     },
-    //     {
-    //         result: 4,
-    //         colour: "darkred",
-    //         desc: `${game.i18n.localize("RQG.Game.ResultEnum.6")}`,
-    //     },
-    // ];
 
     const testOptions = testResults.reduce(
         (a, b) => (a += `<option value="${b.result}">${b.desc}</option>`),

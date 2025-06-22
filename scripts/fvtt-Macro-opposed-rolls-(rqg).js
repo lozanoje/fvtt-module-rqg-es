@@ -1,11 +1,11 @@
 //
-// Opposed Rolls (RQG) v2.1
+// Opposed Rolls (RQG) v2.2
 // by Viriato139ac
 // thanks to Freeze#2689 for the conditional selection code
 //
 
 const macroName = "Opposed Rolls";
-const macroVersion = "2.1";
+const macroVersion = "2.2";
 const macroImage = "icons/commodities/treasure/puzzle-box-glowing-blue.webp";
 
 function nivelexito(diceResult, skillLevel) {
@@ -24,11 +24,11 @@ function nivelexito(diceResult, skillLevel) {
 const lvlColours = ["goldenrod", "blue", "green", "red", "darkred"];
 // const lvlNames = ["Critical", "Special", "Success", "Failure", "Fumble"];
 const lvlNames = [
-  `${game.i18n.localize("RQG.Game.ResultEnum.2")}`,
-  `${game.i18n.localize("RQG.Game.ResultEnum.3")}`,
-  `${game.i18n.localize("RQG.Game.ResultEnum.4")}`,
-  `${game.i18n.localize("RQG.Game.ResultEnum.5")}`,
-  `${game.i18n.localize("RQG.Game.ResultEnum.6")}`,
+  `${game.i18n.localize("RQG.Game.AbilityResultEnum.0")}`,
+  `${game.i18n.localize("RQG.Game.AbilityResultEnum.1")}`,
+  `${game.i18n.localize("RQG.Game.AbilityResultEnum.2")}`,
+  `${game.i18n.localize("RQG.Game.AbilityResultEnum.3")}`,
+  `${game.i18n.localize("RQG.Game.AbilityResultEnum.4")}`,
 ];
 
 // const typeArray = [{ name: "rune" }, { name: "skill" }, { name: "passion" }];

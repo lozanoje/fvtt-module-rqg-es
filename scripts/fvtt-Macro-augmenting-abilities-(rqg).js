@@ -1,11 +1,11 @@
 //
-// Augmenting Abilities (RQG) v1.9
+// Augmenting Abilities (RQG) v1.10
 // by Viriato139ac
 // thanks to Freeze#2689 for the conditional selection code
 //
 
 const macroName = "Augmenting Abilities";
-const macroVersion = "1.9";
+const macroVersion = "1.10";
 const macroImage = "icons/skills/social/diplomacy-peace-alliance.webp";
 
 function nivelexito(diceResult, skillLevel) {
@@ -25,11 +25,11 @@ const augChances = [50, 30, 20, -20, -50];
 const lvlColours = ["goldenrod", "blue", "green", "red", "darkred"];
 //const lvlNames = ["Critical", "Special", "Success", "Failure", "Fumble"];
 const lvlNames = [
-  `${game.i18n.localize("RQG.Game.ResultEnum.2")}`,
-  `${game.i18n.localize("RQG.Game.ResultEnum.3")}`,
-  `${game.i18n.localize("RQG.Game.ResultEnum.4")}`,
-  `${game.i18n.localize("RQG.Game.ResultEnum.5")}`,
-  `${game.i18n.localize("RQG.Game.ResultEnum.6")}`,
+  `${game.i18n.localize("RQG.Game.AbilityResultEnum.0")}`,
+  `${game.i18n.localize("RQG.Game.AbilityResultEnum.1")}`,
+  `${game.i18n.localize("RQG.Game.AbilityResultEnum.2")}`,
+  `${game.i18n.localize("RQG.Game.AbilityResultEnum.3")}`,
+  `${game.i18n.localize("RQG.Game.AbilityResultEnum.4")}`,
 ];
 
 const typeArray = [

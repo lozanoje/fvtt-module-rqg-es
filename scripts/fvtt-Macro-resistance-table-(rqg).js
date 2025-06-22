@@ -1,10 +1,10 @@
 //
-// Resistance Table (RQG) v1.7
+// Resistance Table (RQG) v1.8
 // by Viriato139ac
 // thanks to Freeze#2689 for the conditional selection code
 
 const macroName = "Resistance Table";
-const macroVersion = "1.7";
+const macroVersion = "1.8";
 const macroImage = "icons/skills/social/diplomacy-handshake-yellow.webp";
 
 function nivelexito(diceResult, skillLevel) {
@@ -23,11 +23,11 @@ function nivelexito(diceResult, skillLevel) {
 const lvlColours = ["goldenrod", "blue", "green", "red", "darkred"];
 // const lvlNames = ["Critical", "Special", "Success", "Failure", "Fumble"];
 const lvlNames = [
-  `${game.i18n.localize("RQG.Game.ResultEnum.2")}`,
-  `${game.i18n.localize("RQG.Game.ResultEnum.3")}`,
-  `${game.i18n.localize("RQG.Game.ResultEnum.4")}`,
-  `${game.i18n.localize("RQG.Game.ResultEnum.5")}`,
-  `${game.i18n.localize("RQG.Game.ResultEnum.6")}`,
+  `${game.i18n.localize("RQG.Game.AbilityResultEnum.0")}`,
+  `${game.i18n.localize("RQG.Game.AbilityResultEnum.1")}`,
+  `${game.i18n.localize("RQG.Game.AbilityResultEnum.2")}`,
+  `${game.i18n.localize("RQG.Game.AbilityResultEnum.3")}`,
+  `${game.i18n.localize("RQG.Game.AbilityResultEnum.4")}`,
 ];
 const characteristics = {
   strength: `${game.i18n.localize("RQG.Actor.Characteristics.strength-full")}`,
