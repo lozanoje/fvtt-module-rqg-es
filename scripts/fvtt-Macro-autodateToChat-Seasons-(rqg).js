@@ -1,5 +1,5 @@
 //
-// auto Date to Chat (RQG) v3.2
+// auto Date to Chat (RQG)
 // by Moonpile
 // localization by Viriato139ac
 //
@@ -7,7 +7,7 @@
 // Glorantha calendar must be imported from modules/rqg-babele-es/calendars
 
 const macroName = "auto Date to Chat";
-const macroVersion = "3.2";
+const macroVersion = "3.3";
 const macroImage = "icons/sundries/scrolls/scroll-symbol-triangle-brown.webp";
 
 //const locerrormoon = `Moon image not found`;

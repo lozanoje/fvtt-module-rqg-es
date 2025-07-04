@@ -1,10 +1,10 @@
 //
-// Table Rolls (Generic) v1.7
+// Table Rolls (Generic)
 // by Viriato139ac
 //
 
 const macroName = "Table Rolls";
-const macroVersion = "1.7";
+const macroVersion = "1.8";
 const macroImage = "icons/weapons/thrown/bomb-metal-brown.webp";
 
 const rollArray = [

@@ -1,10 +1,10 @@
 //
-// Hit Location Rolls (RQG) v1.9
+// Hit Location Rolls (RQG)
 // by Viriato139ac
 //
 
 const macroName = "Hit Location Rolls";
-const macroVersion = "1.9";
+const macroVersion = "2.0";
 const macroImage = "icons/sundries/flags/banner-standard-tattered-red.webp";
 
 const myDialogOptions = {

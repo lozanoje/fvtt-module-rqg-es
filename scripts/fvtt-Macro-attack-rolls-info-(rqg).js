@@ -1,10 +1,10 @@
 //
-// Attack Rolls Info (RQG) v1.6
+// Attack Rolls Info (RQG)
 // by Viriato139ac
 //
 
 const macroName = "AttackRolls Info";
-const macroVersion = "1.6";
+const macroVersion = "1.7";
 const macroImage = "icons/weapons/axes/axe-battle-broad-stone.webp";
 
 const myDialogOptions = {

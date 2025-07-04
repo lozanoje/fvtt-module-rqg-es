@@ -1,5 +1,5 @@
 //
-// Date to Chat Seasons (RQG) v3.2
+// Date to Chat Seasons (RQG)
 // by Moonpile
 // localization by Viriato139ac
 //
@@ -7,7 +7,7 @@
 // Glorantha calendar must be imported from modules/rqg-babele-es/calendars
 
 const macroName = "Date to Chat";
-const macroVersion = "3.2";
+const macroVersion = "3.3";
 const macroImage = "icons/tools/navigation/watch-simple-blue.webp";
 
 //const locerrormoon = `Moon image not found`;

@@ -1,11 +1,11 @@
 //
-// Opposed Rolls (RQG) v2.2
+// Opposed Rolls (RQG)
 // by Viriato139ac
 // thanks to Freeze#2689 for the conditional selection code
 //
 
 const macroName = "Opposed Rolls";
-const macroVersion = "2.2";
+const macroVersion = "2.3";
 const macroImage = "icons/commodities/treasure/puzzle-box-glowing-blue.webp";
 
 function nivelexito(diceResult, skillLevel) {

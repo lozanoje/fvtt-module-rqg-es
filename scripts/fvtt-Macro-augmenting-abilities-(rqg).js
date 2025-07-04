@@ -1,11 +1,11 @@
 //
-// Augmenting Abilities (RQG) v1.10
+// Augmenting Abilities (RQG)
 // by Viriato139ac
 // thanks to Freeze#2689 for the conditional selection code
 //
 
 const macroName = "Augmenting Abilities";
-const macroVersion = "1.10";
+const macroVersion = "1.11";
 const macroImage = "icons/skills/social/diplomacy-peace-alliance.webp";
 
 function nivelexito(diceResult, skillLevel) {

@@ -1,10 +1,10 @@
 //
-// Resistance Table (RQG) v1.8
+// Resistance Table (RQG)
 // by Viriato139ac
 // thanks to Freeze#2689 for the conditional selection code
 
 const macroName = "Resistance Table";
-const macroVersion = "1.8";
+const macroVersion = "1.9";
 const macroImage = "icons/skills/social/diplomacy-handshake-yellow.webp";
 
 function nivelexito(diceResult, skillLevel) {

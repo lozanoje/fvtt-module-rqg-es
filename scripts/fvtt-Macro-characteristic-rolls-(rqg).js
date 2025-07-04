@@ -1,10 +1,10 @@
 //
-// Characteristic Rolls (RQG) v1.7
+// Characteristic Rolls (RQG)
 // by Viriato139ac
 // thanks to Freeze#2689 for the conditional selection code
 
 const macroName = "Characteristic Rolls";
-const macroVersion = "1.7";
+const macroVersion = "1.8";
 const macroImage = "icons/sundries/gaming/dice-runed-brown.webp";
 
 function nivelexito(diceResult, skillLevel) {
