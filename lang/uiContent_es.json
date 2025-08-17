@@ -22,10 +22,15 @@
     },
     "ChatMessage": {
       "combat": "Combate"
+    },
+    "RegionBehavior": {
+      "clickableScripts": "Clic para ejecutar programa"
     }
   },
   "COMBAT": {
-    "InitiativeReset": "Reiniciar MR"
+    "InitiativeReset": "Reiniciar todos los MRs",
+    "CombatantInitiative": "Momento de Reacción",
+    "CombatantClear": "Borrar Momentos de Reacción"
   },
   "RQG": {
     "ActorCreation": {
@@ -1312,6 +1317,21 @@
         "FumbleTableMissing": "No se ha encontrado la tirada de pifias \"{fumbleTableName}\"."
       }
     },
+    "Region": {
+      "ClickableScripts": {
+        "ShowPointerOnHover": {
+          "Title": "Punto al pasar el ratón",
+          "Hint": "Decide si se debe mostrar el puntero \"mano\" cuando se pasa el ratón por encima de una región clicable. Mejora la experiencia de usuario si estos se supone que deben descubrir estas áreas."
+        },
+        "LeftClick": {
+          "Title": "Programa clic izquierdo",
+          "Hint": "Ambos programas tienen acceso a todas las variables globales de Foundry, además de las variables de 'scene', 'region', 'behavior' y 'event' referidas a la escena, región, comportamiento o evento seleccionado."
+        },
+        "RightClick": {
+          "Title": "Programa clic derecho"
+        }
+      }
+    },
     "Notification": {
       "Error": {
         "GMOnlyOperation": "Operación solo permitida a GMs"
@@ -1334,7 +1354,7 @@
       "DefaultItemIcons": {
         "dialogTitle": "Ajuste de iconos por defecto de objetos",
         "settingName": "Iconos por defecto de objetos",
-        "settingLabel": "Configure los iconos por defecto para objetos nuevos",
+        "settingLabel": "Configura los iconos por defecto",
         "settingHint": "Ajuste los iconos por defecto cuando se creen nuevos objetos"
       },
       "WorldLanguage": {
@@ -1360,6 +1380,31 @@
       "ShowCharacteristicRatings": {
         "settingName": "Mostrar valoración de características",
         "settingHint": "Muestra una barra de colores que evalúa el valor de característica en relación a la formula que se usa para generarla. Rojo por debajjo de la media y verde por encima de la media. Puede ayudarle a evaluar las virtudes y defectos de un actor de un vistazo"
+      },
+      "TokenRulerSettings": {
+        "dialogTitle": "Ajustes de la regla de iconos",
+        "settingName": "Configuración de la regla de iconos",
+        "settingLabel": "Configurar regla de iconos",
+        "settingHint": "Ajustes que afectan los colores, etc. de la visualización del rango de movimiento de los iconos para saber cuánto se pueden mover en un asalto. Se basa en el movimiento y el multiplicador de carrera.",
+        "LineWidth": {
+          "Name": "Ancho de línea",
+          "Hint": "Grosor de las líneas que se dibujan para visualizar el rango de movimiento de los iconos. Por defecto es 30. Si se pone a 0, no se dibuja ninguna línea."
+        },
+        "Alpha": {
+          "Name": "Alfa",
+          "Hint": "Cómo de traslúcidad es la linea, 1 significa opaca y 0 transparente. Por defecto es 0.45."
+        },
+        "SprintMultiplier": {
+          "Name": "Multiplicador rango de carrera",
+          "Hint": "Ajuste para la regla opcional que permite correr más del MOV en ciertas situaciones. Por ejemplo, un personaje con MOV 8 con un multiplicador de 3 podría correr 8 MOV * 3m * 3 multiplicador = 72m. Déjalo a 0 para deshabilitarlo.",
+          "ExampleRange": "m / 12 seg (MOV 8)"
+        },
+        "Ranges": {
+          "Attack": "Color para Ataque",
+          "Walk": "Color para Andar",
+          "Sprint": "Color para Correr",
+          "Unreachable": "Color para fuera de rango"
+        }
       }
     },
     "TokenEffects": {
@@ -1427,21 +1472,6 @@
         "Weapon": "Hoja de objeto arma"
       },
       "RollTable": "Hoja de tabla"
-    },
-    "Integrations": {
-      "DragRuler": {
-        "Speeds": {
-          "Attack": "atacar",
-          "Walk": "andar",
-          "Sprint": "correr"
-        },
-        "Settings": {
-          "SprintMultiplier": {
-            "Name": "Multiplicador de velocidad al correr",
-            "Hint": "Este ajuste permite aplicar la regla opcional que permite correr más MOV en ciertas circunstancias. Por ejemplo, un personaje con MOV 8 con un multiplicador de velocidad de 3 podría correr 8 MOV * 3 m * 3 multiplicador = 72 m. Déjalo en 0 si quiere deshabilitar esta opción"
-          }
-        }
-      }
     }
   }
 }
