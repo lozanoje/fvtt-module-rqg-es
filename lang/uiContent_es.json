@@ -121,7 +121,8 @@
       },
       "AwardExperience": {
         "GainedExperienceInfo": "{actorName} acaba de ganar una marca de experiencia en {itemName}!",
-        "ItemDoesntHaveExperienceError": "Se ha intentado añadir una marca de experiencia al objeto \"{itemName}\" con id \"{itemId}\" que no tiene la propiedad \"hasExperience\""
+        "ItemDoesntHaveExperienceError": "Se ha intentado añadir una marca de experiencia al objeto \"{itemName}\" con id \"{itemId}\" que no tiene la propiedad \"hasExperience\"",
+        "PowExperienceInfo": "Éxito en la tirada de POD. Solo se puede ganar experiencia si: se tiene éxito en una tirada opuesta de un conjuro, en combate espiritual, en la ceremonia de un ritual, o en un entrenamiento. Si es tal el caso, añade manualmente la experiencia."
       },
       "Background": {
         "Background": "Trasfondo",

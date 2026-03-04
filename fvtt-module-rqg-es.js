@@ -118,6 +118,8 @@ function updateMacro(macroFile) {
     if (instMacro) {
       if (instVersion === undefined ||
         macroVersion === undefined ||
+		isNaN(instVersion) ||
+		isNaN(macroVersion) ||
         instVersion < macroVersion) {
         console.log(
           "Macro: " +
