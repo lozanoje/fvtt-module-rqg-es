@@ -220,6 +220,7 @@
         "intelligence-full": "Inteligencia",
         "power": "POD",
         "power-full": "Poder",
+        "PowWarningTip": "El POD está por debajo de 18. Portavoces divinos, Sacerdotes de las runas, Sacerdotes Superiores y Sumos Sacerdotes requieren un mínimo de 18 de POD.",
         "charisma": "CAR",
         "charisma-full": "Carisma"
       },
@@ -468,6 +469,9 @@
         "WeaponUsage": "Uso",
         "ReduceAmmoQuantity": "Reducir munición",
         "ProneTarget": "Objetivo caído",
+        "ProneAttacker": "Atacante caído",
+        "ProneAttackerHitLocationFromBelow": "Localización ajustada a Desde Abajo (1d10).",
+        "ProneAttackerNoDamageBonus": "Sin bono de daño cuando se ataca estando caído",
         "UnawareTarget": "Objetivo distraido",
         "Darkness": "Oscuridad",
         "OtherModifier": "Otro modificador",
@@ -485,6 +489,9 @@
           "1d10+10": "Desde arriba (1d10 + 10)"
         },
         "NoTokenToAttackWith": "No tiene ninguna ficha en esta escena para realizar un ataque",
+        "NoWeaponToAttackWith": "No dispone de armas con las que atacar",
+        "NoValidSkillForWeaponUsage": "No se ha encontrado una habilidad para usar el arma seleccionada.",
+        "NoValidSkillForWeaponUsageWarn": "No se ha encontrado una habilidad para usar el arma seleccionada. Dile al FM que arregle el enlace a la habilidad en los usos del arma.",
         "WeaponNotEmbedded": "No se puede encontrar el propietario del arma usada"
       },
       "Defence": {
@@ -506,6 +513,8 @@
           "Fifth": "5a -80%",
           "Sixth": "6a -100%"
         },
+        "NoValidParrySkillForWeaponUsage": "No se ha encontrado habilidad válida de parada para el uso del arma seleccionada.",
+        "NoValidParrySkillForWeaponUsageWarn": "No se ha encontrado habilidad válida de parada para el uso del arma seleccionada. Dile al FM que arregle el enlace a la habilidad en los usos del arma.",
         "NoTokenToDefendWith": "No tiene ninguna ficha en esta escena para defenderse de este ataque"
       },
       "AbilityRoll": {
@@ -1119,7 +1128,8 @@
           "Fifth": "5a defensa",
           "Sixth": "6a defensa"
         },
-        "ProneTarget": "caído",
+        "ProneTarget": "defensor caído",
+        "ProneAttacker": "atacante caído",
         "UnawareTarget": "distraído",
         "Darkness": "oscuridad",
         "Halved": "a la mitad",
@@ -1293,10 +1303,13 @@
       }
     },
     "RQGSystem": {
-      "rqid": "ID de sistema RuneQuest (Rqid)",
-      "GenerateDefaultRqid": "Crear ID de sistema RuneQuest (Rqid) en base al documento actual. El rqid debe basarse en el nombre de documento en inglés",
-      "rqidPriority": "Prioridad Rqid",
-      "rqidLang": "Idioma",
+      "Rqid": {
+        "Id": "ID de sistema RuneQuest (Rqid)",
+        "GenerateDefault": "Crear ID de sistema RuneQuest (Rqid) en base al documento actual. El rqid debe basarse en el nombre de documento en inglés",
+        "rqidPriority": "Prioridad Rqid",
+        "Language": "Idioma",
+        "InvalidRegexPattern": "Patrón regex de rqid inválido: \"{rqidPattern}\""
+      },
       "Folder": "Directorio",
       "FoundryId": "ID Foundry",
       "FoundryUuid": "UUID Foundry",
@@ -1309,6 +1322,8 @@
       "DocsInWorld": "{count} documentos en el mundo",
       "DocsInCompendiums": "{count} documentos en el compendio",
       "DuplicateWarning": "Aviso: ¡múltiples rqids con la misma prioridad!",
+      "EmbeddedDocumentParentMissingRqid": "Aviso: El documento padre no tiene RQID. El enlace a este documento embebido no funcionará hasta que el documento padre tenga un RQID.",
+      "OpenParentRqidEditor": "Abrir editor de RQID del padre",
       "CouldNotFindRune": "No se ha podido encontrar una runa en memoria con el rqid {rqid}",
       "Error": {
         "NoSheet": "No se ha encontrado la hoja del documento vinculado al rqid \"{rqid}\". Consulte la consola",
@@ -1445,6 +1460,8 @@
       "WorldNotUpdated": "Este mundo no ha sido actualizado a la versión actual del sistema ({systemVersion}). Espere hasta que su GM haya actializado y entonces refresque la página (F5 o cmd-R)",
       "applyingMigration": "Ejecutando migración del mundo a la versión {systemVersion}. Por favor, sea paciente y no cierre el programa o apague el servidor",
       "migrationFinished": "¡Se ha completado la migración del mundo a la versión {systemVersion}!",
+      "migrationFinishedWithErrors": "La migración del mundo a la versión {systemVersion} se ha completado con {errorCount} errores. Consulte el registro y vuelva a ejecutar la migración. No se ha actualizado worldMigrationVersion.",
+      "migrationFailed": "La migración del mundo a la versión {systemVersion} ha fallado: {error}",
       "actors": "Paso 1 / 4 - Migrando {count} actores",
       "items": "Paso 2 / 4 - Migrando {count} objetos del mundo",
       "scenes": "Paso 3 / 4 - Migrando {count} escenas",
